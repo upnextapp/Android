@@ -1,0 +1,239 @@
+WARN  2013-03-30 12:42:05,026 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 12:42:05,033 (NullSarosSession.java:66) unexpected method call
+ERROR 2013-03-30 13:45:46,413 (RosterUtils.java:482) discovery for service 'gmail.com' failed
+feature-not-implemented(501)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:495)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:461)
+	at de.fu_berlin.inf.dpp.net.util.RosterUtils.getMultiUserChatService(RosterUtils.java:480)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getMUCService(MUCSessionPreferencesNegotiatingManager.java:102)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getOwnPreferences(MUCSessionPreferencesNegotiatingManager.java:59)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.MultiUserChatService.createChat(MultiUserChatService.java:95)
+	at de.fu_berlin.inf.dpp.ui.widgets.session.ChatRoomsComposite$3$2.run(ChatRoomsComposite.java:168)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 13:45:46,427 (MultiUserChatService.java:125) MUC service is not available, aborting connection request
+ERROR 2013-03-30 13:45:46,908 (CancelableProcess.java:315) cancelled process OSN [remote side: simiopoliz@gmail.com/Saros5210F6BF], error: The Saros plugin of Kevin Lam (Version 12.9.28) is not compatible with your installed Saros plugin (Version 13.3.22)
+WARN  2013-03-30 13:45:47,089 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:45:47,091 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:45:47,182 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:45:47,189 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:45:47,224 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:45:47,230 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:45:47,317 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:45:47,322 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:46:39,831 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:46:39,843 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:46:40,424 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:46:40,431 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:46:40,481 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:46:40,487 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:46:42,972 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:46:42,975 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:46:47,332 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:46:47,344 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:48:06,422 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:48:06,429 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:48:06,913 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:48:06,919 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:48:06,966 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:48:06,982 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:48:09,148 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:48:09,151 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:48:13,288 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:48:13,307 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:49:55,927 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:49:55,939 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:49:57,494 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:49:57,509 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:51:13,361 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 13:51:13,372 (NullSarosSession.java:66) unexpected method call
+ERROR 2013-03-30 13:51:13,381 (RosterUtils.java:482) discovery for service 'gmail.com' failed
+feature-not-implemented(501)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:495)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:461)
+	at de.fu_berlin.inf.dpp.net.util.RosterUtils.getMultiUserChatService(RosterUtils.java:480)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getMUCService(MUCSessionPreferencesNegotiatingManager.java:102)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getOwnPreferences(MUCSessionPreferencesNegotiatingManager.java:59)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.MultiUserChatService.createChat(MultiUserChatService.java:95)
+	at de.fu_berlin.inf.dpp.ui.widgets.session.ChatRoomsComposite$3$2.run(ChatRoomsComposite.java:168)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 13:51:13,386 (MultiUserChatService.java:125) MUC service is not available, aborting connection request
+ERROR 2013-03-30 13:51:15,817 (RosterUtils.java:482) discovery for service 'gmail.com' failed
+feature-not-implemented(501)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:495)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:461)
+	at de.fu_berlin.inf.dpp.net.util.RosterUtils.getMultiUserChatService(RosterUtils.java:480)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getMUCService(MUCSessionPreferencesNegotiatingManager.java:102)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getOwnPreferences(MUCSessionPreferencesNegotiatingManager.java:59)
+	at de.fu_berlin.inf.dpp.invitation.OutgoingSessionNegotiation.modifiyAndSendSessionNegotiationData(OutgoingSessionNegotiation.java:381)
+	at de.fu_berlin.inf.dpp.invitation.OutgoingSessionNegotiation.start(OutgoingSessionNegotiation.java:133)
+	at de.fu_berlin.inf.dpp.project.SarosSessionManager$OutgoingInvitationJob.run(SarosSessionManager.java:466)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+WARN  2013-03-30 13:51:16,925 (Socks5Transport.java:332) [SOCKS5] Received response connection without a running connect
+WARN  2013-03-30 14:04:18,727 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:04:45,562 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:04:45,564 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:04:45,566 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:04:45,567 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:05:14,570 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:05:14,577 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:05:15,818 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:05:15,834 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:05:27,447 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:05:27,456 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:05:28,733 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:05:28,740 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:05:37,596 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:05:37,605 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:05:55,316 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:05:55,319 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:06:06,463 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:06:06,470 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:06:07,673 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:06:07,683 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:06:28,883 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:06:28,890 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:06:31,470 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:06:31,476 (NullSarosSession.java:66) unexpected method call
+ERROR 2013-03-30 14:06:31,516 (RosterUtils.java:482) discovery for service 'gmail.com' failed
+feature-not-implemented(501)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:495)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:461)
+	at de.fu_berlin.inf.dpp.net.util.RosterUtils.getMultiUserChatService(RosterUtils.java:480)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getMUCService(MUCSessionPreferencesNegotiatingManager.java:102)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getOwnPreferences(MUCSessionPreferencesNegotiatingManager.java:59)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.MultiUserChatService.createChat(MultiUserChatService.java:95)
+	at de.fu_berlin.inf.dpp.ui.widgets.session.ChatRoomsComposite$3$2.run(ChatRoomsComposite.java:168)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 14:06:31,519 (MultiUserChatService.java:125) MUC service is not available, aborting connection request
+ERROR 2013-03-30 14:06:33,190 (RosterUtils.java:482) discovery for service 'gmail.com' failed
+feature-not-implemented(501)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:495)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:461)
+	at de.fu_berlin.inf.dpp.net.util.RosterUtils.getMultiUserChatService(RosterUtils.java:480)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getMUCService(MUCSessionPreferencesNegotiatingManager.java:102)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getOwnPreferences(MUCSessionPreferencesNegotiatingManager.java:59)
+	at de.fu_berlin.inf.dpp.invitation.OutgoingSessionNegotiation.modifiyAndSendSessionNegotiationData(OutgoingSessionNegotiation.java:381)
+	at de.fu_berlin.inf.dpp.invitation.OutgoingSessionNegotiation.start(OutgoingSessionNegotiation.java:133)
+	at de.fu_berlin.inf.dpp.project.SarosSessionManager$OutgoingInvitationJob.run(SarosSessionManager.java:466)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+WARN  2013-03-30 14:06:34,095 (Socks5Transport.java:332) [SOCKS5] Received response connection without a running connect
+WARN  2013-03-30 14:07:15,991 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:07:16,009 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:07:27,748 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:07:27,761 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:30:41,371 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:30:41,396 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:31:42,386 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:31:42,402 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:37:53,158 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:37:53,207 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:43:23,722 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:44:55,080 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:44:55,094 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:44:57,862 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:45:01,135 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:45:01,177 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:45:04,514 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:45:04,529 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:45:23,830 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:45:23,842 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:45:50,772 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:45:50,874 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:46:29,880 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:46:29,906 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:47:29,723 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:47:45,528 (SharedProjectFileDecorator.java:225) resource should not be null
+WARN  2013-03-30 14:48:12,128 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:48:12,155 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:48:14,157 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:49:00,348 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:49:00,385 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:49:19,687 (SharedResourcesManager.java:415) Resource changed while paused:
+C(0) /
+C(0) /inQueue
+C(0) /inQueue/res
+C(0) /inQueue/res/layout
+C(C) /inQueue/res/layout/intialpage.xml
+
+WARN  2013-03-30 14:49:46,811 (SharedResourcesManager.java:415) Resource changed while paused:
+C(0) /
+C(0) /inQueue
+C(0) /inQueue/res
+C(0) /inQueue/res/layout
+C(MC) /inQueue/res/layout/intialpage.xml
+
+WARN  2013-03-30 14:49:47,006 (SharedResourcesManager.java:415) Resource changed while paused:
+C(0) /
+C(0) /inQueue
+C(0) /inQueue/res
+C(0) /inQueue/res/layout
+C(M) /inQueue/res/layout/intialpage.xml
+
+WARN  2013-03-30 14:51:06,344 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:51:06,345 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:51:06,347 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:51:06,349 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:51:06,395 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:51:06,400 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:51:10,568 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:51:10,573 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:51:12,197 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:51:12,203 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:51:14,661 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 14:51:14,667 (NullSarosSession.java:66) unexpected method call
+ERROR 2013-03-30 14:51:14,708 (RosterUtils.java:482) discovery for service 'gmail.com' failed
+feature-not-implemented(501)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:495)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:461)
+	at de.fu_berlin.inf.dpp.net.util.RosterUtils.getMultiUserChatService(RosterUtils.java:480)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getMUCService(MUCSessionPreferencesNegotiatingManager.java:102)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getOwnPreferences(MUCSessionPreferencesNegotiatingManager.java:59)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.MultiUserChatService.createChat(MultiUserChatService.java:95)
+	at de.fu_berlin.inf.dpp.ui.widgets.session.ChatRoomsComposite$3$2.run(ChatRoomsComposite.java:168)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 14:51:14,710 (MultiUserChatService.java:125) MUC service is not available, aborting connection request
+ERROR 2013-03-30 14:51:17,844 (RosterUtils.java:482) discovery for service 'gmail.com' failed
+feature-not-implemented(501)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:495)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:461)
+	at de.fu_berlin.inf.dpp.net.util.RosterUtils.getMultiUserChatService(RosterUtils.java:480)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getMUCService(MUCSessionPreferencesNegotiatingManager.java:102)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getOwnPreferences(MUCSessionPreferencesNegotiatingManager.java:59)
+	at de.fu_berlin.inf.dpp.invitation.OutgoingSessionNegotiation.modifiyAndSendSessionNegotiationData(OutgoingSessionNegotiation.java:381)
+	at de.fu_berlin.inf.dpp.invitation.OutgoingSessionNegotiation.start(OutgoingSessionNegotiation.java:133)
+	at de.fu_berlin.inf.dpp.project.SarosSessionManager$OutgoingInvitationJob.run(SarosSessionManager.java:466)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+WARN  2013-03-30 14:51:18,715 (Socks5Transport.java:332) [SOCKS5] Received response connection without a running connect
+WARN  2013-03-30 14:55:51,504 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:55:54,622 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:56:53,731 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:56:53,832 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:58:31,093 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 14:58:49,447 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 15:00:17,065 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 15:00:17,091 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 15:00:56,774 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 15:01:14,591 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 15:03:28,418 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 15:03:28,435 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 15:25:54,204 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 15:29:54,201 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 15:29:54,274 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 15:31:47,812 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 15:31:58,046 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 15:33:50,303 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 15:33:50,468 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 15:34:37,578 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 16:32:18,011 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 16:32:18,023 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 16:32:18,048 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 16:32:18,055 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 16:32:18,060 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 16:32:18,067 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 16:33:00,256 (EditorPool.java:196) EditorPart was never added to the EditorPool: main.xml
+WARN  2013-03-30 16:33:00,731 (EditorPool.java:196) EditorPart was never added to the EditorPool: splash_layout.xml
+WARN  2013-03-30 16:33:00,783 (SharedProjectFileDecorator.java:136) path object should not be null
