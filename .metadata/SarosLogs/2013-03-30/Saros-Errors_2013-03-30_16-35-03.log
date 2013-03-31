@@ -1,0 +1,1952 @@
+WARN  2013-03-30 16:35:00,636 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 16:35:00,646 (NullSarosSession.java:66) unexpected method call
+ERROR 2013-03-30 16:35:43,436 (RosterUtils.java:482) discovery for service 'gmail.com' failed
+feature-not-implemented(501)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:495)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:461)
+	at de.fu_berlin.inf.dpp.net.util.RosterUtils.getMultiUserChatService(RosterUtils.java:480)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getMUCService(MUCSessionPreferencesNegotiatingManager.java:102)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getOwnPreferences(MUCSessionPreferencesNegotiatingManager.java:59)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.MultiUserChatService.createChat(MultiUserChatService.java:95)
+	at de.fu_berlin.inf.dpp.ui.widgets.session.ChatRoomsComposite$3$2.run(ChatRoomsComposite.java:168)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 16:35:43,477 (MultiUserChatService.java:125) MUC service is not available, aborting connection request
+ERROR 2013-03-30 16:35:48,888 (RosterUtils.java:482) discovery for service 'gmail.com' failed
+feature-not-implemented(501)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:495)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:461)
+	at de.fu_berlin.inf.dpp.net.util.RosterUtils.getMultiUserChatService(RosterUtils.java:480)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getMUCService(MUCSessionPreferencesNegotiatingManager.java:102)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getOwnPreferences(MUCSessionPreferencesNegotiatingManager.java:59)
+	at de.fu_berlin.inf.dpp.invitation.OutgoingSessionNegotiation.modifiyAndSendSessionNegotiationData(OutgoingSessionNegotiation.java:381)
+	at de.fu_berlin.inf.dpp.invitation.OutgoingSessionNegotiation.start(OutgoingSessionNegotiation.java:133)
+	at de.fu_berlin.inf.dpp.project.SarosSessionManager$OutgoingInvitationJob.run(SarosSessionManager.java:466)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+WARN  2013-03-30 16:35:49,838 (Socks5Transport.java:332) [SOCKS5] Received response connection without a running connect
+WARN  2013-03-30 16:41:45,927 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 16:43:12,871 (SharedProjectFileDecorator.java:225) resource should not be null
+ERROR 2013-03-30 16:43:15,146 (ConsistencyWatchdogServer.java:243) EditorManager is in an inconsistent state. It is reporting a locally open editor but no document could be found on disk: SPath [editorType=txt, path=res/layout/ourmain.xml, project=inQueue]
+ERROR 2013-03-30 16:43:25,199 (ConsistencyWatchdogServer.java:243) EditorManager is in an inconsistent state. It is reporting a locally open editor but no document could be found on disk: SPath [editorType=txt, path=res/layout/ourmain.xml, project=inQueue]
+ERROR 2013-03-30 16:43:35,255 (ConsistencyWatchdogServer.java:243) EditorManager is in an inconsistent state. It is reporting a locally open editor but no document could be found on disk: SPath [editorType=txt, path=res/layout/ourmain.xml, project=inQueue]
+ERROR 2013-03-30 16:43:45,312 (ConsistencyWatchdogServer.java:243) EditorManager is in an inconsistent state. It is reporting a locally open editor but no document could be found on disk: SPath [editorType=txt, path=res/layout/ourmain.xml, project=inQueue]
+ERROR 2013-03-30 16:43:55,367 (ConsistencyWatchdogServer.java:243) EditorManager is in an inconsistent state. It is reporting a locally open editor but no document could be found on disk: SPath [editorType=txt, path=res/layout/ourmain.xml, project=inQueue]
+ERROR 2013-03-30 16:44:05,422 (ConsistencyWatchdogServer.java:243) EditorManager is in an inconsistent state. It is reporting a locally open editor but no document could be found on disk: SPath [editorType=txt, path=res/layout/ourmain.xml, project=inQueue]
+ERROR 2013-03-30 16:44:15,469 (ConsistencyWatchdogServer.java:243) EditorManager is in an inconsistent state. It is reporting a locally open editor but no document could be found on disk: SPath [editorType=txt, path=res/layout/ourmain.xml, project=inQueue]
+ERROR 2013-03-30 16:44:25,536 (ConsistencyWatchdogServer.java:243) EditorManager is in an inconsistent state. It is reporting a locally open editor but no document could be found on disk: SPath [editorType=txt, path=res/layout/ourmain.xml, project=inQueue]
+ERROR 2013-03-30 16:44:35,596 (ConsistencyWatchdogServer.java:243) EditorManager is in an inconsistent state. It is reporting a locally open editor but no document could be found on disk: SPath [editorType=txt, path=res/layout/ourmain.xml, project=inQueue]
+WARN  2013-03-30 16:44:38,954 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 16:44:40,304 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 16:44:42,658 (SharedProjectFileDecorator.java:225) resource should not be null
+WARN  2013-03-30 17:39:42,825 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:39:42,830 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:39:42,834 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:39:42,837 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:39:46,565 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:39:49,294 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:40:31,488 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:40:34,252 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:40:36,525 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:40:39,191 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:40:39,283 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:40:39,331 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:40:41,199 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:40:43,732 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:40:47,557 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:40:49,916 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:41:07,190 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:41:08,159 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:41:08,255 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:41:08,293 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:42:17,931 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:42:17,983 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:42:19,593 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:42:19,595 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:42:21,306 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:42:21,308 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:42:35,241 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:42:35,276 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:43:21,837 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:43:21,890 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:43:22,748 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:43:22,750 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:43:24,082 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:43:24,084 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:43:30,904 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:43:30,948 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:44:49,380 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:44:49,424 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:44:51,371 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:44:51,421 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:44:53,586 (NullSarosSession.java:66) unexpected method call
+WARN  2013-03-30 17:44:53,588 (NullSarosSession.java:66) unexpected method call
+ERROR 2013-03-30 17:44:53,642 (RosterUtils.java:482) discovery for service 'gmail.com' failed
+feature-not-implemented(501)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:495)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:461)
+	at de.fu_berlin.inf.dpp.net.util.RosterUtils.getMultiUserChatService(RosterUtils.java:480)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getMUCService(MUCSessionPreferencesNegotiatingManager.java:102)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getOwnPreferences(MUCSessionPreferencesNegotiatingManager.java:59)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.MultiUserChatService.createChat(MultiUserChatService.java:95)
+	at de.fu_berlin.inf.dpp.ui.widgets.session.ChatRoomsComposite$3$2.run(ChatRoomsComposite.java:168)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 17:44:53,643 (MultiUserChatService.java:125) MUC service is not available, aborting connection request
+ERROR 2013-03-30 17:44:55,444 (RosterUtils.java:482) discovery for service 'gmail.com' failed
+feature-not-implemented(501)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:495)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverItems(ServiceDiscoveryManager.java:461)
+	at de.fu_berlin.inf.dpp.net.util.RosterUtils.getMultiUserChatService(RosterUtils.java:480)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getMUCService(MUCSessionPreferencesNegotiatingManager.java:102)
+	at de.fu_berlin.inf.dpp.communication.chat.muc.negotiation.MUCSessionPreferencesNegotiatingManager.getOwnPreferences(MUCSessionPreferencesNegotiatingManager.java:59)
+	at de.fu_berlin.inf.dpp.invitation.OutgoingSessionNegotiation.modifiyAndSendSessionNegotiationData(OutgoingSessionNegotiation.java:381)
+	at de.fu_berlin.inf.dpp.invitation.OutgoingSessionNegotiation.start(OutgoingSessionNegotiation.java:133)
+	at de.fu_berlin.inf.dpp.project.SarosSessionManager$OutgoingInvitationJob.run(SarosSessionManager.java:466)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+WARN  2013-03-30 17:44:56,675 (Socks5Transport.java:332) [SOCKS5] Received response connection without a running connect
+WARN  2013-03-30 17:45:14,866 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 17:45:15,071 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 17:52:17,999 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 17:52:18,022 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 17:58:19,206 (ContributionAnnotationManager.java:159) Annotation could not be found: de.fu_berlin.inf.dpp.editor.annotations.ContributionAnnotation@337fd416
+WARN  2013-03-30 18:00:23,788 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 18:00:23,806 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 18:00:48,595 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 18:01:38,084 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 18:01:38,357 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 18:01:51,904 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 18:01:52,099 (SharedProjectFileDecorator.java:136) path object should not be null
+ERROR 2013-03-30 18:12:49,449 (BinaryChannelConnection.java:59) SOCKS5 (direct) [simiopoliz@gmail.com/Saros82233AC0] Network IO Exception: Read timed out
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.fill(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.FilterInputStream.read(Unknown Source)
+	at de.fu_berlin.inf.dpp.net.internal.BinaryChannel.receiveIncomingTransferObject(BinaryChannel.java:117)
+	at de.fu_berlin.inf.dpp.net.internal.BinaryChannelConnection$ReceiverThread.run(BinaryChannelConnection.java:48)
+ERROR 2013-03-30 18:13:00,533 (SarosNet.java:465) XMPP Connection Error: 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
+	at sun.security.ssl.AppInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.read1(Unknown Source)
+	at java.io.BufferedReader.read(Unknown Source)
+	at org.xmlpull.mxp1.MXParser.fillBuf(MXParser.java:2992)
+	at org.xmlpull.mxp1.MXParser.more(MXParser.java:3046)
+	at org.xmlpull.mxp1.MXParser.nextImpl(MXParser.java:1144)
+	at org.xmlpull.mxp1.MXParser.next(MXParser.java:1093)
+	at org.jivesoftware.smack.PacketReader.parsePackets(PacketReader.java:325)
+	at org.jivesoftware.smack.PacketReader.access$000(PacketReader.java:43)
+	at org.jivesoftware.smack.PacketReader$1.run(PacketReader.java:70)
+ERROR 2013-03-30 18:13:00,535 (SarosNet.java:442) New Connection State == ERROR
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
+	at sun.security.ssl.AppInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+	at sun.nio.cs.StreamDecoder.implRead(Unknown Source)
+	at sun.nio.cs.StreamDecoder.read(Unknown Source)
+	at java.io.InputStreamReader.read(Unknown Source)
+	at java.io.BufferedReader.fill(Unknown Source)
+	at java.io.BufferedReader.read1(Unknown Source)
+	at java.io.BufferedReader.read(Unknown Source)
+	at org.xmlpull.mxp1.MXParser.fillBuf(MXParser.java:2992)
+	at org.xmlpull.mxp1.MXParser.more(MXParser.java:3046)
+	at org.xmlpull.mxp1.MXParser.nextImpl(MXParser.java:1144)
+	at org.xmlpull.mxp1.MXParser.next(MXParser.java:1093)
+	at org.jivesoftware.smack.PacketReader.parsePackets(PacketReader.java:325)
+	at org.jivesoftware.smack.PacketReader.access$000(PacketReader.java:43)
+	at org.jivesoftware.smack.PacketReader$1.run(PacketReader.java:70)
+WARN  2013-03-30 18:13:20,547 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: No response from the server.. Waiting for peer to connect ...
+ERROR 2013-03-30 18:13:29,554 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: No response from the server.: 
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverInfo(ServiceDiscoveryManager.java:445)
+	at org.jivesoftware.smackx.ServiceDiscoveryManager.discoverInfo(ServiceDiscoveryManager.java:414)
+	at org.jivesoftware.smackx.bytestreams.socks5.Socks5BytestreamManager.supportsSocks5(Socks5BytestreamManager.java:590)
+	at org.jivesoftware.smackx.bytestreams.socks5.Socks5BytestreamManager.establishSession(Socks5BytestreamManager.java:482)
+	at org.jivesoftware.smackx.bytestreams.socks5.Socks5BytestreamManager.establishSession(Socks5BytestreamManager.java:453)
+	at org.jivesoftware.smackx.bytestreams.socks5.Socks5BytestreamManager.establishSession(Socks5BytestreamManager.java:1)
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:13:29,564 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+ERROR 2013-03-30 18:13:29,570 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (469 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+WARN  2013-03-30 18:13:29,577 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:13:38,581 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:13:38,587 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+ERROR 2013-03-30 18:13:38,591 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (469 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+WARN  2013-03-30 18:13:38,596 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:13:47,600 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:13:47,605 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+ERROR 2013-03-30 18:13:47,609 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (469 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:13:47,617 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:13:47,622 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:13:56,626 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:13:56,627 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (469 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:13:56,629 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:13:56,631 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:14:05,633 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:14:05,638 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (469 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:14:05,642 (ActivitySequencer.java:985) Failed to sent activityDataObjects: [[1562:Checksum(path:SPathDataObject [editorType=txt, path=res/layout/main.xml, projectID=1134018129],hash:-962275668,length:1888,vectorTime:null)]]
+java.io.IOException: could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:427)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+ERROR 2013-03-30 18:14:05,652 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:14:05,660 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:14:14,664 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:14:14,669 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (1.4 kB): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:14:14,674 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:14:14,680 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:14:23,683 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:14:23,686 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (1.4 kB): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:14:23,690 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:14:23,694 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:14:32,697 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:14:32,701 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (1.4 kB): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:14:32,708 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:14:32,716 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:14:41,720 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:14:41,724 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (1.4 kB): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:14:41,730 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:14:41,736 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:14:50,740 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:14:50,741 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (1.4 kB): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:14:50,743 (ActivitySequencer.java:985) Failed to sent activityDataObjects: [[1563:Checksum(path:SPathDataObject [editorType=txt, path=res/layout/welcome.xml, projectID=1134018129],hash:979785554,length:612,vectorTime:null)], [1564:EditorActivityDataObject(type:Activated,path:SPathDataObject [editorType=txt, path=src/com/stg/inqueue/Splash_Activity.java, projectID=1134018129])], [1565:TextSelectionActivityDataObject(offset:699,length:0,src:alwayswithjoseph90@gmail.com/SarosE04951EB,path:SPathDataObject [editorType=txt, path=src/com/stg/inqueue/Splash_Activity.java, projectID=1134018129])], [1566:ViewportActivityDataObject(path:SPathDataObject [editorType=txt, path=src/com/stg/inqueue/Splash_Activity.java, projectID=1134018129],range:(18,42))]]
+java.io.IOException: could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:427)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+ERROR 2013-03-30 18:19:13,682 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:19:13,688 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:19:22,692 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:19:22,699 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (481 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:19:22,705 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:19:22,711 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:19:31,714 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:19:31,718 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (481 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:19:31,724 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:19:31,730 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:19:40,734 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:19:40,739 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (481 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:19:40,745 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:19:40,750 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:19:49,753 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:19:49,757 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (481 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:19:49,763 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:19:49,769 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:19:58,772 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:19:58,777 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (481 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:19:58,781 (ActivitySequencer.java:985) Failed to sent activityDataObjects: [[1567:TextSelectionActivityDataObject(offset:651,length:0,src:alwayswithjoseph90@gmail.com/SarosE04951EB,path:SPathDataObject [editorType=txt, path=src/com/stg/inqueue/Splash_Activity.java, projectID=1134018129])]]
+java.io.IOException: could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:427)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+ERROR 2013-03-30 18:19:58,801 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:19:58,803 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:20:07,836 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:20:07,838 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (481 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:20:07,839 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:20:07,841 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:20:16,843 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:20:16,846 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (481 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:20:16,848 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:20:16,850 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:20:25,852 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:20:25,853 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (481 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:20:25,855 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:20:25,858 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:20:34,860 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:20:34,864 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (481 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:20:34,868 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:20:34,874 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:20:43,878 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:20:43,882 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (481 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:20:43,885 (ActivitySequencer.java:985) Failed to sent activityDataObjects: [[1568:TextSelectionActivityDataObject(offset:686,length:0,src:alwayswithjoseph90@gmail.com/SarosE04951EB,path:SPathDataObject [editorType=txt, path=src/com/stg/inqueue/Splash_Activity.java, projectID=1134018129])]]
+java.io.IOException: could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:427)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+ERROR 2013-03-30 18:32:21,344 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:32:21,346 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:32:30,352 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:32:30,356 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (477 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:32:30,361 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:32:30,366 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:32:39,369 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:32:39,373 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (477 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:32:39,380 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:32:39,387 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:32:48,391 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:32:48,396 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (477 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:32:48,403 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:32:48,409 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:32:57,413 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:32:57,416 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (477 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:32:57,418 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:32:57,421 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:33:06,424 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:33:06,425 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (477 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:33:06,426 (ActivitySequencer.java:985) Failed to sent activityDataObjects: [[1569:EditorActivityDataObject(type:Activated,path:SPathDataObject [editorType=txt, path=src/com/stg/inqueue/Splash_Activity.java, projectID=1134018129])]]
+java.io.IOException: could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:427)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+ERROR 2013-03-30 18:33:06,429 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:33:06,431 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:33:15,432 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:33:15,433 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (797 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:33:15,435 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:33:15,437 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:33:24,439 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:33:24,440 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (797 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:33:24,442 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:33:24,445 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:33:33,447 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:33:33,448 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (797 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:33:33,451 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:33:33,453 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:33:42,455 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:33:42,456 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (797 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:33:42,463 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 18:33:42,466 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 18:33:51,469 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 18:33:51,470 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (797 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 18:33:51,471 (ActivitySequencer.java:985) Failed to sent activityDataObjects: [[1570:TextSelectionActivityDataObject(offset:705,length:0,src:alwayswithjoseph90@gmail.com/SarosE04951EB,path:SPathDataObject [editorType=txt, path=src/com/stg/inqueue/Splash_Activity.java, projectID=1134018129])], [1571:ViewportActivityDataObject(path:SPathDataObject [editorType=txt, path=src/com/stg/inqueue/Splash_Activity.java, projectID=1134018129],range:(0,31))]]
+java.io.IOException: could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:427)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+ERROR 2013-03-30 19:11:45,848 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:11:45,854 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+WARN  2013-03-30 19:11:52,593 (SharedProjectFileDecorator.java:136) path object should not be null
+WARN  2013-03-30 19:11:52,889 (SharedProjectFileDecorator.java:136) path object should not be null
+ERROR 2013-03-30 19:11:54,859 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:11:54,860 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (481 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:11:54,863 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:11:54,865 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:12:03,867 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:12:03,871 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (481 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:12:03,878 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:12:03,883 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:12:12,888 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:12:12,890 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (481 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:12:12,894 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:12:12,896 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:12:21,897 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:12:21,901 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (481 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:12:21,907 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:12:21,912 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:12:30,916 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:12:30,920 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (481 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:12:30,922 (ActivitySequencer.java:985) Failed to sent activityDataObjects: [[1572:TextSelectionActivityDataObject(offset:545,length:0,src:alwayswithjoseph90@gmail.com/SarosE04951EB,path:SPathDataObject [editorType=txt, path=src/com/stg/inqueue/Splash_Activity.java, projectID=1134018129])]]
+java.io.IOException: could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:427)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+ERROR 2013-03-30 19:12:30,935 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:12:30,940 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:12:39,944 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:12:39,948 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (1.9 kB): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:12:39,954 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:12:39,959 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:12:48,963 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:12:48,971 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (1.9 kB): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:12:48,980 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:12:48,987 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:12:57,991 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:12:57,995 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (1.9 kB): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:12:58,001 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:12:58,006 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:13:07,009 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:13:07,010 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (1.9 kB): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:13:07,012 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:13:07,015 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:13:16,017 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:13:16,023 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (1.9 kB): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:13:16,026 (ActivitySequencer.java:985) Failed to sent activityDataObjects: [[1573:EditorActivityDataObject(type:Activated,path:no path)], [1574:EditorActivityDataObject(type:Activated,path:no path)], [1575:EditorActivityDataObject(type:Activated,path:SPathDataObject [editorType=txt, path=src/com/stg/inqueue/Splash_Activity.java, projectID=1134018129])], [1576:EditorActivityDataObject(type:Activated,path:SPathDataObject [editorType=txt, path=src/com/stg/inqueue/Splash_Activity.java, projectID=1134018129])], [1577:TextSelectionActivityDataObject(offset:627,length:0,src:alwayswithjoseph90@gmail.com/SarosE04951EB,path:SPathDataObject [editorType=txt, path=src/com/stg/inqueue/Splash_Activity.java, projectID=1134018129])], [1578:ViewportActivityDataObject(path:SPathDataObject [editorType=txt, path=src/com/stg/inqueue/Splash_Activity.java, projectID=1134018129],range:(18,42))]]
+java.io.IOException: could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:427)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+ERROR 2013-03-30 19:49:26,896 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:49:26,898 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:49:35,904 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:49:35,909 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (477 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:49:35,918 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:49:35,925 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:49:44,935 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:49:44,937 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (477 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:49:44,940 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:49:44,942 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:49:53,944 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:49:53,948 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (477 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:49:53,951 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:49:53,953 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:50:02,954 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:50:02,958 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (477 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:50:02,965 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:50:02,971 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:50:11,974 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:50:11,978 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (477 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:50:11,981 (ActivitySequencer.java:985) Failed to sent activityDataObjects: [[1579:EditorActivityDataObject(type:Activated,path:SPathDataObject [editorType=txt, path=src/com/stg/inqueue/Splash_Activity.java, projectID=1134018129])]]
+java.io.IOException: could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:427)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+ERROR 2013-03-30 19:50:11,989 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:50:11,993 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:50:20,996 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:50:20,997 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (798 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:50:20,999 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:50:21,001 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:50:30,003 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:50:30,008 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (798 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:50:30,014 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:50:30,019 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:50:39,022 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:50:39,023 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (798 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:50:39,025 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:50:39,027 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:50:48,029 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:50:48,030 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (798 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:50:48,032 (DataTransferManager.java:411) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 47 In-Band Bytestream because of an unknown error: null
+java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.establishBinaryChannel(ByteStreamTransport.java:106)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+WARN  2013-03-30 19:50:48,034 (Socks5Transport.java:502) [SOCKS5] could not connect to simiopoliz@gmail.com/Saros82233AC0 because: null. Waiting for peer to connect ...
+ERROR 2013-03-30 19:50:57,035 (DataTransferManager.java:400) [simiopoliz@gmail.com/Saros82233AC0]  failed to connect using XEP 65 SOCKS5: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+java.io.IOException: [SOCKS5] waiting for a response session timed out (9000ms) and could not establish a connection from this side, too:
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:528)
+	at de.fu_berlin.inf.dpp.net.internal.ByteStreamTransport.connect(ByteStreamTransport.java:40)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:397)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException
+	at de.fu_berlin.inf.dpp.net.internal.Socks5Transport.establishBinaryChannel(Socks5Transport.java:477)
+	... 11 more
+ERROR 2013-03-30 19:50:57,050 (XMPPTransmitter.java:295) could not send packet extension through a direct connection (798 B): could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+ERROR 2013-03-30 19:50:57,052 (ActivitySequencer.java:985) Failed to sent activityDataObjects: [[1580:TextSelectionActivityDataObject(offset:699,length:0,src:alwayswithjoseph90@gmail.com/SarosE04951EB,path:SPathDataObject [editorType=txt, path=src/com/stg/inqueue/Splash_Activity.java, projectID=1134018129])], [1581:ViewportActivityDataObject(path:SPathDataObject [editorType=txt, path=src/com/stg/inqueue/Splash_Activity.java, projectID=1134018129],range:(18,42))]]
+java.io.IOException: could not connect to: [simiopoliz@gmail.com/Saros82233AC0] 
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.connectInternal(DataTransferManager.java:427)
+	at de.fu_berlin.inf.dpp.net.internal.DataTransferManager.sendData(DataTransferManager.java:262)
+	at de.fu_berlin.inf.dpp.net.internal.XMPPTransmitter.sendToSessionUser(XMPPTransmitter.java:283)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.sendTimedActivities(ActivitySequencer.java:983)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer.access$3(ActivitySequencer.java:955)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.sendActivities(ActivitySequencer.java:649)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.flushTask(ActivitySequencer.java:561)
+	at de.fu_berlin.inf.dpp.net.internal.ActivitySequencer$2.run(ActivitySequencer.java:518)
+	at de.fu_berlin.inf.dpp.util.Utils$6.run(Utils.java:323)
+	at java.lang.Thread.run(Unknown Source)
