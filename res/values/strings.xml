@@ -13,5 +13,6 @@
     <string name="splash">Splash</string>
     <string name="submit">Submit</string>
     <string name="cancel">Cancel</string>
+    <string name="empty"></string>
 
 </resources>
