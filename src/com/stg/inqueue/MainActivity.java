@@ -23,13 +23,13 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		
+
 		// Set up initial lists of restaurants.
 		setupRestaurantList();
-		
+
 		// Set up necessary tabs.
 		setupTabs();
-		 
+
 		// testing purpose
 		// Toast.makeText(this, getDeviceID(), Toast.LENGTH_LONG).show();
 		// Toast.makeText(this, getPhoneNumber(), Toast.LENGTH_LONG).show();
@@ -42,8 +42,11 @@ public class MainActivity extends Activity {
 		// TODO: Make a separate method to add restaurants (possibly throught
 		// the internet?) and save the list so that it doesn't continually add
 		// it to the list.
-		restaurantsArrayList.add("HELLO");
-		restaurantsArrayList.add("WORLD");
+		restaurantsArrayList.add("Olive Garden");
+		restaurantsArrayList.add("Cheescake Factory");
+		restaurantsArrayList.add("Perry's Steakhouse");
+		restaurantsArrayList.add("Fogo de Chao");
+
 		restaurantsAdapter = new ArrayAdapter<String>(this,
 				R.layout.restaurant_row, restaurantsArrayList);
 		lv.setAdapter(restaurantsAdapter);
@@ -150,17 +153,17 @@ public class MainActivity extends Activity {
 
 		// set ActionBar's navigation mode to use tabs
 		queueActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-		
+
 		Tab restaurantsTab = queueActionBar.newTab();
 
 		// set the Tab's title
 		restaurantsTab.setText("Restaurants");
 
-		// set the Tab's listener
-		queueActionBar.addTab(restaurantsTab); 
-		
 		// add the Tab
 		restaurantsTab.setTabListener(queueTabListener);
+
+		// set the Tab's listener
+		queueActionBar.addTab(restaurantsTab);
 
 		Tab positionTab = queueActionBar.newTab();
 		positionTab.setText("Position");
@@ -187,7 +190,7 @@ public class MainActivity extends Activity {
 				lv.setAdapter(restaurantsAdapter);
 				restaurantsAdapter.notifyDataSetChanged();
 			}
-		} 
+		}
 
 		// called when a tab is unselected
 		@Override
