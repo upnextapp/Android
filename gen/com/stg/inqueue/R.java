@@ -24,7 +24,7 @@ public final class R {
         public static final int menu_about=0x7f07000e;
         public static final int menu_help=0x7f07000f;
         public static final int menu_settings=0x7f07000d;
-        public static final int restaurants=0x7f07000b;
+        public static final int restaurants_available_list=0x7f07000b;
         public static final int submit=0x7f070009;
         public static final int tableLayout=0x7f070000;
         public static final int textView1=0x7f07000c;
@@ -33,12 +33,11 @@ public final class R {
     }
     public static final class layout {
         public static final int intialpage=0x7f030000;
-        public static final int list_of_restaurants=0x7f030001;
-        public static final int main=0x7f030002;
-        public static final int position_in_line=0x7f030003;
-        public static final int restaurants_list=0x7f030004;
-        public static final int splash_layout=0x7f030005;
-        public static final int welcome=0x7f030006;
+        public static final int main=0x7f030001;
+        public static final int position_in_line=0x7f030002;
+        public static final int restaurant_row=0x7f030003;
+        public static final int splash_layout=0x7f030004;
+        public static final int welcome=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f060000;
