@@ -1,6 +1,7 @@
 package com.stg.inqueue;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.UUID;
 
 import android.app.ActionBar;
@@ -15,6 +16,8 @@ import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.stackmob.android.sdk.common.StackMobAndroid;
+
 public class MainActivity extends Activity {
 	public RestaurantsFragment listRestaurantsFragment;
 	public PositionFragment positionFragment;
@@ -24,6 +27,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+		StackMobAndroid.init(getApplicationContext(), 0, "f66ba52f-9d96-47a6-97ad-ec4bc95e9687");
 
 //		listRestaurantsFragment = (RestaurantsFragment) getFragmentManager()
 //				.findFragmentById(R.id.restaurants);
@@ -36,6 +40,8 @@ public class MainActivity extends Activity {
 		// testing purpose
 		// Toast.makeText(this, getDeviceID(), Toast.LENGTH_LONG).show();
 		// Toast.makeText(this, getPhoneNumber(), Toast.LENGTH_LONG).show();
+		Task myTask = new Task("Learn more about StackMob", new Date());
+		myTask.save();
 	}
 
 	@Override
