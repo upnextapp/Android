@@ -16,26 +16,37 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class MainActivity extends Activity {
-	public RestaurantsFragment listRestaurantsFragment;
-	public PositionFragment positionFragment;
 	public ArrayList<String> restaurantsArrayList;
+	public ArrayAdapter<String> restaurantsAdapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-//		listRestaurantsFragment = (RestaurantsFragment) getFragmentManager()
-//				.findFragmentById(R.id.restaurants);
-//		positionFragment = new PositionFragment();
-		
+		setupRestaurantList();
 		setupTabs();
-		// ActionBar actionBar = getActionBar();
+		ActionBar actionBar = getActionBar();
 		// actionBar.hide();
-
+		 
 		// testing purpose
 		// Toast.makeText(this, getDeviceID(), Toast.LENGTH_LONG).show();
 		// Toast.makeText(this, getPhoneNumber(), Toast.LENGTH_LONG).show();
+	}
+
+	private void setupRestaurantList() {
+		ListView lv = (ListView) findViewById(R.id.restaurants_available_list);
+		restaurantsArrayList = new ArrayList<String>();
+
+		// TODO: Make a separate method to add restaurants (possibly throught
+		// the internet?) and save the list so that it doesn't continually add
+		// it to the list.
+		restaurantsArrayList.add("HELLO");
+		restaurantsArrayList.add("WORLD");
+		restaurantsAdapter = new ArrayAdapter<String>(this,
+				R.layout.restaurant_row, restaurantsArrayList);
+		lv.setAdapter(restaurantsAdapter);
+		// restaurantsAdapter.notifyDataSetChanged();
 	}
 
 	@Override
@@ -170,8 +181,12 @@ public class MainActivity extends Activity {
 			// display the information corresponding to the selected Tab
 			if (tab.getPosition() == 1)
 				setContentView(R.layout.position_in_line);
-			else
-				setContentView(R.layout.list_of_restaurants);
+			else {
+				setContentView(R.layout.main);
+				ListView lv = (ListView) findViewById(R.id.restaurants_available_list);
+				lv.setAdapter(restaurantsAdapter);
+				restaurantsAdapter.notifyDataSetChanged();
+			}
 		} // end method onTabSelected
 
 		// called when a tab is unselected
