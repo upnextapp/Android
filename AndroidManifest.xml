@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="10"
+        android:minSdkVersion="11"
         android:targetSdkVersion="17" />
 
     <application
@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme" >
         
         <activity 
-            android:name="com.stg.inqueue.Splash_Activity"
+            android:name="com.stg.inqueue.SplashActivity"
             android:label="@string/splash">
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
