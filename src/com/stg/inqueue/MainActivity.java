@@ -18,7 +18,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.stackmob.android.sdk.common.StackMobAndroid;
 
@@ -48,11 +47,10 @@ public class MainActivity extends Activity {
 	}
 
 	private void setupRestaurantList() {
-		ListView lv = (ListView) findViewById(R.id.restaurants_available_list);
 		restaurantsArrayList = new ArrayList<String>();
 
 		// TODO: Make a separate method to add restaurants (possibly throught
-		// the internet?) and save the list so that it doesn't continually add
+		// the Internet?) and save the list so that it doesn't continually add
 		// it to the list.
 		restaurantsArrayList.add("Olive Garden");
 		restaurantsArrayList.add("Cheescake Factory");
@@ -70,12 +68,15 @@ public class MainActivity extends Activity {
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View view,
 					int position, long id) {
-				// TODO Auto-generated method stub
+				// Toast.makeText(getApplicationContext(),
+				// restaurantsArrayList.get(position), Toast.LENGTH_SHORT)
+				// .show();
 
-				// Do something...
-				Toast.makeText(getApplicationContext(),
-						restaurantsArrayList.get(position), Toast.LENGTH_SHORT)
-						.show();
+				// Display a dialog and ask the user to queue for that
+				// particular restaurant.
+				// TODO: Make sure that you are in queue for only one line at any given time.
+				QueueDialogFragment qdf = new QueueDialogFragment(restaurantsArrayList.get(position));
+				qdf.show(getFragmentManager(), "Queue Prompt");
 			}
 		};
 	}
@@ -209,9 +210,10 @@ public class MainActivity extends Activity {
 		@Override
 		public void onTabSelected(Tab tab, FragmentTransaction arg1) {
 			// display the information corresponding to the selected Tab
-			if (tab.getPosition() == 1)
+			if (tab.getPosition() == 1) {
 				setContentView(R.layout.position_in_line);
-			else {
+
+			} else {
 				setContentView(R.layout.main);
 				ListView lv = (ListView) findViewById(R.id.restaurants_available_list);
 
