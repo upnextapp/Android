@@ -31,6 +31,15 @@
             	<action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+        
+        <activity
+            android:name="com.stg.inqueue.initialActivity"
+            android:label="@string/initial">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+            
+        </activity>
        
     </application>
 

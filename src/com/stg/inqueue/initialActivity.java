@@ -1,5 +1,7 @@
 package com.stg.inqueue;
 
+import java.util.UUID;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
@@ -8,8 +10,13 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.stackmob.android.sdk.common.StackMobAndroid;
+
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.text.Editable;
 import android.util.Log;
 import android.view.View;
@@ -25,6 +32,8 @@ public class initialActivity extends Activity {
 	private Button submitButton;
 	private Button cancelButton;
 	private JSONObject jObject;
+	private String phoneNumber = "";
+	private String deviceID = "";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +45,14 @@ public class initialActivity extends Activity {
 		submitButton = (Button) findViewById(R.id.submit);
 		cancelButton= (Button) findViewById(R.id.cancel);
 		
-		submitButton.setOnClickListener((android.view.View.OnClickListener) submitButton);
-		cancelButton.setOnClickListener((android.view.View.OnClickListener) cancelButton);
+		submitButton.setOnClickListener(sumbitButtonListener);
+		cancelButton.setOnClickListener(cancelButtonListener);
+		
+		//Bundle bundle = this.getIntent().getExtras();
+		//deviceID = bundle.get("deviceID").toString();
+		//phoneNumber = bundle.getString("phoneNumber").toString();
+		
+		StackMobAndroid.init(getApplicationContext(), 0, "f66ba52f-9d96-47a6-97ad-ec4bc95e9687");
 		
 	}
 
@@ -56,6 +71,15 @@ public class initialActivity extends Activity {
 			String enteredEmail = email.getText().toString();
 			String enteredPassword = password.getText().toString();
 			
+			
+			/*if(enteredEmail != "" && enteredPassword != ""){
+				Registration registration = new Registration(enteredEmail, enteredPassword
+						,phoneNumber, deviceID);
+				registration.save();
+				
+			
+			}
+			/*
 			try {
 				parseJSON(enteredEmail, enteredPassword);
 			} catch (Exception e) {
@@ -68,7 +92,7 @@ public class initialActivity extends Activity {
 			}else{
 				Log.d("JSON object is not parsed", "error JSON");
 			}
-			
+			*/
 		}
 	};
 	
@@ -103,5 +127,5 @@ public class initialActivity extends Activity {
 			httpClient.getConnectionManager().shutdown();
 		}
 	}
-
+	
 }

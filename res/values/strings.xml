@@ -14,4 +14,5 @@
     <string name="submit">Submit</string>
     <string name="cancel">Cancel</string>
     <string name="empty"></string>
+    <string name="initial">Initial</string>
 </resources>
