@@ -13,20 +13,26 @@ import android.content.Context;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.stackmob.android.sdk.common.StackMobAndroid;
 
 public class MainActivity extends Activity {
 	public ArrayList<String> restaurantsArrayList;
 	public ArrayAdapter<String> restaurantsAdapter;
+	public OnItemClickListener listviewListener;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		StackMobAndroid.init(getApplicationContext(), 0, "f66ba52f-9d96-47a6-97ad-ec4bc95e9687");
+		StackMobAndroid.init(getApplicationContext(), 0,
+				"f66ba52f-9d96-47a6-97ad-ec4bc95e9687");
 
 		// Set up initial lists of restaurants.
 		setupRestaurantList();
@@ -53,10 +59,25 @@ public class MainActivity extends Activity {
 		restaurantsArrayList.add("Perry's Steakhouse");
 		restaurantsArrayList.add("Fogo de Chao");
 
+		// Create an adapter to map the array list of restaurants to the list
+		// view.
 		restaurantsAdapter = new ArrayAdapter<String>(this,
 				R.layout.restaurant_row, restaurantsArrayList);
-		lv.setAdapter(restaurantsAdapter);
-		// restaurantsAdapter.notifyDataSetChanged();
+
+		// Implement listener for the items on the list view.
+		listviewListener = new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+
+				// Do something...
+				Toast.makeText(getApplicationContext(),
+						restaurantsArrayList.get(position), Toast.LENGTH_SHORT)
+						.show();
+			}
+		};
 	}
 
 	@Override
@@ -193,7 +214,13 @@ public class MainActivity extends Activity {
 			else {
 				setContentView(R.layout.main);
 				ListView lv = (ListView) findViewById(R.id.restaurants_available_list);
+
+				// Attach the array list adapter to the list view.
 				lv.setAdapter(restaurantsAdapter);
+
+				// Attach the item listener so that it does something when a
+				// restaurant is clicked.
+				lv.setOnItemClickListener(listviewListener);
 				restaurantsAdapter.notifyDataSetChanged();
 			}
 		}
