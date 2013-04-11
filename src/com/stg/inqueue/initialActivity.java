@@ -93,6 +93,10 @@ public class initialActivity extends Activity {
 				Log.d("JSON object is not parsed", "error JSON");
 			}
 			*/
+			
+			//go to next activity
+			Intent goToMainActivity = new Intent(getApplicationContext(), MainActivity.class);
+			startActivity(goToMainActivity);
 		}
 	};
 	
