@@ -1,8 +1,9 @@
 package com.stg.inqueue;
 
-import com.stackmob.sdk.model.StackMobModel;
+//import com.stackmob.sdk.model.StackMobModel;
+import com.stackmob.sdk.model.StackMobUser;
 
-public class Registration extends StackMobModel{
+public class Registration extends StackMobUser{
 	
 	private String userEmail;
 	private String userPW;

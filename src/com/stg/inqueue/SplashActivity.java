@@ -5,7 +5,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.UUID;
 
-import com.stackmob.sdk.api.StackMobQuery;
+import com.stackmob.sdk.api.*;
+import com.stackmob.sdk.callback.StackMobModelCallback;
 import com.stackmob.sdk.callback.StackMobQueryCallback;
 import com.stackmob.sdk.exception.StackMobException;
 
@@ -31,6 +32,26 @@ public class SplashActivity extends Activity {
         actionBar.hide();
         
         userInfo = new userInformation(getUserPhoneNumber(), getUserDeviceID());
+        
+		/*Registration.query(Registration.class, new StackMobQuery().isInRange(0, 2), new StackMobQueryCallback<Registration>(){
+
+			@Override
+			public void failure(StackMobException arg0) {
+				// TODO Auto-generated method stub
+				Log.d("error 2", "failed to connect to stackmob");
+			}
+
+			@Override
+			public void success(List<Registration> users) {
+				// TODO Auto-generated method stub
+				
+				for(Registration u: users){
+					if(u.getID().contains(userInfo.getDeviceID())){
+						goToInitial = false;
+					};
+				}
+			}
+		});*/
 	}
 
 	@Override
@@ -42,9 +63,24 @@ public class SplashActivity extends Activity {
 		timer.schedule(new TimerTask() {
 
 			@Override
-			public void run() {
+			public void run(){
 				
-				/*Registration.query(Registration.class, new StackMobQuery().isInRange(0), new StackMobQueryCallback<Registration>() {
+				/*registration.fetch(new StackMobModelCallback() {
+				     public void success() {
+				         // The blogPostTask object is now filled in with data.
+				     }
+
+				     public void failure(StackMobException e) {
+				         // handle failure case
+				     }
+				 });
+				
+				//StackMobModelQuery<Task> highPriorityQuery = new StackMobModelQuery<Task>(Task.class).field(new StackMobField("priority").isGreaterThanOrEqualTo( 3).isLessThan(6)).fieldIsEqualTo("done", false);
+				
+				//StackMobModelQuery<Registration> q = new StackMobModelQuery<Registration>(Registration.class).field(new StackMobField("usermail").fieldIsNotNull(null));
+				
+				/*
+				Registration.query(Registration.class, new StackMobQuery().isInRange(0), new StackMobQueryCallback<Registration>() {
 
 					@Override
 					public void failure(StackMobException arg0) {
@@ -63,19 +99,17 @@ public class SplashActivity extends Activity {
 						}
 					}
 				});*/
-				goToInitial = false;
+				
+				//goToInitial = false;
 				startAnotherActivity();
 			}
-		}, 5000);
-		
-		
-		
+		}, 3000);
 	}
 
 	public void startAnotherActivity() {
 		//switch back to main later
 		if(!goToInitial){
-			Intent goToMainActivity = new Intent(getApplicationContext(),initialActivity.class);
+			Intent goToMainActivity = new Intent(getApplicationContext(),MainActivity.class);
 			//Toast.makeText(getApplicationContext(), "Main", Toast.LENGTH_SHORT).show();
 			startActivity(goToMainActivity);
 		}else{
@@ -162,7 +196,6 @@ public class SplashActivity extends Activity {
 		String deviceId = deviceUuid.toString();
 
 		return deviceId;
-
 	}
 	
 	public String getUserPhoneNumber() {
@@ -175,6 +208,4 @@ public class SplashActivity extends Activity {
 		return tmNumber.toString();
 
 	}
-	
-	
 }

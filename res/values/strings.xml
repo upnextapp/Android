@@ -11,8 +11,9 @@
     <string name="welcome">Welcome to inQueue!</string>
     <string name="title_activity_splash_">Splash_Activity</string>
     <string name="splash">Splash</string>
-    <string name="submit">Submit</string>
+    <string name="login">Login</string>
     <string name="cancel">Cancel</string>
     <string name="empty"></string>
     <string name="initial">Initial</string>
+    <string name="createUser">Create User</string>
 </resources>
