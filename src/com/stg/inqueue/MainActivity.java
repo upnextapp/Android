@@ -63,7 +63,18 @@ public class MainActivity extends Activity {
 		
 		// Create an empty line.
 		queue = new QueueLine("");
+<<<<<<< HEAD
 		
+=======
+
+		setContentView(R.layout.main);
+<<<<<<< HEAD
+		StackMobAndroid.init(getApplicationContext(), 0,
+				"f66ba52f-9d96-47a6-97ad-ec4bc95e9687");
+=======
+>>>>>>> front_end
+
+>>>>>>> parent of b9c6a77... Fix merge conflicts.
 		// Set up initial lists of restaurants.
 		//setupRestaurantList();
 		

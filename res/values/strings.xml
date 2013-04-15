@@ -14,7 +14,10 @@
     <string name="login">Login</string>
     <string name="cancel">Cancel</string>
     <string name="empty"></string>
+<<<<<<< HEAD
     <string name="position">POSITION HERE</string>
+=======
     <string name="initial">Initial</string>
     <string name="createUser">Create User</string>
+>>>>>>> front_end
 </resources>
