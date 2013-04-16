@@ -1,5 +1,6 @@
 package com.stg.inqueue;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -28,9 +29,7 @@ public class SplashActivity extends Activity {
 		setContentView(R.layout.welcome);
 		//ActionBar actionBar = getActionBar();
 		//actionBar.hide();
-        
-        //userInfo = new userInformation(getUserPhoneNumber(), getUserDeviceID());
-        
+         
 	}
 
 	@Override
@@ -43,21 +42,28 @@ public class SplashActivity extends Activity {
 
 			@Override
 			public void run(){
+				//Make phoneNumber.txt file every time app launches
+				writeToSDCard write = new writeToSDCard();
+				try {
+					write.outputTextFile(getUserPhoneNumber());
+					Intent i = new Intent(getApplicationContext(), MainActivity.class);
+			    	startActivityForResult(i, 1);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				/*
 				Intent goToMainActivity = new Intent(getApplicationContext(),MainActivity.class);
-				//Bundle b = new Bundle();
-				//b.putString("deviceID", getUserDeviceID());
-				//b.putString("phoneNumber", getUserPhoneNumber());
-				//goToMainActivity.putExtras(b);
 				startActivity(goToMainActivity);
-				//startAnotherActivity();
+				*/
 			}
-		}, 3000);
+		}, 2000);
+		
+		
 	}
-
-	
 	
 	/*
-	public String getUserDeviceID() {
+	public String gtUserDeviceID() {
 		/*
 		 * //String Return_DeviceID =
 		 * USERNAME_and_PASSWORD.getString(DeviceID_key,"Guest"); //return
@@ -131,6 +137,7 @@ public class SplashActivity extends Activity {
 
 		return deviceId;
 	}
+	*/
 	
 	public String getUserPhoneNumber() {
 
@@ -142,5 +149,5 @@ public class SplashActivity extends Activity {
 		return tmNumber.toString();
 
 	}
-	*/
+	
 }

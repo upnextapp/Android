@@ -1,5 +1,6 @@
 package com.stg.inqueue;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +28,7 @@ import android.app.ActionBar.TabListener;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -60,8 +62,8 @@ public class MainActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		StackMobAndroid.init(getApplicationContext(), 0, "f66ba52f-9d96-47a6-97ad-ec4bc95e9687");
-		StackMob.getStackMob().getSession().getLogger().setLogging(true);
+		//StackMobAndroid.init(getApplicationContext(), 0, "f66ba52f-9d96-47a6-97ad-ec4bc95e9687");
+		//StackMob.getStackMob().getSession().getLogger().setLogging(true);
 		//addTaskListButton = (Button) this.findViewById(R.id.add_tasklist_button);
 		//addTaskListName = (TextView) this.findViewById(R.id.add_tasklist_text);
 		
@@ -74,6 +76,11 @@ public class MainActivity extends Activity {
 		// Set up necessary tabs.
 		setupTabs();
 		
+		//I might not need this
+		//phoneNumberExists();
+		
+		/*
+		//gonna get rid of this later
 		if(StackMob.getStackMob().isLoggedIn()) {
 			User.getLoggedInUser(User.class, StackMobOptions.depthOf(2), new StackMobQueryCallback<User>() {
 				@Override
@@ -88,6 +95,34 @@ public class MainActivity extends Activity {
 			});
 		} else {
 			doLogin();
+		}
+		*/
+	
+	}
+	
+	public void phoneNumberExists(){
+		
+		//first check if directory exists
+		File f = new File(Environment.getExternalStorageDirectory() + "/inQueue/data");
+		if(f.exists()){
+			//second check if phoneNumbe file exists
+			File g = new File(Environment.getExternalStorageDirectory() + "/inQueue/data/phoneNumber.txt");
+			if(g.exists()){
+				//phoneNumber and directory exist
+				//do nothing
+			}else{
+				//directory exists but phoneNumber.txt doesn't exist
+				/*
+				Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+		    	startActivityForResult(i, 1);
+		    	*/
+			}
+		}else{
+			//directory doesn't exists
+			/*
+			Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+	    	startActivityForResult(i, 1);
+	    	*/
 		}
 	}
 	
@@ -117,9 +152,10 @@ public class MainActivity extends Activity {
 	            //add about method later
 	        	//logOff();
 	            return true;
-	        case R.id.logout:
+	        /*case R.id.logout:
 	        	logout();
 	        	return true;
+	        */
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
@@ -144,21 +180,7 @@ public class MainActivity extends Activity {
 				//Toast.makeText(getApplicationContext(), "Logged out successfully", Toast.LENGTH_SHORT).show();
 				doLogin();
 			}
-		}
-	);
-		/*
-		User.logout(new StackMobModelCallback<User>() {
-		    @Override
-		    public void success() {
-		        // the call succeeded
-		    }
-		 
-		    @Override
-		    public void failure(StackMobException e) {
-		        // the call failed
-		    }
 		});
-		*/
 	}
 	
 	
@@ -278,12 +300,12 @@ public class MainActivity extends Activity {
 		};
 		
 		
-		public class QueueDialogFragment extends DialogFragment {
-			public String restaurantName;
-	
-			public QueueDialogFragment(String name) {
-				this.restaurantName = name;
-			}
+	public class QueueDialogFragment extends DialogFragment {
+		public String restaurantName;
+
+		public QueueDialogFragment(String name) {
+			this.restaurantName = name;
+		}
 
 		@Override
 		public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -293,19 +315,19 @@ public class MainActivity extends Activity {
 					.setPositiveButton("Yes",
 							new DialogInterface.OnClickListener() {
 
-								@Override
-								public void onClick(DialogInterface dialog,
-										int which) {
-									// TODO Auto-generated method stub
+							@Override
+							public void onClick(DialogInterface dialog,
+									int which) {
+								// TODO Auto-generated method stub
 
-									// If it is not the same as the previous
-									// line, then make a new line and add in the
-									// user (temporarily named Kevin).
-									if (queue.getName() != restaurantName) {
-										queue = new QueueLine(restaurantName);
-										queue.add("Kevin");
-									}
+								// If it is not the same as the previous
+								// line, then make a new line and add in the
+								// user (temporarily named Kevin).
+								if (queue.getName() != restaurantName) {
+									queue = new QueueLine(restaurantName);
+									queue.add("Kevin");
 								}
+							}
 							})
 					.setNegativeButton("No",
 							new DialogInterface.OnClickListener() {

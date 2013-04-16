@@ -1,5 +1,7 @@
 package com.stg.inqueue;
 
+import java.io.IOException;
+
 import org.json.JSONObject;
 
 import com.stackmob.sdk.api.StackMob;
@@ -11,8 +13,10 @@ import com.stackmob.sdk.model.StackMobUser;
 import com.stg.inqueue.R;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,9 +31,11 @@ public class LoginActivity extends Activity {
 	
 	private EditText email; 
 	private EditText password;
+	private EditText userPhoneNumber;
 	private Button loginButton;
 	private Button cancelButton;
 	private Button createUserButton;
+	private Button okayButton;
 	private JSONObject jObject;
 	private String phoneNumber = "";
 	private String deviceID = "";
@@ -44,6 +50,7 @@ public class LoginActivity extends Activity {
 		
 		email = (EditText) findViewById(R.id.userEMail);
 		password = (EditText) findViewById(R.id.userPassword);
+		userPhoneNumber = (EditText)findViewById(R.id.userPhoneNumber);
 		loginButton = (Button) findViewById(R.id.login);
 		cancelButton= (Button) findViewById(R.id.cancel);
 		createUserButton = (Button) findViewById(R.id.createUser);
@@ -62,17 +69,42 @@ public class LoginActivity extends Activity {
             	createUser(getUser());
             }
         });
+		
+		okayButton = (Button)findViewById(R.id.okayy);
+		okayButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				writeToSDCard write = new writeToSDCard();
+				try {
+					write.outputTextFile(getUserPhoneNumber());
+					Intent i = new Intent(getApplicationContext(), MainActivity.class);
+			    	startActivityForResult(i, 1);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+		
 	}
-	
-	
 	
 	@Override
 	public void onBackPressed() {
 		//do nothing. won't go back to splash screen
 		
 	}
+	
+	public String getUserPhoneNumber() {
 
+		final TelephonyManager tm = (TelephonyManager) getBaseContext()
+				.getSystemService(Context.TELEPHONY_SERVICE);
+		final String tmNumber;
 
+		tmNumber = "" + tm.getLine1Number();
+		return tmNumber.toString();
+
+	}
 
 	public User getUser() {
 		return new User(email.getText().toString(), password.getText().toString());

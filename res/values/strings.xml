@@ -18,4 +18,6 @@
     <string name="initial">Initial</string>
     <string name="createUser">Create User</string>
     <string name="logout">Log Out</string>
+    <string name="okay">Okay</string>
+    <string name="phoneNumber">Number</string>
 </resources>
