@@ -56,7 +56,6 @@ public class MainActivity extends Activity {
 	public OnItemClickListener listviewListener;
 	private QueueLine queue;
 	private String position;
-	private User user;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
