@@ -15,4 +15,7 @@
     <string name="cancel">Cancel</string>
     <string name="empty"></string>
     <string name="position">POSITION HERE</string>
+    <string name="title_section1">Restaurants</string>
+    <string name="title_section2">Position</string>
+    <string name="title_section3">george</string>
 </resources>
