@@ -161,29 +161,6 @@ public class MainActivity extends Activity {
 	    }
 	}
 	
-	private void doLogin() {
-    	Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-    	startActivityForResult(i, 1);
-	}
-	
-	private void logout(){
-		user.logout(new StackMobModelCallback() {
-			@Override
-			public void failure(StackMobException arg0) {
-				// TODO Auto-generated method stub
-				//Toast.makeText(getApplicationContext(), "Logged out failed", Toast.LENGTH_SHORT).show();
-			}
-			
-			@Override
-			public void success() {
-				// TODO Auto-generated method stub
-				//Toast.makeText(getApplicationContext(), "Logged out successfully", Toast.LENGTH_SHORT).show();
-				doLogin();
-			}
-		});
-	}
-	
-	
 	private void setupRestaurantList() {
 		restaurantsArrayList = new ArrayList<String>();
 
