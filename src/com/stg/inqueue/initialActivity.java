@@ -111,11 +111,6 @@ public class initialActivity extends Activity {
 			
 			getInputs();
 			login(getUser());
-			/*
-				//Log.d("successfully saved stackmob", "okay");
-				//Toast.makeText(getApplicationContext(), "saving stackmob", Toast.LENGTH_SHORT).show();
-				
-			}
 			
 			/*
 			try {
@@ -163,16 +158,20 @@ public class initialActivity extends Activity {
 			
 			@Override
 			public void success(String arg0) {
+				Toast.makeText(getApplicationContext(), "Welcome returning user", Toast.LENGTH_SHORT).show();
 				StackMobSession session = StackMob.getStackMob().getSession();
 				Intent i = getIntent();
+				i.putExtra("enteredEmail", enteredEmail);
+				i.putExtra("enteredPassword", enteredPassword);
 				i.putExtra(MainActivity.LOGGED_IN_USER, user.toJson());
 				setResult(RESULT_OK, i);
-				finish();	
+				finish();
 			}
 			
 			@Override
 			public void failure(StackMobException arg0) {
 				Toast.makeText(getApplicationContext(), arg0.getMessage(), 10).show();
+				Toast.makeText(getApplicationContext(), "Fail to log in", Toast.LENGTH_SHORT).show();
 				
 			}
 		});

@@ -64,6 +64,16 @@ public class LoginActivity extends Activity {
         });
 	}
 	
+	
+	
+	@Override
+	public void onBackPressed() {
+		//do nothing. won't go back to splash screen
+		
+	}
+
+
+
 	public User getUser() {
 		return new User(email.getText().toString(), password.getText().toString());
 	}

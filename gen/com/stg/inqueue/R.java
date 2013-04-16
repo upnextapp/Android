@@ -25,6 +25,7 @@ public final class R {
         public static final int intial_row2=0x7f070005;
         public static final int login=0x7f070009;
         public static final int logo=0x7f07000f;
+        public static final int logout=0x7f070019;
         public static final int menu_about=0x7f070017;
         public static final int menu_help=0x7f070018;
         public static final int menu_settings=0x7f070016;
@@ -65,6 +66,7 @@ public final class R {
         public static final int hello_world=0x7f040001;
         public static final int initial=0x7f04000e;
         public static final int login=0x7f04000a;
+        public static final int logout=0x7f040010;
         public static final int menu_about=0x7f040003;
         public static final int menu_help=0x7f040004;
         public static final int menu_settings=0x7f040002;
