@@ -20,20 +20,20 @@ public class writeToSDCard {
 			dir.mkdirs();
 		}
 		File file = new File(dir, "phoneNumber.txt");
-
-		try {
-			FileOutputStream f = new FileOutputStream(file);
-			//PrintWriter pw = new PrintWriter(f);
-			PrintWriter pw = new PrintWriter(f, false);
-			pw.println(number);
-			pw.flush();
-			pw.close();
-			f.close();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			Log.i(TAG, "******* File not found. Did you" +
-	                " add a WRITE_EXTERNAL_STORAGE permission to the   manifest?");
+		if(!(file.exists())){
+			try {
+				FileOutputStream f = new FileOutputStream(file);
+				PrintWriter pw = new PrintWriter(f, false);
+				pw.println(number);
+				pw.flush();
+				pw.close();
+				f.close();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				Log.i(TAG, "******* File not found. Did you" +
+		                " add a WRITE_EXTERNAL_STORAGE permission to the   manifest?");
+			}
 		}
 	}
 }

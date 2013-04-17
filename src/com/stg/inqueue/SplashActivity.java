@@ -1,18 +1,11 @@
 package com.stg.inqueue;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.UUID;
 
-import com.stackmob.sdk.api.*;
-import com.stackmob.sdk.callback.StackMobModelCallback;
-import com.stackmob.sdk.callback.StackMobQueryCallback;
-import com.stackmob.sdk.exception.StackMobException;
 import com.stg.inqueue.R;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -27,9 +20,7 @@ public class SplashActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.welcome);
-		//ActionBar actionBar = getActionBar();
-		//actionBar.hide();
-         
+
 	}
 
 	@Override
@@ -52,14 +43,19 @@ public class SplashActivity extends Activity {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				/*
-				Intent goToMainActivity = new Intent(getApplicationContext(),MainActivity.class);
-				startActivity(goToMainActivity);
-				*/
 			}
 		}, 2000);
-		
-		
+	}
+	
+	public String getUserPhoneNumber() {
+
+		final TelephonyManager tm = (TelephonyManager) getBaseContext()
+				.getSystemService(Context.TELEPHONY_SERVICE);
+		final String tmNumber;
+
+		tmNumber = "" + tm.getLine1Number();
+		return tmNumber.toString();
+
 	}
 	
 	/*
@@ -138,16 +134,4 @@ public class SplashActivity extends Activity {
 		return deviceId;
 	}
 	*/
-	
-	public String getUserPhoneNumber() {
-
-		final TelephonyManager tm = (TelephonyManager) getBaseContext()
-				.getSystemService(Context.TELEPHONY_SERVICE);
-		final String tmNumber;
-
-		tmNumber = "" + tm.getLine1Number();
-		return tmNumber.toString();
-
-	}
-	
 }

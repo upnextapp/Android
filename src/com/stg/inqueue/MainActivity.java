@@ -2,18 +2,15 @@ package com.stg.inqueue;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.google.gson.JsonArray;
 import com.stg.inqueue.R;
-import com.stackmob.android.sdk.common.StackMobAndroid;
-import com.stackmob.sdk.api.StackMob;
-import com.stackmob.sdk.api.StackMobOptions;
-import com.stackmob.sdk.api.StackMobSession;
-import com.stackmob.sdk.callback.StackMobCallback;
-import com.stackmob.sdk.callback.StackMobModelCallback;
-import com.stackmob.sdk.callback.StackMobQueryCallback;
-import com.stackmob.sdk.exception.StackMobException;
-import com.stackmob.sdk.util.StackMobLogger;
 //import com.stg.inqueue.Main_Activity.QueueDialogFragment;
 
 import android.app.ActionBar;
@@ -22,7 +19,6 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.FragmentTransaction;
-import android.app.ListActivity;
 import android.app.ActionBar.Tab;
 import android.app.ActionBar.TabListener;
 import android.content.DialogInterface;
@@ -45,11 +41,22 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class MainActivity extends Activity {
 	
-	//protected static final String TASKLIST_KEY = "task_list";
-	//protected static final String TASKLIST_RETURN_KEY = "modified_task_list";
-	//protected static final String TASKLIST_INDEX = "task_list_index";
-	protected static final String LOGGED_IN_USER = "logged_in_user";
-
+	// url to make request
+	private static String url = "http://api.androidhive.info/contacts/";
+	private static String url_inqueue = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/";
+	
+	//JSON node names
+	private static String TAG_USERS = "users";
+	private static String TAG_PHONE = "phone";
+	private static String TAG_BUSINESSES = "businesses";
+	private static String TAG_ID ="id";
+	
+	//JSON array
+	JSONArray business = null;
+	
+	//Business map
+	HashMap<String,String> businessMap = new HashMap<String, String>();
+	
 	//private TaskListAdapter adapter;
 	public ArrayList<String> restaurantsArrayList;
 	public ArrayAdapter<String> restaurantsAdapter;
@@ -61,10 +68,6 @@ public class MainActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		//StackMobAndroid.init(getApplicationContext(), 0, "f66ba52f-9d96-47a6-97ad-ec4bc95e9687");
-		//StackMob.getStackMob().getSession().getLogger().setLogging(true);
-		//addTaskListButton = (Button) this.findViewById(R.id.add_tasklist_button);
-		//addTaskListName = (TextView) this.findViewById(R.id.add_tasklist_text);
 		
 		// Create an empty line.
 		queue = new QueueLine("");
@@ -74,61 +77,46 @@ public class MainActivity extends Activity {
 		
 		// Set up necessary tabs.
 		setupTabs();
-		
-		//I might not need this
-		//phoneNumberExists();
-		
-		/*
-		//gonna get rid of this later
-		if(StackMob.getStackMob().isLoggedIn()) {
-			User.getLoggedInUser(User.class, StackMobOptions.depthOf(2), new StackMobQueryCallback<User>() {
-				@Override
-				public void success(List<User> list) {
-					user = list.get(0);
-				}
-
-				@Override
-				public void failure(StackMobException e) {
-					doLogin();
-				}
-			});
-		} else {
-			doLogin();
-		}
-		*/
 	
 	}
 	
-	public void phoneNumberExists(){
+	@Override
+	protected void onStart() {
+		// TODO Auto-generated method stub
+		super.onStart();
 		
-		//first check if directory exists
-		File f = new File(Environment.getExternalStorageDirectory() + "/inQueue/data");
-		if(f.exists()){
-			//second check if phoneNumbe file exists
-			File g = new File(Environment.getExternalStorageDirectory() + "/inQueue/data/phoneNumber.txt");
-			if(g.exists()){
-				//phoneNumber and directory exist
-				//do nothing
-			}else{
-				//directory exists but phoneNumber.txt doesn't exist
-				/*
-				Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-		    	startActivityForResult(i, 1);
-		    	*/
+		//JSON request to grab businesses
+		JSONParser jsonParser = new JSONParser();
+		JSONObject jsonObject = jsonParser.getJSONFromUrl(url_inqueue);
+		
+		try{
+			business = jsonObject.getJSONArray(TAG_BUSINESSES);
+			for(int i=0; i < business.length();i++){
+				JSONObject j = business.getJSONObject(i);
+				
+				//add key, values of business
+				String business_name = j.getString(TAG_BUSINESSES);
+				String business_id = j.getString(TAG_ID);
+				
+				//put key, values to map
+				businessMap.put(business_name, business_id);
 			}
-		}else{
-			//directory doesn't exists
-			/*
-			Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-	    	startActivityForResult(i, 1);
-	    	*/
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			//do nothing for now
 		}
 	}
 	
+
+
+
 	@Override
 	public void onBackPressed() {
 		//do nothing. won't go back to splash screen
 	}
+	
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
@@ -137,6 +125,7 @@ public class MainActivity extends Activity {
 	    inflater.inflate(R.menu.main, menu);
 	    return true;
 	}
+	
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item)
@@ -151,14 +140,11 @@ public class MainActivity extends Activity {
 	            //add about method later
 	        	//logOff();
 	            return true;
-	        /*case R.id.logout:
-	        	logout();
-	        	return true;
-	        */
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
 	}
+	
 	
 	private void setupRestaurantList() {
 		restaurantsArrayList = new ArrayList<String>();
