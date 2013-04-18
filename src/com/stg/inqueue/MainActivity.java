@@ -27,6 +27,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.stackmob.android.sdk.common.StackMobAndroid;
 
@@ -76,7 +77,7 @@ public class MainActivity extends FragmentActivity {
 	private void setupRestaurantList() {
 		restaurantsArrayList = new ArrayList<String>();
 
-		// TODO: Make a separate method to add restaurants (possibly throught
+		// TODO: Make a separate method to add restaurants (possibly through
 		// the Internet?) and save the list so that it doesn't continually add
 		// it to the list.
 		restaurantsArrayList.add("Olive Garden");
@@ -351,18 +352,25 @@ public class MainActivity extends FragmentActivity {
 			// getItem is called to instantiate the fragment for the given page.
 			// Return a DummySectionFragment (defined as a static inner class
 			// below) with the page number as its lone argument.
-			DummySectionFragment fragment = new DummySectionFragment();
-			fragment.setAdapter(restaurantsAdapter);
-			fragment.setListener(listviewListener);
 			Bundle args = new Bundle();
-			args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
-			fragment.setArguments(args);
-			return fragment;
+			if (position == 0) {
+				RestaurantListFragment fragment = new RestaurantListFragment();
+				fragment.setAdapter(restaurantsAdapter);
+				fragment.setListener(listviewListener);
+				args.putInt(RestaurantListFragment.ARG_SECTION_NUMBER, position + 1);
+				fragment.setArguments(args);
+				return fragment;
+			} else {
+				PositionFragment pFragment = new PositionFragment();
+				args.putInt(PositionFragment.ARG_SECTION_NUMBER, position + 2);
+				pFragment.setArguments(args);
+				return pFragment;
+			}
 		}
 
 		@Override
 		public int getCount() {
-			// Show 3 total pages.
+			// Show 2 total pages.
 			return 2;
 		}
 
@@ -374,8 +382,6 @@ public class MainActivity extends FragmentActivity {
 				return getString(R.string.title_section1).toUpperCase(l);
 			case 1:
 				return getString(R.string.title_section2).toUpperCase(l);
-			case 2:
-				return getString(R.string.title_section3).toUpperCase(l);
 			}
 			return null;
 		}
@@ -386,7 +392,7 @@ public class MainActivity extends FragmentActivity {
 	 * displays dummy text.
 	 */
 	@SuppressLint("ValidFragment")
-	public static class DummySectionFragment extends ListFragment {
+	public static class RestaurantListFragment extends ListFragment {
 		/**
 		 * The fragment argument representing the section number for this
 		 * fragment.
@@ -395,7 +401,7 @@ public class MainActivity extends FragmentActivity {
 		private ArrayAdapter<String> adapter;
 		private OnItemClickListener listener;
 		
-		public DummySectionFragment() {
+		public RestaurantListFragment() {
 		}
 		
 		public void setAdapter(ArrayAdapter<String> a) {
@@ -422,6 +428,35 @@ public class MainActivity extends FragmentActivity {
 					container, false);
 			ListView lv = (ListView) rootView.findViewById(android.R.id.list);
 			lv.setAdapter(adapter);
+			return rootView;
+		}
+	}
+	
+	public static class PositionFragment extends Fragment {
+		/**
+		 * The fragment argument representing the section number for this
+		 * fragment.
+		 */
+		public static final String ARG_SECTION_NUMBER = "section_number";
+		private QueueLine queue;
+		
+		public PositionFragment() {
+		}
+		
+		public void setQueue(QueueLine q) {
+			this.queue = q;
+		}
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			setRetainInstance(true);
+			View rootView = inflater.inflate(R.layout.position_in_line,
+					container, false);
+			TextView tv = (TextView) rootView.findViewById(R.id.position);
+			tv.setText("POSITION GOES HERE");
+			//ListView lv = (ListView) rootView.findViewById(android.R.id.list);
+			//lv.setAdapter(adapter);
 			return rootView;
 		}
 	}
