@@ -17,4 +17,7 @@
     <string name="position">POSITION HERE</string>
     <string name="initial">Initial</string>
     <string name="createUser">Create User</string>
+    <string name="title_section1">Restaurants</string>
+    <string name="title_section2">Position</string>
+    <string name="title_section3">george</string>
 </resources>
