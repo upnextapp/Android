@@ -16,11 +16,20 @@
     <string name="position">POSITION HERE</string>
     <string name="initial">Initial</string>
     <string name="createUser">Create User</string>
+<<<<<<< HEAD
     <string name="logout">Log Out</string>
     <string name="okay">Okay</string>
     <string name="phoneNumber">Number</string>
     <string name="main">Main</string>
+<<<<<<< HEAD
     <string name="title_section1">Restaurants</string>
     <string name="title_section2">Position</string>
     <string name="title_section3">george</string>
+=======
+=======
+    <string name="title_section1">Restaurants</string>
+    <string name="title_section2">Position</string>
+    <string name="title_section3">george</string>
+>>>>>>> 54ff78aa27169c8ae861f7c34902a1d0143f041f
+>>>>>>> 96ae98ac75e656527a78632038f6985b211e241b
 </resources>

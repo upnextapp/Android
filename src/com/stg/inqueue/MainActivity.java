@@ -1,16 +1,66 @@
 package com.stg.inqueue;
 
 import java.util.ArrayList;
+<<<<<<< HEAD
 import java.util.Date;
 import java.util.HashMap;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+=======
+<<<<<<< HEAD
+import java.util.HashMap;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.google.gson.JsonArray;
+import com.stg.inqueue.R;
+//import com.stg.inqueue.Main_Activity.QueueDialogFragment;
+
+import android.app.ActionBar;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.app.FragmentTransaction;
+import android.app.ActionBar.Tab;
+import android.app.ActionBar.TabListener;
+import android.content.DialogInterface;
+import android.content.Intent;
+>>>>>>> 96ae98ac75e656527a78632038f6985b211e241b
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+=======
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+import java.util.UUID;
+
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.ListFragment;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.telephony.TelephonyManager;
+import android.view.LayoutInflater;
+import android.view.Menu;
+>>>>>>> 54ff78aa27169c8ae861f7c34902a1d0143f041f
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
@@ -38,13 +88,66 @@ public class MainActivity extends FragmentActivity {
 	
 	//private TaskListAdapter adapter;
 
+=======
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+<<<<<<< HEAD
+public class MainActivity extends Activity {
+	
+	// url to make request
+	//private static String url = "http://api.androidhive.info/contacts/";
+	private static String url_inqueue = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/";
+	
+	//JSON node names
+	private static String TAG_USERS = "users";
+	private static String TAG_PHONE = "phone";
+	private static String TAG_BUSINESSES = "businesses";
+	private static String TAG_ID ="id";
+	
+	//JSON array
+	JSONArray business = null;
+	
+	//Business map
+	HashMap<String,String> businessMap = new HashMap<String, String>();
+	
+	//private TaskListAdapter adapter;
+=======
+import com.stackmob.android.sdk.common.StackMobAndroid;
+import com.stackmob.sdk.api.StackMob;
+import com.stackmob.sdk.api.StackMobOptions;
+import com.stackmob.sdk.callback.StackMobQueryCallback;
+import com.stackmob.sdk.exception.StackMobException;
+//import com.stg.inqueue.Main_Activity.QueueDialogFragment;
+
+	
+public class MainActivity extends FragmentActivity {
+>>>>>>> 54ff78aa27169c8ae861f7c34902a1d0143f041f
+>>>>>>> 96ae98ac75e656527a78632038f6985b211e241b
 	public ArrayList<String> restaurantsArrayList;
 	public ArrayAdapter<String> restaurantsAdapter;
 	public OnItemClickListener listviewListener;
 	private QueueLine queue;
 	private String position;
+<<<<<<< HEAD
+=======
+	private User user;
+	//protected static final String TASKLIST_KEY = "task_list";
+	//protected static final String TASKLIST_RETURN_KEY = "modified_task_list";
+	//protected static final String TASKLIST_INDEX = "task_list_index";
+	protected static final String LOGGED_IN_USER = "logged_in_user";
 
 	//private TaskListAdapter adapter;
+>>>>>>> 54ff78aa27169c8ae861f7c34902a1d0143f041f
+
+<<<<<<< HEAD
+	//private TaskListAdapter adapter;
+=======
+>>>>>>> 96ae98ac75e656527a78632038f6985b211e241b
 	SectionsPagerAdapter mSectionsPagerAdapter;
 	ViewPager mViewPager;
 	

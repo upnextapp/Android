@@ -25,7 +25,14 @@
             </intent-filter>
         </activity>
             
+<<<<<<< HEAD
         <activity android:name=".MainActivity" android:label="@string/main" />
+=======
+        <activity android:name=".MainActivity" android:label="@string/main">
+         
+        </activity>
+        <activity android:name=".LoginActivity" android:label="@string/login" />
+>>>>>>> 96ae98ac75e656527a78632038f6985b211e241b
     </application>
     
 </manifest>
