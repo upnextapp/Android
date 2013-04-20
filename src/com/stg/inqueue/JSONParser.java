@@ -9,7 +9,10 @@ import java.io.UnsupportedEncodingException;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -71,5 +74,21 @@ public class JSONParser {
         // return JSON String
         return jObj;
  
+    }
+    
+    public void postRequest(JSONObject jo,String url) throws Exception{
+		
+    	DefaultHttpClient httpClient = new DefaultHttpClient();
+    	HttpPost httpPost = new HttpPost(url);
+    	
+    	StringEntity se = new StringEntity(jo.toString());
+    	httpPost.setEntity(se);
+    	httpPost.setHeader("Accept", "application/json");
+    	httpPost.setHeader("Content-type", "application/json");
+
+    	HttpResponse httpResponse = httpClient.execute(httpPost);
+    	ResponseHandler responseHandler = new BasicResponseHandler();
+    	httpResponse = httpClient.execute(httpPost, responseHandler);
+    	
     }
 }

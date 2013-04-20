@@ -43,7 +43,10 @@ public class MainActivity extends FragmentActivity {
 
 	// url to make request
 	//private static String url = "http://api.androidhive.info/contacts/";
-	private static String url_inqueue = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/";
+	private static String url_getRestaurants = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/" +
+			"getRestaurants";
+	private static String url_enterQueue = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/" +
+			"enterQueue";
 	
 	//JSON node names
 	private static String TAG_USERS = "users";
@@ -55,7 +58,7 @@ public class MainActivity extends FragmentActivity {
 	JSONArray business = null;
 	
 	//Business map
-	HashMap<String,String> businessMap = new HashMap<String, String>();
+	static HashMap<String,String> businessMap = new HashMap<String, String>();
 	
 	//private TaskListAdapter adapter;
 	SectionsPagerAdapter mSectionsPagerAdapter;
@@ -86,7 +89,7 @@ public class MainActivity extends FragmentActivity {
 		
 		//JSON request to grab businesses
 		JSONParser jsonParser = new JSONParser();
-		JSONObject jsonObject = jsonParser.getJSONFromUrl(url_inqueue);
+		JSONObject jsonObject = jsonParser.getJSONFromUrl(url_getRestaurants);
 		
 		try{
 			business = jsonObject.getJSONArray(TAG_BUSINESSES);
@@ -344,20 +347,41 @@ public class MainActivity extends FragmentActivity {
 			builder.setMessage("Click 'Yes' to queue for " + restaurantName)
 					.setPositiveButton("Yes",
 							new DialogInterface.OnClickListener() {
-
+						
 								@Override
-								public void onClick(DialogInterface dialog,
-										int which) {
-
+								public void onClick(DialogInterface dialog,	int which) {
 									// If it is not the same as the previous
 									// line, then make a new line and add in the
 									// user (temporarily named Kevin).
+									// TODO:this is where we make a JSON post request.
 									if (queue.getName() != restaurantName) {
 										queue = new QueueLine(restaurantName);
 										queue.add("Kevin");
+										
+										//here is JSON post call
+										SDCard sd = new SDCard();
+										String phoneNumber = sd.getNumber();
+										String uniqueID = getBusinssID(restaurantName);
+										
+										JSONObject jObject = new JSONObject();
+										try{
+											jObject.put(TAG_PHONE, phoneNumber);
+											jObject.put(TAG_BUSINESSES,uniqueID);
+										}catch(Exception e){
+											e.printStackTrace();
+										}
+										
+										JSONParser jsonParser = new JSONParser();
+										try {
+											jsonParser.postRequest(jObject, url_enterQueue);
+										} catch (Exception e) {
+											// TODO Auto-generated catch block
+											e.printStackTrace();
+										}
 									}
 								}
 							})
+							
 					.setNegativeButton("No",
 							new DialogInterface.OnClickListener() {
 
@@ -367,6 +391,7 @@ public class MainActivity extends FragmentActivity {
 
 								}
 							}).setTitle("Would you like get in line?");
+			
 			return builder.create();
 		}
 
@@ -493,5 +518,12 @@ public class MainActivity extends FragmentActivity {
 			//lv.setAdapter(adapter);
 			return rootView;
 		}
+	}
+	
+	public static String getBusinssID(String businessName){
+		if(businessMap.containsKey(businessName)){
+			return businessMap.get(businessName);
+		}
+		return null;
 	}
 }
