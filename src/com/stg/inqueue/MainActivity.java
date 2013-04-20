@@ -1,134 +1,129 @@
 package com.stg.inqueue;
 
-import java.io.File;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Date;
+import java.util.HashMap;
 
-import com.stg.inqueue.R;
-import com.stackmob.android.sdk.common.StackMobAndroid;
-import com.stackmob.sdk.api.StackMob;
-import com.stackmob.sdk.api.StackMobOptions;
-import com.stackmob.sdk.api.StackMobSession;
-import com.stackmob.sdk.callback.StackMobCallback;
-import com.stackmob.sdk.callback.StackMobModelCallback;
-import com.stackmob.sdk.callback.StackMobQueryCallback;
-import com.stackmob.sdk.exception.StackMobException;
-import com.stackmob.sdk.util.StackMobLogger;
-//import com.stg.inqueue.Main_Activity.QueueDialogFragment;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
-import android.app.ActionBar;
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
-import android.app.FragmentTransaction;
-import android.app.ListActivity;
-import android.app.ActionBar.Tab;
-import android.app.ActionBar.TabListener;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Environment;
-import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+//import android.support.v4.app.FragmentActivity;
+//import android.support.v4.app.FragmentPagerAdapter;
+//import android.support.v4.view.ViewPager;
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity {
 	
-	//protected static final String TASKLIST_KEY = "task_list";
-	//protected static final String TASKLIST_RETURN_KEY = "modified_task_list";
-	//protected static final String TASKLIST_INDEX = "task_list_index";
-	protected static final String LOGGED_IN_USER = "logged_in_user";
-
+	// url to make request
+	//private static String url = "http://api.androidhive.info/contacts/";
+	private static String url_inqueue = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/";
+	
+	//JSON node names
+	private static String TAG_USERS = "users";
+	private static String TAG_PHONE = "phone";
+	private static String TAG_BUSINESSES = "businesses";
+	private static String TAG_ID ="id";
+	
+	//JSON array
+	JSONArray business = null;
+	
+	//Business map
+	HashMap<String,String> businessMap = new HashMap<String, String>();
+	
 	//private TaskListAdapter adapter;
+
 	public ArrayList<String> restaurantsArrayList;
 	public ArrayAdapter<String> restaurantsAdapter;
 	public OnItemClickListener listviewListener;
 	private QueueLine queue;
 	private String position;
 
+	//private TaskListAdapter adapter;
+	SectionsPagerAdapter mSectionsPagerAdapter;
+	ViewPager mViewPager;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		//StackMobAndroid.init(getApplicationContext(), 0, "f66ba52f-9d96-47a6-97ad-ec4bc95e9687");
-		//StackMob.getStackMob().getSession().getLogger().setLogging(true);
-		//addTaskListButton = (Button) this.findViewById(R.id.add_tasklist_button);
-		//addTaskListName = (TextView) this.findViewById(R.id.add_tasklist_text);
 		
 		// Create an empty line.
 		queue = new QueueLine("");
+		
+		// Create an empty line.
+		queue = new QueueLine("");
+
+		setContentView(R.layout.main);
+		StackMobAndroid.init(getApplicationContext(), 0,
+				"f66ba52f-9d96-47a6-97ad-ec4bc95e9687");
+
+		
 		
 		// Set up initial lists of restaurants.
 		setupRestaurantList();
 		
 		// Set up necessary tabs.
 		setupTabs();
-		
-		//I might not need this
-		//phoneNumberExists();
-		
-		/*
-		//gonna get rid of this later
-		if(StackMob.getStackMob().isLoggedIn()) {
-			User.getLoggedInUser(User.class, StackMobOptions.depthOf(2), new StackMobQueryCallback<User>() {
-				@Override
-				public void success(List<User> list) {
-					user = list.get(0);
-				}
-
-				@Override
-				public void failure(StackMobException e) {
-					doLogin();
-				}
-			});
-		} else {
-			doLogin();
-		}
-		*/
 	
 	}
 	
-	public void phoneNumberExists(){
+	@Override
+	protected void onStart() {
+		// TODO Auto-generated method stub
+		super.onStart();
 		
-		//first check if directory exists
-		File f = new File(Environment.getExternalStorageDirectory() + "/inQueue/data");
-		if(f.exists()){
-			//second check if phoneNumbe file exists
-			File g = new File(Environment.getExternalStorageDirectory() + "/inQueue/data/phoneNumber.txt");
-			if(g.exists()){
-				//phoneNumber and directory exist
-				//do nothing
-			}else{
-				//directory exists but phoneNumber.txt doesn't exist
-				/*
-				Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-		    	startActivityForResult(i, 1);
-		    	*/
+		//JSON request to grab businesses
+		JSONParser jsonParser = new JSONParser();
+		JSONObject jsonObject = jsonParser.getJSONFromUrl(url_inqueue);
+		
+		try{
+			business = jsonObject.getJSONArray(TAG_BUSINESSES);
+			for(int i=0; i < business.length();i++){
+				JSONObject j = business.getJSONObject(i);
+				
+				//add key, values of business
+				String business_name = j.getString(TAG_BUSINESSES);
+				String business_id = j.getString(TAG_ID);
+				
+				//put key, values to map
+				businessMap.put(business_name, business_id);
 			}
-		}else{
-			//directory doesn't exists
-			/*
-			Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-	    	startActivityForResult(i, 1);
-	    	*/
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			//do nothing for now
 		}
+
+		// Create the adapter that will return a fragment for each of the three
+		// primary sections of the app.
+		mSectionsPagerAdapter = new SectionsPagerAdapter(
+				getSupportFragmentManager());
+
+		// Set up the ViewPager with the sections adapter.
+		mViewPager = (ViewPager) findViewById(R.id.pager);
+		mViewPager.setAdapter(mSectionsPagerAdapter);
+		// testing purpose
+		// Toast.makeText(this, getDeviceID(), Toast.LENGTH_LONG).show();
+		// Toast.makeText(this, getPhoneNumber(), Toast.LENGTH_LONG).show();
+		Task myTask = new Task("Learn more about StackMob", new Date());
+		myTask.save();
 	}
 	
+
+
+
 	@Override
 	public void onBackPressed() {
 		//do nothing. won't go back to splash screen
 	}
+	
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
@@ -137,6 +132,7 @@ public class MainActivity extends Activity {
 	    inflater.inflate(R.menu.main, menu);
 	    return true;
 	}
+	
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item)
@@ -151,19 +147,16 @@ public class MainActivity extends Activity {
 	            //add about method later
 	        	//logOff();
 	            return true;
-	        /*case R.id.logout:
-	        	logout();
-	        	return true;
-	        */
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
 	}
 	
+	
 	private void setupRestaurantList() {
 		restaurantsArrayList = new ArrayList<String>();
 
-		// TODO: Make a separate method to add restaurants (possibly throught
+		// TODO: Make a separate method to add restaurants (possibly through
 		// the Internet?) and save the list so that it doesn't continually add
 		// it to the list.
 		restaurantsArrayList.add("Olive Garden");
@@ -190,50 +183,117 @@ public class MainActivity extends Activity {
 				// particular restaurant.
 				// TODO: Make sure that you are in queue for only one line at
 				// any given time.
-
-				QueueDialogFragment qdf = new QueueDialogFragment(
-						restaurantsArrayList.get(position));
+				QueueDialogFragment qdf = new QueueDialogFragment();
+				qdf.setRestaurantName(restaurantsArrayList.get(position));
+				qdf.setQueue(queue);
 				qdf.show(getFragmentManager(), "Queue Prompt");
 			}
 		};
 	}
+<<<<<<< HEAD
 	
 	// set up the ActionBar's tabs
 	private void setupTabs() {
 		ActionBar queueActionBar = getActionBar(); // get the ActionBar
+=======
+>>>>>>> 54ff78aa27169c8ae861f7c34902a1d0143f041f
 
-		// set ActionBar's navigation mode to use tabs
-		queueActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-
-		Tab restaurantsTab = queueActionBar.newTab();
-
-		// set the Tab's title
-		restaurantsTab.setText("Restaurants");
-
-		// add the Tab
-		restaurantsTab.setTabListener(queueTabListener);
-
-		// set the Tab's listener
-		queueActionBar.addTab(restaurantsTab);
-
-		Tab positionTab = queueActionBar.newTab();
-		positionTab.setText("Position");
-		positionTab.setTabListener(queueTabListener);
-		queueActionBar.addTab(positionTab);
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
 	}
+
+	public String getDeviceID() {
+		/*
+		 * //String Return_DeviceID =
+		 * USERNAME_and_PASSWORD.getString(DeviceID_key,"Guest"); //return
+		 * Return_DeviceID;
+		 * 
+		 * TelephonyManager TelephonyMgr = (TelephonyManager)
+		 * getApplicationContext
+		 * ().getApplicationContext().getSystemService(Context
+		 * .TELEPHONY_SERVICE); String m_szImei = TelephonyMgr.getDeviceId(); //
+		 * Requires // READ_PHONE_STATE
+		 * 
+		 * // 2 compute DEVICE ID String m_szDevIDShort = "35" + // we make this
+		 * look like a valid IMEI Build.BOARD.length() % 10 +
+		 * Build.BRAND.length() % 10 + Build.CPU_ABI.length() % 10 +
+		 * Build.DEVICE.length() % 10 + Build.DISPLAY.length() % 10 +
+		 * Build.HOST.length() % 10 + Build.ID.length() % 10 +
+		 * Build.MANUFACTURER.length() % 10 + Build.MODEL.length() % 10 +
+		 * Build.PRODUCT.length() % 10 + Build.TAGS.length() % 10 +
+		 * Build.TYPE.length() % 10 + Build.USER.length() % 10; // 13 digits //
+		 * 3 android ID - unreliable String m_szAndroidID =
+		 * Secure.getString(getContentResolver(),Secure.ANDROID_ID); // 4 wifi
+		 * manager, read MAC address - requires //
+		 * android.permission.ACCESS_WIFI_STATE or comes as null WifiManager wm
+		 * = (WifiManager)
+		 * getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+		 * String m_szWLANMAC = wm.getConnectionInfo().getMacAddress(); // 5
+		 * Bluetooth MAC address android.permission.BLUETOOTH required
+		 * BluetoothAdapter m_BluetoothAdapter = null; // Local Bluetooth
+		 * adapter m_BluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+		 * String m_szBTMAC = m_BluetoothAdapter.getAddress();
+		 * System.out.println("m_szBTMAC "+m_szBTMAC);
+		 * 
+		 * // 6 SUM THE IDs String m_szLongID = m_szImei + m_szDevIDShort +
+		 * m_szAndroidID+ m_szWLANMAC + m_szBTMAC;
+		 * System.out.println("m_szLongID "+m_szLongID); MessageDigest m = null;
+		 * try { m = MessageDigest.getInstance("MD5"); } catch
+		 * (NoSuchAlgorithmException e) { e.printStackTrace(); }
+		 * m.update(m_szLongID.getBytes(), 0, m_szLongID.length()); byte
+		 * p_md5Data[] = m.digest();
+		 * 
+		 * String m_szUniqueID = new String(); for (int i = 0; i <
+		 * p_md5Data.length; i++) { int b = (0xFF & p_md5Data[i]); // if it is a
+		 * single digit, make sure it have 0 in front (proper // padding) if (b
+		 * <= 0xF) m_szUniqueID += "0"; // add number to string m_szUniqueID +=
+		 * Integer.toHexString(b); } m_szUniqueID = m_szUniqueID.toUpperCase();
+		 * 
+		 * Log.i("-------------DeviceID------------", m_szUniqueID);
+		 * Log.d("DeviceIdCheck",
+		 * "DeviceId that generated MPreferenceActivity:"+m_szUniqueID);
+		 * 
+		 * 
+		 * //System.out.println(m_szUniqueID); return m_szUniqueID;
+		 * 
+		 * }
+		 */
+
+		// for prototype purposes, this is fine
+		final TelephonyManager tm = (TelephonyManager) getBaseContext()
+				.getSystemService(Context.TELEPHONY_SERVICE);
+		final String tmDevice, tmSerial, androidId;
+		tmDevice = "" + tm.getDeviceId();
+		tmSerial = "" + tm.getSimSerialNumber();
+		androidId = ""
+				+ android.provider.Settings.Secure.getString(
+						getContentResolver(),
+						android.provider.Settings.Secure.ANDROID_ID);
+
+		UUID deviceUuid = new UUID(androidId.hashCode(),
+				((long) tmDevice.hashCode() << 32) | tmSerial.hashCode());
+		String deviceId = deviceUuid.toString();
+
+		return deviceId;
+
+	}
+<<<<<<< HEAD
 	
 	// listen for events generated by the ActionBar Tabs
-	TabListener queueTabListener = new TabListener() {
+	TabListener queueTabListener = new TabListener(){
 		// called when the selected Tab is re-selected
 		@Override
-		public void onTabReselected(Tab arg0, FragmentTransaction arg1) {
+		public void onTabReselected(Tab arg0, FragmentTransaction arg1){
 		}
 
 		// called when a previously unselected Tab is selected
 		@Override
-		public void onTabSelected(Tab tab, FragmentTransaction arg1) {
+		public void onTabSelected(Tab tab, FragmentTransaction arg1){
 			// display the information corresponding to the selected Tab
-			if (tab.getPosition() == 1) {
+			if(tab.getPosition() == 1){
 				setContentView(R.layout.position_in_line);
 				
 				// Get the view for the queue name and position.
@@ -243,10 +303,10 @@ public class MainActivity extends Activity {
 				// If we have not selected a restaurant, display a special
 				// message.
 				// If we selected a restaurant, then set the title and position.
-				if (queue.getName() == "") {
+				if(queue.getName() == ""){
 					title.setText("");
 					position.setText("You are not in line!");
-				} else {
+				}else{
 					title.setText(queue.getName());
 
 					// "Kevin" will need to eventually be replaced with the user
@@ -255,27 +315,114 @@ public class MainActivity extends Activity {
 					position.setText(queue.getPosition("Kevin") + " / "
 							+ String.valueOf(queue.size()));
 				}
-			} else {
+			}else{
 				setContentView(R.layout.main);
 				ListView lv = (ListView) findViewById(R.id.restaurants_available_list);
+=======
 
-				// Attach the array list adapter to the list view.
-				lv.setAdapter(restaurantsAdapter);
+	public String getPhoneNumber() {
+>>>>>>> 54ff78aa27169c8ae861f7c34902a1d0143f041f
 
-				// Attach the item listener so that it does something when a
-				// restaurant is clicked.
-				lv.setOnItemClickListener(listviewListener);
-				restaurantsAdapter.notifyDataSetChanged();
-			}
+		final TelephonyManager tm = (TelephonyManager) getBaseContext()
+				.getSystemService(Context.TELEPHONY_SERVICE);
+		final String tmNumber;
+
+		tmNumber = "" + tm.getLine1Number();
+		return tmNumber.toString();
+
+	}
+//
+//	// set up the ActionBar's tabs
+//	private void setupTabs() {
+//		ActionBar queueActionBar = getActionBar(); // get the ActionBar
+//
+//		// set ActionBar's navigation mode to use tabs
+//		queueActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+//
+//		Tab restaurantsTab = queueActionBar.newTab();
+//
+//		// set the Tab's title
+//		restaurantsTab.setText("Restaurants");
+//
+//		// add the Tab
+//		restaurantsTab.setTabListener(queueTabListener);
+//
+//		// set the Tab's listener
+//		queueActionBar.addTab(restaurantsTab);
+//
+//		Tab positionTab = queueActionBar.newTab();
+//		positionTab.setText("Position");
+//		positionTab.setTabListener(queueTabListener);
+//		queueActionBar.addTab(positionTab);
+//	}
+//
+//	// listen for events generated by the ActionBar Tabs
+//	TabListener queueTabListener = new TabListener() {
+//		// called when the selected Tab is re-selected
+//		@Override
+//		public void onTabReselected(Tab arg0, FragmentTransaction arg1) {
+//		}
+//
+//		// called when a previously unselected Tab is selected
+//		@Override
+//		public void onTabSelected(Tab tab, FragmentTransaction arg1) {
+//			// display the information corresponding to the selected Tab
+//			if (tab.getPosition() == 1) {
+//				setContentView(R.layout.position_in_line);
+//				
+//				// Get the view for the queue name and position.
+//				TextView title = (TextView) findViewById(R.id.restaurant_position_title);
+//				TextView position = (TextView) findViewById(R.id.position);
+//
+//				// If we have not selected a restaurant, display a special
+//				// message.
+//				// If we selected a restaurant, then set the title and position.
+//				if (queue.getName() == "") {
+//					title.setText("");
+//					position.setText("You are not in line!");
+//				} else {
+//					title.setText(queue.getName());
+//
+//					// "Kevin" will need to eventually be replaced with the user
+//					// ID.
+//					// TODO: Change "Kevin" to a uniqued ID.
+//					position.setText(queue.getPosition("Kevin") + " / "
+//							+ String.valueOf(queue.size()));
+//				}
+//			} else {
+//				setContentView(R.layout.main);
+//				ListView lv = (ListView) findViewById(R.id.restaurants_available_list);
+//
+//				// Attach the array list adapter to the list view.
+//				lv.setAdapter(restaurantsAdapter);
+//
+//				// Attach the item listener so that it does something when a
+//				// restaurant is clicked.
+//				lv.setOnItemClickListener(listviewListener);
+//				restaurantsAdapter.notifyDataSetChanged();
+//			}
+//		}
+//
+//		// called when a tab is unselected
+//		@Override
+//		public void onTabUnselected(Tab arg0, FragmentTransaction arg1) {
+//		}
+//	};
+
+	@SuppressLint("ValidFragment")
+	public static class QueueDialogFragment extends DialogFragment {
+		private String restaurantName;
+		private QueueLine queue;
+		
+		public QueueDialogFragment() {
 		}
 
-		// called when a tab is unselected
-		@Override
-		public void onTabUnselected(Tab arg0, FragmentTransaction arg1) {
+		public void setRestaurantName(String name) {
+			this.restaurantName = name;
 		}
-		};
-		
-		
+<<<<<<< HEAD
+	};
+			
 	public class QueueDialogFragment extends DialogFragment {
 		public String restaurantName;
 
@@ -283,9 +430,17 @@ public class MainActivity extends Activity {
 			this.restaurantName = name;
 		}
 
+=======
+		
+		public void setQueue(QueueLine q) {
+			this.queue = q;
+		}
+		
+>>>>>>> 54ff78aa27169c8ae861f7c34902a1d0143f041f
 		@Override
 		public Dialog onCreateDialog(Bundle savedInstanceState) {
 			// TODO Auto-generated method stub
+			setRetainInstance(true);
 			AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 			builder.setMessage("Click 'Yes' to queue for " + restaurantName)
 					.setPositiveButton("Yes",
@@ -320,4 +475,127 @@ public class MainActivity extends Activity {
 
 	}
 	
+	/**
+	 * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
+	 * one of the sections/tabs/pages.
+	 */
+	public class SectionsPagerAdapter extends FragmentPagerAdapter {
+
+		public SectionsPagerAdapter(FragmentManager fm) {
+			super(fm);
+		}
+
+		@Override
+		public Fragment getItem(int position) {
+			// getItem is called to instantiate the fragment for the given page.
+			// Return a DummySectionFragment (defined as a static inner class
+			// below) with the page number as its lone argument.
+			Bundle args = new Bundle();
+			if (position == 0) {
+				RestaurantListFragment fragment = new RestaurantListFragment();
+				fragment.setAdapter(restaurantsAdapter);
+				fragment.setListener(listviewListener);
+				args.putInt(RestaurantListFragment.ARG_SECTION_NUMBER, position + 1);
+				fragment.setArguments(args);
+				return fragment;
+			} else {
+				PositionFragment pFragment = new PositionFragment();
+				args.putInt(PositionFragment.ARG_SECTION_NUMBER, position + 2);
+				pFragment.setArguments(args);
+				return pFragment;
+			}
+		}
+
+		@Override
+		public int getCount() {
+			// Show 2 total pages.
+			return 2;
+		}
+
+		@Override
+		public CharSequence getPageTitle(int position) {
+			Locale l = Locale.getDefault();
+			switch (position) {
+			case 0:
+				return getString(R.string.title_section1).toUpperCase(l);
+			case 1:
+				return getString(R.string.title_section2).toUpperCase(l);
+			}
+			return null;
+		}
+	}
+
+	/**
+	 * A dummy fragment representing a section of the app, but that simply
+	 * displays dummy text.
+	 */
+	@SuppressLint("ValidFragment")
+	public static class RestaurantListFragment extends ListFragment {
+		/**
+		 * The fragment argument representing the section number for this
+		 * fragment.
+		 */
+		public static final String ARG_SECTION_NUMBER = "section_number";
+		private ArrayAdapter<String> adapter;
+		private OnItemClickListener listener;
+		
+		public RestaurantListFragment() {
+		}
+		
+		public void setAdapter(ArrayAdapter<String> a) {
+			adapter = a;
+		}
+		
+		public void setListener(OnItemClickListener l) {
+			listener = l;
+		}
+
+		@Override
+		public void onListItemClick(ListView l, View v, int position, long id) {
+			// TODO Auto-generated method stub
+			super.onListItemClick(l, v, position, id);
+			QueueDialogFragment qdf = new QueueDialogFragment();
+			qdf.show(getActivity().getFragmentManager(), "Queue Prompt");
+		}
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			setRetainInstance(true);
+			View rootView = inflater.inflate(R.layout.fragment_main_dummy,
+					container, false);
+			ListView lv = (ListView) rootView.findViewById(android.R.id.list);
+			lv.setAdapter(adapter);
+			return rootView;
+		}
+	}
+	
+	public static class PositionFragment extends Fragment {
+		/**
+		 * The fragment argument representing the section number for this
+		 * fragment.
+		 */
+		public static final String ARG_SECTION_NUMBER = "section_number";
+		private QueueLine queue;
+		
+		public PositionFragment() {
+		}
+		
+		public void setQueue(QueueLine q) {
+			this.queue = q;
+		}
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			setRetainInstance(true);
+			View rootView = inflater.inflate(R.layout.position_in_line,
+					container, false);
+			TextView tv = (TextView) rootView.findViewById(R.id.position);
+			tv.setText("POSITION GOES HERE");
+			//ListView lv = (ListView) rootView.findViewById(android.R.id.list);
+			//lv.setAdapter(adapter);
+			return rootView;
+		}
+	}
 }
