@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">inQueue</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
@@ -11,10 +10,16 @@
     <string name="welcome">Welcome to inQueue!</string>
     <string name="title_activity_splash_">Splash_Activity</string>
     <string name="splash">Splash</string>
-    <string name="submit">Submit</string>
+    <string name="login">Login</string>
     <string name="cancel">Cancel</string>
     <string name="empty"></string>
     <string name="position">POSITION HERE</string>
+    <string name="initial">Initial</string>
+    <string name="createUser">Create User</string>
+    <string name="logout">Log Out</string>
+    <string name="okay">Okay</string>
+    <string name="phoneNumber">Number</string>
+    <string name="main">Main</string>
     <string name="title_section1">Restaurants</string>
     <string name="title_section2">Position</string>
     <string name="title_section3">george</string>
