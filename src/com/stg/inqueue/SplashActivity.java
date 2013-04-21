@@ -11,6 +11,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -53,7 +54,6 @@ public class SplashActivity extends Activity {
 		final String tmNumber;
 		tmNumber = "" + tm.getLine1Number();
 		return tmNumber.toString();
-
 	}
 
 }

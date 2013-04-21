@@ -10,6 +10,7 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.BasicResponseHandler;
@@ -24,32 +25,55 @@ public class JSONParser {
     static InputStream is = null;
     static JSONObject jObj = null;
     static String json = "";
+    static InputStream instream = null;
  
     // constructor
     public JSONParser() {
     	//empty constructor
     }
  
+    /*
     public JSONObject getJSONFromUrl(String url) {
+    	
+    	
+    	
+    	 DefaultHttpClient httpClient = new DefaultHttpClient();
+         HttpGet httpGet = new HttpGet(url);
  
+         HttpResponse httpResponse = null;
+         HttpEntity httpEntity = null;
         // Making HTTP request
         try {
-            // defaultHttpClient
-            DefaultHttpClient httpClient = new DefaultHttpClient();
-            HttpPost httpPost = new HttpPost(url);
- 
-            HttpResponse httpResponse = httpClient.execute(httpPost);
-            HttpEntity httpEntity = httpResponse.getEntity();
-            is = httpEntity.getContent();           
+            httpResponse= httpClient.execute(httpGet);
+            httpEntity = httpResponse.getEntity();
+            //is = httpEntity.getContent();           
  
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
+            Log.e("first error", "error 1");
         } catch (ClientProtocolException e) {
             e.printStackTrace();
+            Log.e("2 error", "error 2");
         } catch (IOException e) {
             e.printStackTrace();
+            Log.e("3 error", "error 3");
         }
- 
+        
+        // A Simple JSON Response Read
+		try {
+			instream = httpEntity.getContent();
+		} catch (IllegalStateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String result= convertStreamToString(instream);
+		
+		
+        
+        /*
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(
                     is, "iso-8859-1"), 8);
@@ -73,8 +97,10 @@ public class JSONParser {
  
         // return JSON String
         return jObj;
+        
  
     }
+	*/
     
     public void postRequest(JSONObject jo,String url) throws Exception{
 		
@@ -91,4 +117,33 @@ public class JSONParser {
     	httpResponse = httpClient.execute(httpPost, responseHandler);
     	
     }
+    
+    private static String convertStreamToString(InputStream is) {
+		/*
+		 * To convert the InputStream to String we use the BufferedReader.readLine()
+		 * method. We iterate until the BufferedReader return null which means
+		 * there's no more data to read. Each line will appended to a StringBuilder
+		 * and returned as String.
+		 */
+		BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+		StringBuilder sb = new StringBuilder();
+
+		String line = null;
+		try {
+			while ((line = reader.readLine()) != null) {
+				sb.append(line + "\n");
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				is.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+		return sb.toString();
+	}
+
 }

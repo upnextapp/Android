@@ -2,9 +2,13 @@ package com.stg.inqueue;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
+import java.util.HashSet;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -15,6 +19,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v4.app.Fragment;
@@ -22,6 +27,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -32,27 +38,37 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.gson.Gson;
+import com.google.gson.stream.JsonReader;
 
 public class MainActivity extends FragmentActivity {
+	
+	public interface Callback{
+		void onComplete();
+		void onFail();
+	}
 	
 	public ArrayList<String> restaurantsArrayList;
 	public ArrayAdapter<String> restaurantsAdapter;
 	public OnItemClickListener listviewListener;
 	private QueueLine queue;
 	private String position;
+	private static Network n;
 
 	// url to make request
 	//private static String url = "http://api.androidhive.info/contacts/";
 	private static String url_getRestaurants = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/" +
-			"getRestaurants";
+			"api/list";
 	private static String url_enterQueue = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/" +
 			"enterQueue";
 	
 	//JSON node names
-	private static String TAG_USERS = "users";
 	private static String TAG_PHONE = "phone";
-	private static String TAG_BUSINESSES = "businesses";
-	private static String TAG_ID ="id";
+	private static String TAG_QUEUES = "queues";
+	private static String TAG_ID = "uniqueID";
+	private static String TAG_NAME= "name";
 	
 	//JSON array
 	JSONArray business = null;
@@ -75,52 +91,113 @@ public class MainActivity extends FragmentActivity {
 		// Create an empty line.
 		queue = new QueueLine("");
 		
-		// Set up initial lists of restaurants.
-		setupRestaurantList();
-		
-		// Set up necessary tabs.
-		setupTabs();
-	
+		// fetch restaurants
+		startAsyncTask();
+			
 	}
 	
 	@Override
 	protected void onStart() {
 		super.onStart();
 		
-		//JSON request to grab businesses
-		JSONParser jsonParser = new JSONParser();
-		JSONObject jsonObject = jsonParser.getJSONFromUrl(url_getRestaurants);
+		/*// Set up necessary tabs.
+		setupTabs();
 		
-		try{
-			business = jsonObject.getJSONArray(TAG_BUSINESSES);
-			for(int i=0; i < business.length();i++){
-				JSONObject j = business.getJSONObject(i);
-				
-				//add key, values of business
-				String business_name = j.getString(TAG_BUSINESSES);
-				String business_id = j.getString(TAG_ID);
-				
-				//put key, values to map
-				businessMap.put(business_name, business_id);
-			}
-			
-		}catch(Exception e){
-			e.printStackTrace();
-		}finally{
-			//do nothing for now
-		}
-
+		// Set up initial lists of restaurants.
+		setupRestaurantList();*/
+		
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the app.
-		mSectionsPagerAdapter = new SectionsPagerAdapter(
-				getSupportFragmentManager());
+		/*
+		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
 		// Set up the ViewPager with the sections adapter.
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
+		*/
 		// testing purpose
 		// Toast.makeText(this, getDeviceID(), Toast.LENGTH_LONG).show();
 		// Toast.makeText(this, getPhoneNumber(), Toast.LENGTH_LONG).show();
+		
+	}
+	
+	public void startAsyncTask(){
+		n = new Network(new Callback(){
+			
+			@Override
+			public void onComplete() {
+				// TODO Auto-generated method stub
+				try {
+					
+					JSONObject jObject = n.get(100, TimeUnit.MILLISECONDS);
+					Log.i("front_end","grabbed JSON Object");
+					
+					//make restaurant list
+					try{
+						if(jObject != null){
+							business = jObject.getJSONArray(TAG_QUEUES);
+							//has uniqueID and name
+							for(int i=0; i < business.length();i++){
+								//TODO: debug this.
+								JSONObject j = (JSONObject) business.getJSONObject(i);
+								
+								//add key, values of business
+								String business_name = j.getString(TAG_NAME);
+								String business_id = j.getString(TAG_ID);
+								
+								//put key, values to map
+								//TODO: I might have to switch key, value
+								businessMap.put(business_name, business_id);
+							}
+						}
+						
+					}catch(Exception e){
+						e.printStackTrace();
+					}finally{
+						//do nothing for now
+						Log.d("front_end", businessMap.toString());
+						//Toast.makeText(getApplicationContext(), "async done", Toast.LENGTH_SHORT).show();
+						
+						// Set up necessary tabs.
+						setupTabs();
+						
+						// Set up initial lists of restaurants.
+						setupRestaurantList();
+						//setContentView(R.layout.main);
+						
+						mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+
+						// Set up the ViewPager with the sections adapter.
+						mViewPager = (ViewPager) findViewById(R.id.pager);
+						mViewPager.setAdapter(mSectionsPagerAdapter);
+
+					}
+				
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					Log.i("front_end","interrupt");
+				} catch (ExecutionException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					Log.i("front_end","Execution");
+				} catch (TimeoutException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					Log.i("front_end","timeout");
+				}
+			}
+
+			@Override
+			public void onFail() {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		n.execute();
+		
 		
 	}
 	
@@ -154,23 +231,22 @@ public class MainActivity extends FragmentActivity {
 	    }
 	}
 	
+	
 	private void setupRestaurantList() {
 		restaurantsArrayList = new ArrayList<String>();
 		
-		/*
 		//TODO: grab restaurants from db.
 		for(Map.Entry<String, String> e: businessMap.entrySet()){
 			restaurantsArrayList.add(e.getKey());
 		}
-		*/ 
-
+		 
 		// TODO: Remove next four lines after successfully connecting to server and fetch
-		// restaurants.
+		/*
 		restaurantsArrayList.add("Olive Garden");
 		restaurantsArrayList.add("Cheescake Factory");
 		restaurantsArrayList.add("Perry's Steakhouse");
 		restaurantsArrayList.add("Fogo de Chao");
-
+		*/
 		// Create an adapter to map the array list of restaurants to the list
 		// view.
 		restaurantsAdapter = new ArrayAdapter<String>(this,
@@ -201,7 +277,6 @@ public class MainActivity extends FragmentActivity {
 	// set up the ActionBar's tabs
 	private void setupTabs() {
 		ActionBar queueActionBar = getActionBar(); // get the ActionBar
-
 	}
 
 	/*
@@ -366,7 +441,7 @@ public class MainActivity extends FragmentActivity {
 										JSONObject jObject = new JSONObject();
 										try{
 											jObject.put(TAG_PHONE, phoneNumber);
-											jObject.put(TAG_BUSINESSES,uniqueID);
+											jObject.put(TAG_QUEUES,uniqueID);
 										}catch(Exception e){
 											e.printStackTrace();
 										}
