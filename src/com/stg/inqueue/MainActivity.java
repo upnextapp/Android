@@ -84,27 +84,27 @@ public class MainActivity extends FragmentActivity {
 		super.onStart();
 		
 		//JSON request to grab businesses
-		JSONParser jsonParser = new JSONParser();
-		JSONObject jsonObject = jsonParser.getJSONFromUrl(url_inqueue);
-		
-		try{
-			business = jsonObject.getJSONArray(TAG_BUSINESSES);
-			for(int i=0; i < business.length();i++){
-				JSONObject j = business.getJSONObject(i);
-				
-				//add key, values of business
-				String business_name = j.getString(TAG_BUSINESSES);
-				String business_id = j.getString(TAG_ID);
-				
-				//put key, values to map
-				businessMap.put(business_name, business_id);
-			}
-			
-		}catch(Exception e){
-			e.printStackTrace();
-		}finally{
-			//do nothing for now
-		}
+//		JSONParser jsonParser = new JSONParser();
+//		JSONObject jsonObject = jsonParser.getJSONFromUrl(url_inqueue);
+//		
+//		try{
+//			business = jsonObject.getJSONArray(TAG_BUSINESSES);
+//			for(int i=0; i < business.length();i++){
+//				JSONObject j = business.getJSONObject(i);
+//				
+//				//add key, values of business
+//				String business_name = j.getString(TAG_BUSINESSES);
+//				String business_id = j.getString(TAG_ID);
+//				
+//				//put key, values to map
+//				businessMap.put(business_name, business_id);
+//			}
+//			
+//		}catch(Exception e){
+//			e.printStackTrace();
+//		}finally{
+//			//do nothing for now
+//		}
 
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the app.
