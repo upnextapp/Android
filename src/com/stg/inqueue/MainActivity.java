@@ -72,10 +72,6 @@ public class MainActivity extends FragmentActivity {
 
 		// Set up initial lists of restaurants.
 		setupRestaurantList();
-
-		// Set up necessary tabs.
-		setupTabs();
-
 	}
 
 	@Override
@@ -184,12 +180,6 @@ public class MainActivity extends FragmentActivity {
 				qdf.show(getFragmentManager(), "Queue Prompt");
 			}
 		};
-	}
-
-	// set up the ActionBar's tabs
-	private void setupTabs() {
-		ActionBar queueActionBar = getActionBar(); // get the ActionBar
-
 	}
 
 	@SuppressLint("ValidFragment")
@@ -337,6 +327,11 @@ public class MainActivity extends FragmentActivity {
 			View rootView = inflater.inflate(R.layout.fragment_main_dummy,
 					container, false);
 			ListView lv = (ListView) rootView.findViewById(android.R.id.list);
+			
+			/*
+			 * CODE TO PARSE RESPONSE AND TRANSLATE TO ADAPTER HERE
+			 */
+			
 			lv.setAdapter(adapter);
 			return rootView;
 		}
@@ -364,10 +359,12 @@ public class MainActivity extends FragmentActivity {
 			View rootView = inflater.inflate(R.layout.position_in_line,
 					container, false);
 			TextView tv = (TextView) rootView.findViewById(R.id.position);
+			
+			/*
+			 * CODE TO PARSE RESPONSE AND TRANSLATE TO DISPLAYABLE MESSAGE GOES HERE
+			 */
+			
 			tv.setText("POSITION GOES HERE");
-			// ListView lv = (ListView)
-			// rootView.findViewById(android.R.id.list);
-			// lv.setAdapter(adapter);
 			return rootView;
 		}
 	}
