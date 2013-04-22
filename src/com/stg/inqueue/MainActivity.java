@@ -89,7 +89,7 @@ public class MainActivity extends FragmentActivity {
 		queue = new QueueLine("");
 		
 		// Create an empty line.
-		queue = new QueueLine("");
+		//queue = new QueueLine("");
 		
 		// fetch restaurants
 		startAsyncTask();
@@ -190,14 +190,14 @@ public class MainActivity extends FragmentActivity {
 
 			@Override
 			public void onFail() {
-				// TODO Auto-generated method stub
+				// TODO: what should it do when it fails?
 				
 			}
 			
 		});
 		
+		//executes asynctask
 		n.execute();
-		
 		
 	}
 	
@@ -239,16 +239,10 @@ public class MainActivity extends FragmentActivity {
 		for(Map.Entry<String, String> e: businessMap.entrySet()){
 			restaurantsArrayList.add(e.getKey());
 		}
+		
+		Log.d("front_end", restaurantsArrayList.toString());
 		 
-		// TODO: Remove next four lines after successfully connecting to server and fetch
-		/*
-		restaurantsArrayList.add("Olive Garden");
-		restaurantsArrayList.add("Cheescake Factory");
-		restaurantsArrayList.add("Perry's Steakhouse");
-		restaurantsArrayList.add("Fogo de Chao");
-		*/
-		// Create an adapter to map the array list of restaurants to the list
-		// view.
+		// Create an adapter to map the array list of restaurants to the list view.
 		restaurantsAdapter = new ArrayAdapter<String>(this,
 				R.layout.restaurant_row, restaurantsArrayList);
 
@@ -267,6 +261,8 @@ public class MainActivity extends FragmentActivity {
 				// TODO: Make sure that you are in queue for only one line at
 				// any given time.
 				QueueDialogFragment qdf = new QueueDialogFragment();
+				
+				//TODO: this is where queue dialog grabs restaurant's name
 				qdf.setRestaurantName(restaurantsArrayList.get(position));
 				qdf.setQueue(queue);
 				qdf.show(getFragmentManager(), "Queue Prompt");
@@ -445,7 +441,7 @@ public class MainActivity extends FragmentActivity {
 										}catch(Exception e){
 											e.printStackTrace();
 										}
-										
+										/*
 										JSONParser jsonParser = new JSONParser();
 										try {
 											jsonParser.postRequest(jObject, url_enterQueue);
@@ -453,6 +449,7 @@ public class MainActivity extends FragmentActivity {
 											// TODO Auto-generated catch block
 											e.printStackTrace();
 										}
+										*/
 									}
 								}
 							})
