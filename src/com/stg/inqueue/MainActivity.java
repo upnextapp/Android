@@ -80,10 +80,11 @@ public class MainActivity extends FragmentActivity {
 
 		// Create an empty line.
 		queue = new QueueLine("");
-		
+
+		// Set up initial lists of restaurants.
+		setupRestaurantList();
 		// fetch restaurants
 		startAsyncTask();
-			
 	}
 
 	@Override
@@ -214,29 +215,6 @@ public class MainActivity extends FragmentActivity {
 		// Create an adapter to map the array list of restaurants to the list view.
 		restaurantsAdapter = new ArrayAdapter<String>(this,
 				R.layout.restaurant_row, restaurantsArrayList);
-
-		// Implement listener for the items on the list view.
-		listviewListener = new OnItemClickListener() {
-
-			@Override
-			public void onItemClick(AdapterView<?> arg0, View view,
-					int position, long id) {
-				// Toast.makeText(getApplicationContext(),
-				// restaurantsArrayList.get(position), Toast.LENGTH_SHORT)
-				// .show();
-
-				// Display a dialog and ask the user to queue for that
-				// particular restaurant.
-				// TODO: Make sure that you are in queue for only one line at
-				// any given time.
-				QueueDialogFragment qdf = new QueueDialogFragment();
-				
-				//TODO: this is where queue dialog grabs restaurant's name
-				qdf.setRestaurantName(restaurantsArrayList.get(position));
-				qdf.setQueue(queue);
-				qdf.show(getFragmentManager(), "Queue Prompt");
-			}
-		};
 	}
 
 	// set up the ActionBar's tabs
@@ -264,7 +242,7 @@ public class MainActivity extends FragmentActivity {
 		public Dialog onCreateDialog(Bundle savedInstanceState) {
 			setRetainInstance(true);
 			AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-			builder.setMessage("Click 'Yes' to queue for " + restaurantName)
+			builder.setMessage("Click 'Yes' to queue for " + restaurantName + "!")
 					.setPositiveButton("Yes",
 							new DialogInterface.OnClickListener() {
 						
@@ -339,7 +317,8 @@ public class MainActivity extends FragmentActivity {
 			if (position == 0) {
 				RestaurantListFragment rFragment = new RestaurantListFragment();
 				rFragment.setAdapter(restaurantsAdapter);
-				rFragment.setListener(listviewListener);
+				rFragment.setQueue(queue);
+				rFragment.setRestaurantsArrayList(restaurantsArrayList);
 				args.putInt(RestaurantListFragment.ARG_SECTION_NUMBER,
 						position + 1);
 				rFragment.setArguments(args);
@@ -383,7 +362,8 @@ public class MainActivity extends FragmentActivity {
 		 */
 		public static final String ARG_SECTION_NUMBER = "section_number";
 		private ArrayAdapter<String> adapter;
-		private OnItemClickListener listener;
+		private QueueLine queue;
+		private ArrayList<String> restaurantsArrayList;
 
 		public RestaurantListFragment() {
 		}
@@ -392,14 +372,20 @@ public class MainActivity extends FragmentActivity {
 			adapter = a;
 		}
 
-		public void setListener(OnItemClickListener l) {
-			listener = l;
+		public void setQueue(QueueLine q) {
+			this.queue = q;
 		}
-
+		
+		public void setRestaurantsArrayList(ArrayList<String> l) {
+			this.restaurantsArrayList = l;
+		}
+		
 		@Override
 		public void onListItemClick(ListView l, View v, int position, long id) {
 			super.onListItemClick(l, v, position, id);
 			QueueDialogFragment qdf = new QueueDialogFragment();
+			qdf.setRestaurantName(restaurantsArrayList.get(position));
+			qdf.setQueue(queue);
 			qdf.show(getActivity().getFragmentManager(), "Queue Prompt");
 		}
 
@@ -410,6 +396,11 @@ public class MainActivity extends FragmentActivity {
 			View rootView = inflater.inflate(R.layout.fragment_main_dummy,
 					container, false);
 			ListView lv = (ListView) rootView.findViewById(android.R.id.list);
+			
+			/*
+			 * CODE TO PARSE RESPONSE AND TRANSLATE TO ADAPTER HERE
+			 */
+			
 			lv.setAdapter(adapter);
 			return rootView;
 		}
@@ -437,10 +428,12 @@ public class MainActivity extends FragmentActivity {
 			View rootView = inflater.inflate(R.layout.position_in_line,
 					container, false);
 			TextView tv = (TextView) rootView.findViewById(R.id.position);
+			
+			/*
+			 * CODE TO PARSE RESPONSE AND TRANSLATE TO DISPLAYABLE MESSAGE GOES HERE
+			 */
+			
 			tv.setText("POSITION GOES HERE");
-			// ListView lv = (ListView)
-			// rootView.findViewById(android.R.id.list);
-			// lv.setAdapter(adapter);
 			return rootView;
 		}
 	}
