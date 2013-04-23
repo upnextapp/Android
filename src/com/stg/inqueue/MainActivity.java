@@ -55,8 +55,8 @@ public class MainActivity extends FragmentActivity {
 	private String position;
 	private static Network n;
 
+	// private TaskListAdapter adapter;	
 	// url to make request
-	//private static String url = "http://api.androidhive.info/contacts/";
 	private static String url_getRestaurants = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/" +
 			"api/list";
 	private static String url_enterQueue = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/" +
@@ -82,7 +82,7 @@ public class MainActivity extends FragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		
+
 		// Create an empty line.
 		queue = new QueueLine("");
 		
@@ -90,12 +90,13 @@ public class MainActivity extends FragmentActivity {
 		startAsyncTask();
 			
 	}
-	
+
 	@Override
 	protected void onStart() {
 		super.onStart();
-		
+
 	}
+
 	
 	@Override
 	protected void onRestart() {
@@ -180,35 +181,32 @@ public class MainActivity extends FragmentActivity {
 	
 	@Override
 	public void onBackPressed() {
-		//do nothing. won't go back to splash screen
+		// do nothing. won't go back to splash screen
 	}
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-	
+
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item)
-	{
-	    switch (item.getItemId())
-	    {
-	        case R.id.menu_settings:
-	            //add setting method later
-	        	//showPreferencesActivity();
-	            return true;
-	        case R.id.menu_about:
-	            //add about method later
-	        	//logOff();
-	            return true;
-	        default:
-	            return super.onOptionsItemSelected(item);
-	    }
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.menu_settings:
+			// add setting method later
+			// showPreferencesActivity();
+			return true;
+		case R.id.menu_about:
+			// add about method later
+			// logOff();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
-	
-	
+
 	private void setupRestaurantList() {
 		restaurantsArrayList = new ArrayList<String>();
 		
@@ -245,7 +243,7 @@ public class MainActivity extends FragmentActivity {
 			}
 		};
 	}
-	
+
 	// set up the ActionBar's tabs
 	private void setupTabs() {
 		ActionBar queueActionBar = getActionBar(); // get the ActionBar
@@ -326,7 +324,7 @@ public class MainActivity extends FragmentActivity {
 		}
 
 	}
-	
+
 	/**
 	 * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
 	 * one of the sections/tabs/pages.
@@ -336,7 +334,7 @@ public class MainActivity extends FragmentActivity {
 		public SectionsPagerAdapter(FragmentManager fm) {
 			super(fm);
 		}
-		
+
 		@Override
 		public Fragment getItem(int position) {
 			// getItem is called to instantiate the fragment for the given page.
@@ -347,7 +345,8 @@ public class MainActivity extends FragmentActivity {
 				RestaurantListFragment rFragment = new RestaurantListFragment();
 				rFragment.setAdapter(restaurantsAdapter);
 				rFragment.setListener(listviewListener);
-				args.putInt(RestaurantListFragment.ARG_SECTION_NUMBER, position + 1);
+				args.putInt(RestaurantListFragment.ARG_SECTION_NUMBER,
+						position + 1);
 				rFragment.setArguments(args);
 				return rFragment;
 			} else {
@@ -390,14 +389,14 @@ public class MainActivity extends FragmentActivity {
 		public static final String ARG_SECTION_NUMBER = "section_number";
 		private ArrayAdapter<String> adapter;
 		private OnItemClickListener listener;
-		
+
 		public RestaurantListFragment() {
 		}
-		
+
 		public void setAdapter(ArrayAdapter<String> a) {
 			adapter = a;
 		}
-		
+
 		public void setListener(OnItemClickListener l) {
 			listener = l;
 		}
@@ -420,7 +419,7 @@ public class MainActivity extends FragmentActivity {
 			return rootView;
 		}
 	}
-	
+
 	public static class PositionFragment extends Fragment {
 		/**
 		 * The fragment argument representing the section number for this
@@ -428,10 +427,10 @@ public class MainActivity extends FragmentActivity {
 		 */
 		public static final String ARG_SECTION_NUMBER = "section_number";
 		private QueueLine queue;
-		
+
 		public PositionFragment() {
 		}
-		
+
 		public void setQueue(QueueLine q) {
 			this.queue = q;
 		}
@@ -444,8 +443,9 @@ public class MainActivity extends FragmentActivity {
 					container, false);
 			TextView tv = (TextView) rootView.findViewById(R.id.position);
 			tv.setText("POSITION GOES HERE");
-			//ListView lv = (ListView) rootView.findViewById(android.R.id.list);
-			//lv.setAdapter(adapter);
+			// ListView lv = (ListView)
+			// rootView.findViewById(android.R.id.list);
+			// lv.setAdapter(adapter);
 			return rootView;
 		}
 	}

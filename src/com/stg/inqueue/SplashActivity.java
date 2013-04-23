@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.stg.inqueue.R;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
