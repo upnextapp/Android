@@ -295,18 +295,19 @@ public class MainActivity extends FragmentActivity {
 										try{
 											jObject.put(TAG_PHONE, phoneNumber);
 											jObject.put(TAG_QUEUES,uniqueID);
+											RestClient rc = new RestClient();
+											boolean result = rc.post(jObject, url_enterQueue);
+											if(result){
+												Log.i("front_end", "success");
+											}else{
+												Log.i("front_end", "failed");
+											}
 										}catch(Exception e){
 											e.printStackTrace();
+										}finally{
+											//TODO: what I can do here?
 										}
-										/*
-										JSONParser jsonParser = new JSONParser();
-										try {
-											jsonParser.postRequest(jObject, url_enterQueue);
-										} catch (Exception e) {
-											// TODO Auto-generated catch block
-											e.printStackTrace();
-										}
-										*/
+										
 									}
 								}
 							})

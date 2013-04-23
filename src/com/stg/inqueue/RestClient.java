@@ -10,7 +10,11 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicHeader;
+import org.apache.http.protocol.HTTP;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -65,7 +69,7 @@ public class RestClient {
 		try {
 			response = httpclient.execute(httpget);
 			// Examine the response status
-			Log.i("Praeda",response.getStatusLine().toString());
+			Log.i("front_end",response.getStatusLine().toString());
 
 			// Get hold of the response entity
 			HttpEntity entity = response.getEntity();
@@ -117,5 +121,36 @@ public class RestClient {
 		Log.i("front_end","returning json object");
 		return json;
 	}
-
+	
+	public boolean post(JSONObject jObject, String url){
+			HttpClient httpclient = new DefaultHttpClient();
+			
+			HttpPost httpPost = new HttpPost();
+			
+			HttpResponse httpResponse;
+			
+			try{
+				StringEntity sE = new StringEntity(jObject.toString());
+				sE.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+				httpPost.setEntity(sE);
+				httpResponse = httpclient.execute(httpPost);
+				
+				if(httpResponse != null){
+					Log.i("front_end", httpResponse.toString());
+					return true;
+				}
+				
+			} catch (ClientProtocolException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+				Log.i("front_end", "IOexception error");
+			}
+			finally{
+				//what can I do here?
+			}
+		
+		return false;
+	
+	}
 }
