@@ -235,12 +235,6 @@ public class MainActivity extends FragmentActivity {
 				// particular restaurant.
 				// TODO: Make sure that you are in queue for only one line at
 				// any given time.
-				QueueDialogFragment qdf = new QueueDialogFragment();
-				
-				//TODO: this is where queue dialog grabs restaurant's name
-				qdf.setRestaurantName(restaurantsArrayList.get(position));
-				qdf.setQueue(queue);
-				qdf.show(getFragmentManager(), "Queue Prompt");
 			}
 		};
 	}
@@ -270,7 +264,7 @@ public class MainActivity extends FragmentActivity {
 		public Dialog onCreateDialog(Bundle savedInstanceState) {
 			setRetainInstance(true);
 			AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-			builder.setMessage("Click 'Yes' to queue for " + restaurantName)
+			builder.setMessage("Click 'Yes' to queue for " + restaurantName + "!")
 					.setPositiveButton("Yes",
 							new DialogInterface.OnClickListener() {
 						
@@ -345,6 +339,8 @@ public class MainActivity extends FragmentActivity {
 				RestaurantListFragment rFragment = new RestaurantListFragment();
 				rFragment.setAdapter(restaurantsAdapter);
 				rFragment.setListener(listviewListener);
+				rFragment.setQueue(queue);
+				rFragment.setRestaurantsArrayList(restaurantsArrayList);
 				args.putInt(RestaurantListFragment.ARG_SECTION_NUMBER,
 						position + 1);
 				rFragment.setArguments(args);
@@ -389,6 +385,8 @@ public class MainActivity extends FragmentActivity {
 		public static final String ARG_SECTION_NUMBER = "section_number";
 		private ArrayAdapter<String> adapter;
 		private OnItemClickListener listener;
+		private QueueLine queue;
+		private ArrayList<String> restaurantsArrayList;
 
 		public RestaurantListFragment() {
 		}
@@ -401,10 +399,20 @@ public class MainActivity extends FragmentActivity {
 			listener = l;
 		}
 
+		public void setQueue(QueueLine q) {
+			this.queue = q;
+		}
+		
+		public void setRestaurantsArrayList(ArrayList<String> l) {
+			this.restaurantsArrayList = l;
+		}
+		
 		@Override
 		public void onListItemClick(ListView l, View v, int position, long id) {
 			super.onListItemClick(l, v, position, id);
 			QueueDialogFragment qdf = new QueueDialogFragment();
+			qdf.setRestaurantName(restaurantsArrayList.get(position));
+			qdf.setQueue(queue);
 			qdf.show(getActivity().getFragmentManager(), "Queue Prompt");
 		}
 
