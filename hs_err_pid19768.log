@@ -1,0 +1,85 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (classFileParser.cpp:3470), pid=19768, tid=26592
+#  Error: ShouldNotReachHere()
+#
+# JRE version: 7.0-b147
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.0-b17 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000269c800):  JavaThread "Unknown thread" [_thread_in_vm, id=26592, stack(0x0000000002550000,0x0000000002650000)]
+
+Stack: [0x0000000002550000,0x0000000002650000]
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x000000000269c800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=26592, stack(0x0000000002550000,0x0000000002650000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Dynamic libraries:
+0x000007f6d0550000 - 0x000007f6d0583000 	C:\Program Files\Java\jre7\bin\javaw.exe
+0x000007fa1abc0000 - 0x000007fa1ad7e000 	C:\Windows\SYSTEM32\ntdll.dll
+0x000007fa18130000 - 0x000007fa18266000 	C:\Windows\system32\KERNEL32.DLL
+0x000007fa17e50000 - 0x000007fa17f43000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fa18030000 - 0x000007fa1810e000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fa183f0000 - 0x000007fa1853c000 	C:\Windows\system32\USER32.dll
+0x000007fa157e0000 - 0x000007fa15a49000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9200.16384_none_418c2a697189c07f\COMCTL32.dll
+0x000007fa18540000 - 0x000007fa185e5000 	C:\Windows\system32\msvcrt.dll
+0x000007fa18270000 - 0x000007fa182b8000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fa18e80000 - 0x000007fa18fc0000 	C:\Windows\system32\RPCRT4.dll
+0x000007fa18ac0000 - 0x000007fa18c00000 	C:\Windows\system32\GDI32.dll
+0x000007fa196b0000 - 0x000007fa196e9000 	C:\Windows\system32\IMM32.DLL
+0x000007fa197c0000 - 0x000007fa198d5000 	C:\Windows\system32\MSCTF.dll
+0x000007fa17a40000 - 0x000007fa17a80000 	C:\Windows\system32\nvinitx.dll
+0x0000000068ba0000 - 0x0000000068c71000 	C:\Program Files\Java\jre7\bin\msvcr100.dll
+0x00000000684d0000 - 0x0000000068b9e000 	C:\Program Files\Java\jre7\bin\server\jvm.dll
+0x000007fa15e00000 - 0x000007fa15e09000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x000007fa15e60000 - 0x000007fa15e80000 	C:\Windows\SYSTEM32\WINMM.dll
+0x000007fa18330000 - 0x000007fa18337000 	C:\Windows\system32\PSAPI.DLL
+0x000007fa17fd0000 - 0x000007fa18028000 	C:\Windows\system32\WS2_32.dll
+0x000007fa15e20000 - 0x000007fa15e52000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x000007fa18760000 - 0x000007fa18769000 	C:\Windows\system32\NSI.dll
+0x0000000068ed0000 - 0x0000000068edf000 	C:\Program Files\Java\jre7\bin\verify.dll
+0x0000000068ea0000 - 0x0000000068ec8000 	C:\Program Files\Java\jre7\bin\java.dll
+0x00000000684b0000 - 0x00000000684c5000 	C:\Program Files\Java\jre7\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=MS949 -Xbootclasspath:C:\Users\alway_000\android-sdks\platforms\android-17\android.jar 
+java_command: org.eclipse.jdt.internal.junit.runner.RemoteTestRunner -version 3 -port 63967 -testLoaderClass org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader -loaderpluginname org.eclipse.jdt.junit4.runtime -classNames com.stg.inqueue.JSONtest
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Mozilla Firefox\FireFox.exe;C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+USERNAME=jojo
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 6.2 Build 9200 
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 6195900k(2105552k free), swap 9315356k(1656852k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (21.0-b17) for windows-amd64 JRE (1.7.0-b147), built on Jun 27 2011 02:19:45 by "java_re" with unknown MS VC++:1600
+
+time: Sat Apr 20 22:14:04 2013
+elapsed time: 0 seconds
+

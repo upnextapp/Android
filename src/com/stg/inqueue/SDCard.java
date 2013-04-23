@@ -9,11 +9,14 @@ import java.io.PrintWriter;
 import android.os.Environment;
 import android.util.Log;
 
-public class writeToSDCard {
+public class SDCard {
+	
+	private String phoneNumber;
 	
 	private static final String TAG = "MEDIA";
 
 	public void outputTextFile(String number) throws IOException{
+		phoneNumber = number;
 		File sdCard = Environment.getExternalStorageDirectory();
 		File dir = new File (sdCard.getAbsolutePath() + "/inQueue/data");
 		if(!(dir.exists())){
@@ -35,5 +38,9 @@ public class writeToSDCard {
 		                " add a WRITE_EXTERNAL_STORAGE permission to the   manifest?");
 			}
 		}
+	}
+	
+	public String getNumber(){
+		return phoneNumber;
 	}
 }

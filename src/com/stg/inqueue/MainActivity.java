@@ -2,7 +2,14 @@ package com.stg.inqueue;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -13,6 +20,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v4.app.Fragment;
@@ -20,6 +28,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -30,32 +39,45 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.gson.Gson;
+import com.google.gson.stream.JsonReader;
 
 public class MainActivity extends FragmentActivity {
-
+	
+	public interface Callback{
+		void onComplete();
+		void onFail();
+	}
+	
 	public ArrayList<String> restaurantsArrayList;
 	public ArrayAdapter<String> restaurantsAdapter;
 	public OnItemClickListener listviewListener;
 	private QueueLine queue;
 	private String position;
+	private static Network n;
 
+	// private TaskListAdapter adapter;	
 	// url to make request
-	// private static String url = "http://api.androidhive.info/contacts/";
-	private static String url_inqueue = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/";
-
-	// JSON node names
-	private static String TAG_USERS = "users";
+	private static String url_getRestaurants = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/" +
+			"api/list";
+	private static String url_enterQueue = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/" +
+			"enterQueue";
+	
+	//JSON node names
 	private static String TAG_PHONE = "phone";
-	private static String TAG_BUSINESSES = "businesses";
-	private static String TAG_ID = "id";
-
-	// JSON array
+	private static String TAG_QUEUES = "queues";
+	private static String TAG_ID = "uniqueID";
+	private static String TAG_NAME= "name";
+	
+	//JSON array
 	JSONArray business = null;
-
-	// Business map
-	HashMap<String, String> businessMap = new HashMap<String, String>();
-
-	// private TaskListAdapter adapter;
+	
+	//Business map
+	static LinkedHashMap<String,String> businessMap = new LinkedHashMap<String, String>();
+	
+	//private TaskListAdapter adapter;
 	SectionsPagerAdapter mSectionsPagerAdapter;
 	ViewPager mViewPager;
 
@@ -67,55 +89,100 @@ public class MainActivity extends FragmentActivity {
 		// Create an empty line.
 		queue = new QueueLine("");
 
-		// Create an empty line.
-		queue = new QueueLine("");
-
 		// Set up initial lists of restaurants.
 		setupRestaurantList();
+		// fetch restaurants
+		startAsyncTask();
 	}
 
 	@Override
 	protected void onStart() {
-		// TODO Auto-generated method stub
 		super.onStart();
-
-		// JSON request to grab businesses
-		// JSONParser jsonParser = new JSONParser();
-		// JSONObject jsonObject = jsonParser.getJSONFromUrl(url_inqueue);
-		//
-		// try{
-		// business = jsonObject.getJSONArray(TAG_BUSINESSES);
-		// for(int i=0; i < business.length();i++){
-		// JSONObject j = business.getJSONObject(i);
-		//
-		// //add key, values of business
-		// String business_name = j.getString(TAG_BUSINESSES);
-		// String business_id = j.getString(TAG_ID);
-		//
-		// //put key, values to map
-		// businessMap.put(business_name, business_id);
-		// }
-		//
-		// }catch(Exception e){
-		// e.printStackTrace();
-		// }finally{
-		// //do nothing for now
-		// }
-
-		// Create the adapter that will return a fragment for each of the three
-		// primary sections of the app.
-		mSectionsPagerAdapter = new SectionsPagerAdapter(
-				getSupportFragmentManager());
-
-		// Set up the ViewPager with the sections adapter.
-		mViewPager = (ViewPager) findViewById(R.id.pager);
-		mViewPager.setAdapter(mSectionsPagerAdapter);
-		// testing purpose
-		// Toast.makeText(this, getDeviceID(), Toast.LENGTH_LONG).show();
-		// Toast.makeText(this, getPhoneNumber(), Toast.LENGTH_LONG).show();
 
 	}
 
+	
+	@Override
+	protected void onResume() {
+		//grab restaurants from db and display it again
+		startAsyncTask();
+	}
+
+	public void startAsyncTask(){
+		n = new Network(new Callback(){
+			
+			@Override
+			public void onComplete() {
+				try {
+					
+					JSONObject jObject = n.get(100, TimeUnit.MILLISECONDS);
+					Log.i("front_end","grabbed JSON Object");
+					
+					//make restaurant list
+					try{
+						if(jObject != null){
+							business = jObject.getJSONArray(TAG_QUEUES);
+							//has uniqueID and name
+							for(int i=0; i < business.length();i++){
+								JSONObject j = (JSONObject) business.getJSONObject(i);
+								
+								//add key, values of business
+								String business_name = j.getString(TAG_NAME);
+								String business_id = j.getString(TAG_ID);
+								
+								//put key, values to map
+								//TODO: I might have to switch key, value
+								businessMap.put(business_name, business_id);
+							}
+						}
+						
+					}catch(Exception e){
+						e.printStackTrace();
+					}finally{
+						//do nothing for now
+						Log.d("front_end", businessMap.toString());
+						//Toast.makeText(getApplicationContext(), "async done", Toast.LENGTH_SHORT).show();
+						
+						// Set up necessary tabs.
+						setupTabs();
+						
+						// Set up initial lists of restaurants.
+						setupRestaurantList();
+						//setContentView(R.layout.main);
+						
+						mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+
+						// Set up the ViewPager with the sections adapter.
+						mViewPager = (ViewPager) findViewById(R.id.pager);
+						mViewPager.setAdapter(mSectionsPagerAdapter);
+
+					}
+				
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+					Log.i("front_end","interrupt");
+				} catch (ExecutionException e) {
+					e.printStackTrace();
+					Log.i("front_end","Execution");
+				} catch (TimeoutException e) {
+					e.printStackTrace();
+					Log.i("front_end","timeout");
+				}
+			}
+
+			@Override
+			public void onFail() {
+				// TODO: what should it do when it fails?
+				
+			}
+			
+		});
+		
+		//executes asynctask
+		n.execute();
+		
+	}
+	
 	@Override
 	public void onBackPressed() {
 		// do nothing. won't go back to splash screen
@@ -146,17 +213,14 @@ public class MainActivity extends FragmentActivity {
 
 	private void setupRestaurantList() {
 		restaurantsArrayList = new ArrayList<String>();
-
-		// TODO: Make a separate method to add restaurants (possibly through
-		// the Internet?) and save the list so that it doesn't continually add
-		// it to the list.
-		restaurantsArrayList.add("Olive Garden");
-		restaurantsArrayList.add("Cheescake Factory");
-		restaurantsArrayList.add("Perry's Steakhouse");
-		restaurantsArrayList.add("Fogo de Chao");
-
-		// Create an adapter to map the array list of restaurants to the list
-		// view.
+		
+		for(Map.Entry<String, String> e: businessMap.entrySet()){
+			restaurantsArrayList.add(e.getKey());
+		}
+		
+		Log.d("front_end", restaurantsArrayList.toString());
+		 
+		// Create an adapter to map the array list of restaurants to the list view.
 		restaurantsAdapter = new ArrayAdapter<String>(this,
 				R.layout.restaurant_row, restaurantsArrayList);
 
@@ -175,11 +239,18 @@ public class MainActivity extends FragmentActivity {
 				// TODO: Make sure that you are in queue for only one line at
 				// any given time.
 				QueueDialogFragment qdf = new QueueDialogFragment();
+				
+				//TODO: this is where queue dialog grabs restaurant's name
 				qdf.setRestaurantName(restaurantsArrayList.get(position));
 				qdf.setQueue(queue);
 				qdf.show(getFragmentManager(), "Queue Prompt");
 			}
 		};
+	}
+
+	// set up the ActionBar's tabs
+	private void setupTabs() {
+		ActionBar queueActionBar = getActionBar(); // get the ActionBar
 	}
 
 	@SuppressLint("ValidFragment")
@@ -200,37 +271,58 @@ public class MainActivity extends FragmentActivity {
 
 		@Override
 		public Dialog onCreateDialog(Bundle savedInstanceState) {
-			// TODO Auto-generated method stub
 			setRetainInstance(true);
 			AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 			builder.setMessage("Click 'Yes' to queue for " + restaurantName)
 					.setPositiveButton("Yes",
 							new DialogInterface.OnClickListener() {
-
+						
 								@Override
-								public void onClick(DialogInterface dialog,
-										int which) {
-									// TODO Auto-generated method stub
-
+								public void onClick(DialogInterface dialog,	int which) {
 									// If it is not the same as the previous
 									// line, then make a new line and add in the
 									// user (temporarily named Kevin).
+									
+									// TODO:this is where we make a JSON post request.
 									if (queue.getName() != restaurantName) {
 										queue = new QueueLine(restaurantName);
 										queue.add("Kevin");
+										
+										//here is JSON post call
+										SDCard sd = new SDCard();
+										String phoneNumber = sd.getNumber();
+										String uniqueID = getBusinssID(restaurantName);
+										
+										JSONObject jObject = new JSONObject();
+										try{
+											jObject.put(TAG_PHONE, phoneNumber);
+											jObject.put(TAG_QUEUES,uniqueID);
+										}catch(Exception e){
+											e.printStackTrace();
+										}
+										/*
+										JSONParser jsonParser = new JSONParser();
+										try {
+											jsonParser.postRequest(jObject, url_enterQueue);
+										} catch (Exception e) {
+											// TODO Auto-generated catch block
+											e.printStackTrace();
+										}
+										*/
 									}
 								}
 							})
+							
 					.setNegativeButton("No",
 							new DialogInterface.OnClickListener() {
 
 								@Override
 								public void onClick(DialogInterface dialog,
 										int which) {
-									// TODO Auto-generated method stub
 
 								}
 							}).setTitle("Would you like get in line?");
+			
 			return builder.create();
 		}
 
@@ -314,7 +406,6 @@ public class MainActivity extends FragmentActivity {
 
 		@Override
 		public void onListItemClick(ListView l, View v, int position, long id) {
-			// TODO Auto-generated method stub
 			super.onListItemClick(l, v, position, id);
 			QueueDialogFragment qdf = new QueueDialogFragment();
 			qdf.show(getActivity().getFragmentManager(), "Queue Prompt");
@@ -367,5 +458,12 @@ public class MainActivity extends FragmentActivity {
 			tv.setText("POSITION GOES HERE");
 			return rootView;
 		}
+	}
+	
+	public static String getBusinssID(String businessName){
+		if(businessMap.containsKey(businessName)){
+			return businessMap.get(businessName);
+		}
+		return null;
 	}
 }
