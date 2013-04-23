@@ -32,7 +32,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity {
-	
+
 	public ArrayList<String> restaurantsArrayList;
 	public ArrayAdapter<String> restaurantsAdapter;
 	public OnItemClickListener listviewListener;
@@ -40,22 +40,22 @@ public class MainActivity extends FragmentActivity {
 	private String position;
 
 	// url to make request
-	//private static String url = "http://api.androidhive.info/contacts/";
+	// private static String url = "http://api.androidhive.info/contacts/";
 	private static String url_inqueue = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/";
-	
-	//JSON node names
+
+	// JSON node names
 	private static String TAG_USERS = "users";
 	private static String TAG_PHONE = "phone";
 	private static String TAG_BUSINESSES = "businesses";
-	private static String TAG_ID ="id";
-	
-	//JSON array
+	private static String TAG_ID = "id";
+
+	// JSON array
 	JSONArray business = null;
-	
-	//Business map
-	HashMap<String,String> businessMap = new HashMap<String, String>();
-	
-	//private TaskListAdapter adapter;
+
+	// Business map
+	HashMap<String, String> businessMap = new HashMap<String, String>();
+
+	// private TaskListAdapter adapter;
 	SectionsPagerAdapter mSectionsPagerAdapter;
 	ViewPager mViewPager;
 
@@ -63,48 +63,48 @@ public class MainActivity extends FragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		
+
 		// Create an empty line.
 		queue = new QueueLine("");
-		
+
 		// Create an empty line.
 		queue = new QueueLine("");
-		
+
 		// Set up initial lists of restaurants.
 		setupRestaurantList();
-		
+
 		// Set up necessary tabs.
 		setupTabs();
-	
+
 	}
-	
+
 	@Override
 	protected void onStart() {
 		// TODO Auto-generated method stub
 		super.onStart();
-		
-		//JSON request to grab businesses
-		JSONParser jsonParser = new JSONParser();
-		JSONObject jsonObject = jsonParser.getJSONFromUrl(url_inqueue);
-		
-		try{
-			business = jsonObject.getJSONArray(TAG_BUSINESSES);
-			for(int i=0; i < business.length();i++){
-				JSONObject j = business.getJSONObject(i);
-				
-				//add key, values of business
-				String business_name = j.getString(TAG_BUSINESSES);
-				String business_id = j.getString(TAG_ID);
-				
-				//put key, values to map
-				businessMap.put(business_name, business_id);
-			}
-			
-		}catch(Exception e){
-			e.printStackTrace();
-		}finally{
-			//do nothing for now
-		}
+
+		// JSON request to grab businesses
+		// JSONParser jsonParser = new JSONParser();
+		// JSONObject jsonObject = jsonParser.getJSONFromUrl(url_inqueue);
+		//
+		// try{
+		// business = jsonObject.getJSONArray(TAG_BUSINESSES);
+		// for(int i=0; i < business.length();i++){
+		// JSONObject j = business.getJSONObject(i);
+		//
+		// //add key, values of business
+		// String business_name = j.getString(TAG_BUSINESSES);
+		// String business_id = j.getString(TAG_ID);
+		//
+		// //put key, values to map
+		// businessMap.put(business_name, business_id);
+		// }
+		//
+		// }catch(Exception e){
+		// e.printStackTrace();
+		// }finally{
+		// //do nothing for now
+		// }
 
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the app.
@@ -117,42 +117,37 @@ public class MainActivity extends FragmentActivity {
 		// testing purpose
 		// Toast.makeText(this, getDeviceID(), Toast.LENGTH_LONG).show();
 		// Toast.makeText(this, getPhoneNumber(), Toast.LENGTH_LONG).show();
-		
+
 	}
-	
-
-
 
 	@Override
 	public void onBackPressed() {
-		//do nothing. won't go back to splash screen
+		// do nothing. won't go back to splash screen
 	}
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-	
+
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item)
-	{
-	    switch (item.getItemId())
-	    {
-	        case R.id.menu_settings:
-	            //add setting method later
-	        	//showPreferencesActivity();
-	            return true;
-	        case R.id.menu_about:
-	            //add about method later
-	        	//logOff();
-	            return true;
-	        default:
-	            return super.onOptionsItemSelected(item);
-	    }
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.menu_settings:
+			// add setting method later
+			// showPreferencesActivity();
+			return true;
+		case R.id.menu_about:
+			// add about method later
+			// logOff();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
-	
+
 	private void setupRestaurantList() {
 		restaurantsArrayList = new ArrayList<String>();
 
@@ -190,133 +185,12 @@ public class MainActivity extends FragmentActivity {
 			}
 		};
 	}
-	
+
 	// set up the ActionBar's tabs
 	private void setupTabs() {
 		ActionBar queueActionBar = getActionBar(); // get the ActionBar
 
 	}
-	
-	
-	/*
-	// listen for events generated by the ActionBar Tabs
-	TabListener queueTabListener = new TabListener(){
-		// called when the selected Tab is re-selected
-		@Override
-		public void onTabReselected(Tab arg0, FragmentTransaction arg1){
-		}
-
-		// called when a previously unselected Tab is selected
-		@Override
-		public void onTabSelected(Tab tab, FragmentTransaction arg1){
-			// display the information corresponding to the selected Tab
-			if(tab.getPosition() == 1){
-				setContentView(R.layout.position_in_line);
-				
-				// Get the view for the queue name and position.
-				TextView title = (TextView) findViewById(R.id.restaurant_position_title);
-				TextView position = (TextView) findViewById(R.id.position);
-
-				// If we have not selected a restaurant, display a special
-				// message.
-				// If we selected a restaurant, then set the title and position.
-				if(queue.getName() == ""){
-					title.setText("");
-					position.setText("You are not in line!");
-				}else{
-					title.setText(queue.getName());
-
-					// "Kevin" will need to eventually be replaced with the user
-					// ID.
-					// TODO: Change "Kevin" to a uniqued ID.
-					position.setText(queue.getPosition("Kevin") + " / "
-							+ String.valueOf(queue.size()));
-				}
-			}else{
-				setContentView(R.layout.main);
-				ListView lv = (ListView) findViewById(R.id.restaurants_available_list);
-
-			}
-		}
-		*/
-		
-//
-//	// set up the ActionBar's tabs
-//	private void setupTabs() {
-//		ActionBar queueActionBar = getActionBar(); // get the ActionBar
-//
-//		// set ActionBar's navigation mode to use tabs
-//		queueActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-//
-//		Tab restaurantsTab = queueActionBar.newTab();
-//
-//		// set the Tab's title
-//		restaurantsTab.setText("Restaurants");
-//
-//		// add the Tab
-//		restaurantsTab.setTabListener(queueTabListener);
-//
-//		// set the Tab's listener
-//		queueActionBar.addTab(restaurantsTab);
-//
-//		Tab positionTab = queueActionBar.newTab();
-//		positionTab.setText("Position");
-//		positionTab.setTabListener(queueTabListener);
-//		queueActionBar.addTab(positionTab);
-//	}
-//
-//	// listen for events generated by the ActionBar Tabs
-//	TabListener queueTabListener = new TabListener() {
-//		// called when the selected Tab is re-selected
-//		@Override
-//		public void onTabReselected(Tab arg0, FragmentTransaction arg1) {
-//		}
-//
-//		// called when a previously unselected Tab is selected
-//		@Override
-//		public void onTabSelected(Tab tab, FragmentTransaction arg1) {
-//			// display the information corresponding to the selected Tab
-//			if (tab.getPosition() == 1) {
-//				setContentView(R.layout.position_in_line);
-//				
-//				// Get the view for the queue name and position.
-//				TextView title = (TextView) findViewById(R.id.restaurant_position_title);
-//				TextView position = (TextView) findViewById(R.id.position);
-//
-//				// If we have not selected a restaurant, display a special
-//				// message.
-//				// If we selected a restaurant, then set the title and position.
-//				if (queue.getName() == "") {
-//					title.setText("");
-//					position.setText("You are not in line!");
-//				} else {
-//					title.setText(queue.getName());
-//
-//					// "Kevin" will need to eventually be replaced with the user
-//					// ID.
-//					// TODO: Change "Kevin" to a uniqued ID.
-//					position.setText(queue.getPosition("Kevin") + " / "
-//							+ String.valueOf(queue.size()));
-//				}
-//			} else {
-//				setContentView(R.layout.main);
-//				ListView lv = (ListView) findViewById(R.id.restaurants_available_list);
-//
-//				// Attach the array list adapter to the list view.
-//				lv.setAdapter(restaurantsAdapter);
-//
-//				// Attach the item listener so that it does something when a
-//				// restaurant is clicked.
-//				lv.setOnItemClickListener(listviewListener);
-//				restaurantsAdapter.notifyDataSetChanged();
-//			}
-//		}
-//
-//		// called when a tab is unselected
-//		@Override
-//		public void onTabUnselected(Tab arg0, FragmentTransaction arg1) {
-//		}
-//	};
 
 	@SuppressLint("ValidFragment")
 	public static class QueueDialogFragment extends DialogFragment {
@@ -371,7 +245,7 @@ public class MainActivity extends FragmentActivity {
 		}
 
 	}
-	
+
 	/**
 	 * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
 	 * one of the sections/tabs/pages.
@@ -381,7 +255,7 @@ public class MainActivity extends FragmentActivity {
 		public SectionsPagerAdapter(FragmentManager fm) {
 			super(fm);
 		}
-		
+
 		@Override
 		public Fragment getItem(int position) {
 			// getItem is called to instantiate the fragment for the given page.
@@ -392,7 +266,8 @@ public class MainActivity extends FragmentActivity {
 				RestaurantListFragment rFragment = new RestaurantListFragment();
 				rFragment.setAdapter(restaurantsAdapter);
 				rFragment.setListener(listviewListener);
-				args.putInt(RestaurantListFragment.ARG_SECTION_NUMBER, position + 1);
+				args.putInt(RestaurantListFragment.ARG_SECTION_NUMBER,
+						position + 1);
 				rFragment.setArguments(args);
 				return rFragment;
 			} else {
@@ -435,14 +310,14 @@ public class MainActivity extends FragmentActivity {
 		public static final String ARG_SECTION_NUMBER = "section_number";
 		private ArrayAdapter<String> adapter;
 		private OnItemClickListener listener;
-		
+
 		public RestaurantListFragment() {
 		}
-		
+
 		public void setAdapter(ArrayAdapter<String> a) {
 			adapter = a;
 		}
-		
+
 		public void setListener(OnItemClickListener l) {
 			listener = l;
 		}
@@ -466,7 +341,7 @@ public class MainActivity extends FragmentActivity {
 			return rootView;
 		}
 	}
-	
+
 	public static class PositionFragment extends Fragment {
 		/**
 		 * The fragment argument representing the section number for this
@@ -474,10 +349,10 @@ public class MainActivity extends FragmentActivity {
 		 */
 		public static final String ARG_SECTION_NUMBER = "section_number";
 		private QueueLine queue;
-		
+
 		public PositionFragment() {
 		}
-		
+
 		public void setQueue(QueueLine q) {
 			this.queue = q;
 		}
@@ -490,8 +365,9 @@ public class MainActivity extends FragmentActivity {
 					container, false);
 			TextView tv = (TextView) rootView.findViewById(R.id.position);
 			tv.setText("POSITION GOES HERE");
-			//ListView lv = (ListView) rootView.findViewById(android.R.id.list);
-			//lv.setAdapter(adapter);
+			// ListView lv = (ListView)
+			// rootView.findViewById(android.R.id.list);
+			// lv.setAdapter(adapter);
 			return rootView;
 		}
 	}
