@@ -220,23 +220,6 @@ public class MainActivity extends FragmentActivity {
 		// Create an adapter to map the array list of restaurants to the list view.
 		restaurantsAdapter = new ArrayAdapter<String>(this,
 				R.layout.restaurant_row, restaurantsArrayList);
-
-		// Implement listener for the items on the list view.
-		listviewListener = new OnItemClickListener() {
-
-			@Override
-			public void onItemClick(AdapterView<?> arg0, View view,
-					int position, long id) {
-				// Toast.makeText(getApplicationContext(),
-				// restaurantsArrayList.get(position), Toast.LENGTH_SHORT)
-				// .show();
-
-				// Display a dialog and ask the user to queue for that
-				// particular restaurant.
-				// TODO: Make sure that you are in queue for only one line at
-				// any given time.
-			}
-		};
 	}
 
 	// set up the ActionBar's tabs
@@ -338,7 +321,6 @@ public class MainActivity extends FragmentActivity {
 			if (position == 0) {
 				RestaurantListFragment rFragment = new RestaurantListFragment();
 				rFragment.setAdapter(restaurantsAdapter);
-				rFragment.setListener(listviewListener);
 				rFragment.setQueue(queue);
 				rFragment.setRestaurantsArrayList(restaurantsArrayList);
 				args.putInt(RestaurantListFragment.ARG_SECTION_NUMBER,
@@ -384,7 +366,6 @@ public class MainActivity extends FragmentActivity {
 		 */
 		public static final String ARG_SECTION_NUMBER = "section_number";
 		private ArrayAdapter<String> adapter;
-		private OnItemClickListener listener;
 		private QueueLine queue;
 		private ArrayList<String> restaurantsArrayList;
 
@@ -393,10 +374,6 @@ public class MainActivity extends FragmentActivity {
 
 		public void setAdapter(ArrayAdapter<String> a) {
 			adapter = a;
-		}
-
-		public void setListener(OnItemClickListener l) {
-			listener = l;
 		}
 
 		public void setQueue(QueueLine q) {
