@@ -98,7 +98,7 @@ public class MainActivity extends FragmentActivity {
 	}
 	
 	@Override
-	protected void onResume() {
+	protected void onRestart() {
 		//grab restaurants from db and display it again
 		startAsyncTask();
 	}
