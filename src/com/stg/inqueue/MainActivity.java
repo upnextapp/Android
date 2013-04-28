@@ -16,6 +16,7 @@ import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -24,6 +25,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -48,20 +50,24 @@ public class MainActivity extends FragmentActivity {
 	public OnItemClickListener listviewListener;
 	private QueueLine queue;
 	private String position;
-	private static Network n;
-
+	private static GetBusiness n;
+	private static putQueue pQ;
+	
 	// private TaskListAdapter adapter;	
 	// url to make request
 	private static String url_getRestaurants = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/" +
 			"api/list";
 	private static String url_enterQueue = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/" +
-			"enterQueue";
+			"queue";
 	
 	//JSON node names
 	private static String TAG_PHONE = "phone";
 	private static String TAG_QUEUES = "queues";
 	private static String TAG_ID = "uniqueID";
 	private static String TAG_NAME= "name";
+	
+	private static String phoneNumber = "";
+	
 	
 	//JSON array
 	JSONArray business = null;
@@ -78,30 +84,32 @@ public class MainActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
+		phoneNumber = getIntent().getExtras().getString("number");
 		// Create an empty line.
 		queue = new QueueLine("");
 
 		// Set up initial lists of restaurants.
 		setupRestaurantList();
 		// fetch restaurants
-		startAsyncTask();
+		HTTPGetAsyncTask();
+		
 	}
 
 	@Override
 	protected void onStart() {
 		super.onStart();
-
 	}
 
 	
 	@Override
 	protected void onRestart() {
 		//grab restaurants from db and display it again
-		startAsyncTask();
+		super.onRestart();
+		HTTPGetAsyncTask();
 	}
 
-	public void startAsyncTask(){
-		n = new Network(new Callback(){
+	public void HTTPGetAsyncTask(){
+		n = new GetBusiness(new Callback(){
 			
 			@Override
 			public void onComplete() {
@@ -172,6 +180,39 @@ public class MainActivity extends FragmentActivity {
 		
 		//executes asynctask
 		n.execute();
+		
+	}
+	
+	public static void HTTPPostAsynTask(JSONObject jO){
+		pQ = new putQueue(new Callback() {
+			
+			@Override
+			public void onFail() {
+				// TODO Auto-generated method stub
+				Log.i("Front_end", "post failed");
+			}
+			
+			@Override
+			public void onComplete() {
+				// TODO Auto-generated method stub
+				try {
+					Boolean result = pQ.get(100,TimeUnit.MILLISECONDS);
+					Log.i("front_end", "post with get success!");
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (ExecutionException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (TimeoutException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			}
+		});
+		
+		pQ.execute(jO);
 		
 	}
 	
@@ -258,23 +299,29 @@ public class MainActivity extends FragmentActivity {
 										queue.add("Kevin");
 										
 										//here is JSON post call
-										SDCard sd = new SDCard();
-										String phoneNumber = sd.getNumber();
+										String userNumber = phoneNumber;
+										//System.out.println(phoneNumber);
 										String uniqueID = getBusinssID(restaurantName);
-										
+										//System.out.println(uniqueID);
 										JSONObject jObject = new JSONObject();
 										try{
 											jObject.put(TAG_PHONE, phoneNumber);
-											jObject.put(TAG_QUEUES,uniqueID);
-											RestClient rc = new RestClient();
-											boolean result = rc.post(jObject, url_enterQueue);
-											if(result){
-												Log.i("front_end", "success");
-											}else{
-												Log.i("front_end", "failed");
+											if(uniqueID != null){
+												jObject.put(TAG_QUEUES,uniqueID);
 											}
+											Log.i("front_end", "executing httpPost async");
+											HTTPPostAsynTask(jObject);
+//											RestClient rc = new RestClient();
+//											//boolean result = rc.post(jObject, url_enterQueue);
+//											boolean result = rc.postWithGet(jObject, url_enterQueue);
+//											if(result){
+//												Log.i("front_end", "success");
+//											}else{
+//												Log.i("front_end", "failed");
+//											}
 										}catch(Exception e){
 											e.printStackTrace();
+											Log.i("front_end","not able to post.");
 										}finally{
 											//TODO: what I can do here?
 										}
@@ -443,5 +490,14 @@ public class MainActivity extends FragmentActivity {
 			return businessMap.get(businessName);
 		}
 		return null;
+	}
+	
+	public String getUserPhoneNumber() {
+
+		final TelephonyManager tm = (TelephonyManager) getBaseContext()
+				.getSystemService(Context.TELEPHONY_SERVICE);
+		final String tmNumber;
+		tmNumber = "" + tm.getLine1Number();
+		return tmNumber.toString();
 	}
 }

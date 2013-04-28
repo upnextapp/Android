@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -19,6 +20,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.util.JsonReader;
 import android.util.Log;
 
 public class RestClient {
@@ -67,6 +69,7 @@ public class RestClient {
 		// Execute the request
 		HttpResponse response;
 		try {
+			
 			response = httpclient.execute(httpget);
 			// Examine the response status
 			Log.i("front_end",response.getStatusLine().toString());
@@ -131,17 +134,26 @@ public class RestClient {
 			
 			try{
 				StringEntity sE = new StringEntity(jObject.toString());
-				sE.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+				Log.i("front_end", "json to string" + jObject.toString());
+				
+				//sE.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
 				httpPost.setEntity(sE);
+				httpPost.setHeader("Accept", "application/json");
+			    httpPost.setHeader("Content-type", "application/json");
 				httpResponse = httpclient.execute(httpPost);
+				
+				Log.i("front_end", "executing! httpPost");
 				
 				if(httpResponse != null){
 					Log.i("front_end", httpResponse.toString());
 					return true;
+				}else{
+					Log.i("front_end", "null!!!!!");
 				}
 				
 			} catch (ClientProtocolException e) {
 				e.printStackTrace();
+				Log.i("front_end", "client protocol error");
 			} catch (IOException e) {
 				e.printStackTrace();
 				Log.i("front_end", "IOexception error");
@@ -152,5 +164,39 @@ public class RestClient {
 		
 		return false;
 	
+	}
+	
+	public boolean postWithGet(JSONObject jObject, String url){
+		
+	
+		HttpClient httpclient = new DefaultHttpClient();
+
+		// Prepare a request object
+		HttpGet httpget = new HttpGet(url);
+		
+		try {
+			StringEntity sE = new StringEntity(jObject.toString());
+		} catch (UnsupportedEncodingException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		// Execute the request
+		HttpResponse response;
+		try{
+			response = httpclient.execute(httpget);
+			Log.i("front_end", "success with post request");
+			Log.i("front_end", response.getEntity().toString());
+			return true;
+		}catch(ClientProtocolException e){
+			e.printStackTrace();
+		}catch(IOException e){
+			e.printStackTrace();
+		}finally{
+			//TODO: do something
+		}
+		
+		return false;
+		
 	}
 }

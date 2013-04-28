@@ -9,17 +9,13 @@ import com.stg.inqueue.MainActivity.Callback;
 
 import android.os.AsyncTask;
 
-public class Network extends AsyncTask<Void, Void, JSONObject>{
+public class GetBusiness extends AsyncTask<Void, Void, JSONObject>{
 	
 	private Callback mCallbacks;
 	
-	public Network(Callback callback){
+	public GetBusiness(Callback callback){
 		mCallbacks = callback;
 	}
-	
-	//public Set<Callback> callbacks = new HashSet<Callback>();
-	
-	//public void addObserver(Callback cb){ callbacks.add(cb);}
 
 	@Override
 	protected JSONObject doInBackground(Void... params) {

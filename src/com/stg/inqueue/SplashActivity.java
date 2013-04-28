@@ -35,7 +35,10 @@ public class SplashActivity extends Activity {
 				SDCard write = new SDCard();
 				try {
 					write.outputTextFile(getUserPhoneNumber());
+					Bundle b = new Bundle();
+					b.putString("number", getUserPhoneNumber());
 					Intent i = new Intent(getApplicationContext(), MainActivity.class);
+					i.putExtras(b);
 			    	startActivityForResult(i, 1);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
