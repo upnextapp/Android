@@ -49,7 +49,6 @@ public class MainActivity extends FragmentActivity {
 	public ArrayAdapter<String> restaurantsAdapter;
 	public OnItemClickListener listviewListener;
 	private QueueLine queue;
-	private String position;
 	private static GetBusiness n;
 	private static PutQueue pQ;
 	
