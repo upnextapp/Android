@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent" 
+    android:background="#FFFFFF">
 
     <TextView
         android:id="@+id/textView1"
@@ -9,8 +10,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="202dp"
+        android:layout_marginTop="182dp"
         android:text="@string/welcome"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:textStyle="italic"
+        android:textSize="15sp"
+        />
+
+    	<ImageView
+    	    android:id="@+id/inQueue_text"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignBottom="@+id/textView1"
+    	    android:layout_centerHorizontal="true"
+    	    android:layout_marginBottom="38dp"
+    	    android:src="@drawable/inqueue_big" />
 
 </RelativeLayout>

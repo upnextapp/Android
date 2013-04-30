@@ -22,7 +22,8 @@ public class PutQueue extends AsyncTask<JSONObject, Void, JSONObject> {
 		
 		JSONObject jObject = params[0];
 		RestClient rC = new RestClient();
-		result = rC.postWithGet(jObject, url_enterQueue);
+		//result = rC.postWithGet(jObject, url_enterQueue);
+		result = rC.post(jObject, url_enterQueue);
 		Log.i("front_end", "async success post");
 		return result;
 	}

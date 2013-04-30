@@ -19,13 +19,16 @@ public final class R {
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
         public static final int icon=0x7f020001;
-        public static final int logo=0x7f020002;
+        public static final int inq=0x7f020002;
+        public static final int inqueue_big=0x7f020003;
+        public static final int logo=0x7f020004;
     }
     public static final class id {
-        public static final int menu_about=0x7f080006;
-        public static final int menu_help=0x7f080008;
-        public static final int menu_refresh=0x7f080007;
-        public static final int menu_settings=0x7f080005;
+        public static final int inQueue_text=0x7f080005;
+        public static final int menu_about=0x7f080007;
+        public static final int menu_help=0x7f080009;
+        public static final int menu_refresh=0x7f080008;
+        public static final int menu_settings=0x7f080006;
         public static final int pager=0x7f080000;
         public static final int pager_title_strip=0x7f080001;
         public static final int position=0x7f080003;

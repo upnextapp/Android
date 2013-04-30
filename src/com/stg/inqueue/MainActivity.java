@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
@@ -73,7 +74,8 @@ public class MainActivity extends FragmentActivity {
 	private static String phoneNumber = "";
 	
 	//static JSONObject
-	static JSONObject jObject = null;
+	static JSONObject jObject = new JSONObject();
+	JSONObject dummy = new JSONObject(); 
 	
 	//JSON array
 	JSONArray business = null;
@@ -142,7 +144,7 @@ public class MainActivity extends FragmentActivity {
 								
 								//put key, values to map
 								//TODO: I might have to switch key, value
-								businessMap.put(business_name, business_id);
+								businessMap.put(business_id, business_name);
 							}
 						}
 						
@@ -255,7 +257,7 @@ public class MainActivity extends FragmentActivity {
 			return true;
 		case R.id.menu_refresh:
 			HTTPGetAsyncTask();
-			if(jObject != null){
+			if(jObject != dummy){
 				HTTPPostAsynTask(jObject);
 			}
 			return true;
@@ -268,7 +270,7 @@ public class MainActivity extends FragmentActivity {
 		restaurantsArrayList = new ArrayList<String>();
 		
 		for(Map.Entry<String, String> e: businessMap.entrySet()){
-			restaurantsArrayList.add(e.getKey());
+			restaurantsArrayList.add(e.getValue());
 		}
 		
 		Log.d("front_end", restaurantsArrayList.toString());
@@ -496,9 +498,15 @@ public class MainActivity extends FragmentActivity {
 		}
 	}
 	
-	public static String getBusinssID(String businessName){
-		if(businessMap.containsKey(businessName)){
-			return businessMap.get(businessName);
+	public static String getBusinssID(String value){
+		if(businessMap.containsValue(value)){
+			Set<String> keySet = businessMap.keySet();
+			for(String key: keySet){
+				if(businessMap.get(key) == value){
+					return key;
+				}
+			}
+			//return businessMap.;
 		}
 		return null;
 	}
