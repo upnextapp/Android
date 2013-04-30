@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
@@ -49,6 +50,8 @@ public class MainActivity extends FragmentActivity {
 	public ArrayAdapter<String> restaurantsAdapter;
 	public OnItemClickListener listviewListener;
 	private QueueLine queue;
+	private static String position;
+	private static String queueLength;
 	private static GetBusiness n;
 	private static PutQueue pQ;
 	
@@ -61,9 +64,11 @@ public class MainActivity extends FragmentActivity {
 	
 	//JSON node names
 	private static String TAG_PHONE = "phone";
-	private static String TAG_QUEUES = "queues";
+	private static String TAG_QUEUES = "queue";
 	private static String TAG_ID = "uniqueID";
 	private static String TAG_NAME= "name";
+	private static String TAG_POSITION= "position";
+	private static String TAG_QUEUE_LENGTH= "queueLength";
 	
 	private static String phoneNumber = "";
 	
@@ -92,7 +97,11 @@ public class MainActivity extends FragmentActivity {
 		// fetch restaurants
 		HTTPGetAsyncTask();
 		
+		ActionBar ab = getActionBar();
+		ab.hide();
 		
+		position = "0";
+		queueLength = "0";
 	}
 
 	@Override
@@ -201,6 +210,16 @@ public class MainActivity extends FragmentActivity {
 					
 					if(result != null){
 						//TODO: kevin's part
+						try {
+							position = result.getJSONArray(TAG_POSITION).getString(0);
+							queueLength = result.getJSONArray(TAG_QUEUE_LENGTH).getString(0);
+							
+							
+						} catch (JSONException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+							Log.i("ui","Failed to grab position number.");
+						}
 					}
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
@@ -241,6 +260,9 @@ public class MainActivity extends FragmentActivity {
 		case R.id.menu_about:
 			// add about method later
 			// logOff();
+			return true;
+		case R.id.menu_refresh:
+			HTTPGetAsyncTask();
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
@@ -462,7 +484,7 @@ public class MainActivity extends FragmentActivity {
 		public void setQueue(QueueLine q) {
 			this.queue = q;
 		}
-
+		
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
@@ -475,7 +497,7 @@ public class MainActivity extends FragmentActivity {
 			 * CODE TO PARSE RESPONSE AND TRANSLATE TO DISPLAYABLE MESSAGE GOES HERE
 			 */
 			
-			tv.setText("POSITION GOES HERE");
+			tv.setText("POSITION: " + getPosition() + " / " + getQueueLength());
 			return rootView;
 		}
 	}
@@ -485,6 +507,14 @@ public class MainActivity extends FragmentActivity {
 			return businessMap.get(businessName);
 		}
 		return null;
+	}
+	
+	public static String getPosition() {
+		return position;
+	}
+	
+	public static String getQueueLength() {
+		return queueLength;
 	}
 	
 	public String getUserPhoneNumber() {

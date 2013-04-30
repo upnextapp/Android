@@ -23,7 +23,8 @@ public final class R {
     }
     public static final class id {
         public static final int menu_about=0x7f080006;
-        public static final int menu_help=0x7f080007;
+        public static final int menu_help=0x7f080008;
+        public static final int menu_refresh=0x7f080007;
         public static final int menu_settings=0x7f080005;
         public static final int pager=0x7f080000;
         public static final int pager_title_strip=0x7f080001;
@@ -54,6 +55,7 @@ public final class R {
         public static final int main=0x7f050013;
         public static final int menu_about=0x7f050003;
         public static final int menu_help=0x7f050004;
+        public static final int menu_refresh=0x7f050017;
         public static final int menu_settings=0x7f050002;
         public static final int okay=0x7f050011;
         public static final int password=0x7f050006;
