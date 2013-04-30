@@ -20,12 +20,13 @@ import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v4.app.ListFragment;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.ListFragment;
 import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -33,7 +34,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -73,9 +73,10 @@ public class MainActivity extends FragmentActivity {
 	private static String currentRestaurantName = "Unavailable";
 	private static String phoneNumber = "";
 	
+	
 	//static JSONObject
 	static JSONObject jObject = null;
-	
+	static JSONObject dummy = null;
 	//JSON array
 	JSONArray business = null;
 	
@@ -162,11 +163,9 @@ public class MainActivity extends FragmentActivity {
 						//setContentView(R.layout.main);
 						
 						mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-
 						// Set up the ViewPager with the sections adapter.
 						mViewPager = (ViewPager) findViewById(R.id.pager);
 						mViewPager.setAdapter(mSectionsPagerAdapter);
-
 					}
 				
 				} catch (InterruptedException e) {
@@ -192,6 +191,64 @@ public class MainActivity extends FragmentActivity {
 		//executes asynctask
 		n.execute();
 		
+	}
+	
+	public LinkedHashMap<String,String> HTTPGetAsyncTaskTWO(){
+		n = new GetBusiness(new Callback(){
+			
+			@Override
+			public void onComplete() {
+				try {
+					
+					JSONObject jObject = n.get(1000, TimeUnit.MILLISECONDS);
+					Log.i("front_end","grabbed JSON Object");
+					
+					//make restaurant list
+					try{
+						if(jObject != null){
+							business = jObject.getJSONArray(TAG_QUEUES);
+							//has uniqueID and name
+							for(int i=0; i < business.length();i++){
+								JSONObject j = (JSONObject) business.getJSONObject(i);
+								
+								//add key, values of business
+								String business_name = j.getString(TAG_NAME);
+								String business_id = j.getString(TAG_ID);
+								
+								//put key, values to map
+								//TODO: I might have to switch key, value
+								businessMap.put(business_name, business_id);
+								
+							}
+						}
+						
+					}catch(Exception e){
+						e.printStackTrace();
+					}
+				
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+					Log.i("front_end","interrupt");
+				} catch (ExecutionException e) {
+					e.printStackTrace();
+					Log.i("front_end","Execution");
+				} catch (TimeoutException e) {
+					e.printStackTrace();
+					Log.i("front_end","timeout");
+				}
+			}
+
+			@Override
+			public void onFail() {
+				// TODO: what should it do when it fails?
+				
+			}
+			
+		});
+		
+		//executes asynctask
+		n.execute();
+		return businessMap;
 	}
 	
 	public static void HTTPPostAsynTask(JSONObject jO){
@@ -255,16 +312,34 @@ public class MainActivity extends FragmentActivity {
 			// logOff();
 			return true;
 		case R.id.menu_refresh:
-			HTTPGetAsyncTask();
-			if(jObject != null){
+			// Pull restaurants from our server.
+			updateRestaurantList();
+			
+			// Update the position queue
+			if(jObject != dummy)
 				HTTPPostAsynTask(jObject);
-			}
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
 	}
 
+	private void updateRestaurantList() {
+		// Clear adapter/array list and add new elements.
+		restaurantsAdapter.clear();
+		restaurantsArrayList.clear();
+		
+		// Get an updated list of restaurants from the server.
+		LinkedHashMap<String,String> m = HTTPGetAsyncTaskTWO(); //TODO: Rename this
+		
+		// Add it to the array list.
+		for (String s : m.keySet())
+			restaurantsArrayList.add(s);
+		
+		// Update the adapter and notify so that the view will refresh itself.
+		restaurantsAdapter.notifyDataSetChanged();
+	}
+	
 	private void setupRestaurantList() {
 		restaurantsArrayList = new ArrayList<String>();
 		
@@ -366,7 +441,6 @@ public class MainActivity extends FragmentActivity {
 	 * one of the sections/tabs/pages.
 	 */
 	public class SectionsPagerAdapter extends FragmentPagerAdapter {
-
 		public SectionsPagerAdapter(FragmentManager fm) {
 			super(fm);
 		}
@@ -443,6 +517,14 @@ public class MainActivity extends FragmentActivity {
 			this.restaurantsArrayList = l;
 		}
 		
+		public String outputArrayList() {
+			return restaurantsArrayList.toString();
+		}
+		
+		public void updateAdapter() {
+			this.adapter.notifyDataSetChanged();
+		}
+		
 		@Override
 		public void onListItemClick(ListView l, View v, int position, long id) {
 			super.onListItemClick(l, v, position, id);
@@ -459,11 +541,6 @@ public class MainActivity extends FragmentActivity {
 			View rootView = inflater.inflate(R.layout.fragment_main_dummy,
 					container, false);
 			ListView lv = (ListView) rootView.findViewById(android.R.id.list);
-			
-			/*
-			 * CODE TO PARSE RESPONSE AND TRANSLATE TO ADAPTER HERE
-			 */
-			
 			lv.setAdapter(adapter);
 			return rootView;
 		}
@@ -491,10 +568,6 @@ public class MainActivity extends FragmentActivity {
 			View rootView = inflater.inflate(R.layout.position_in_line,
 					container, false);
 			TextView tv = (TextView) rootView.findViewById(R.id.position);
-			
-			/*
-			 * CODE TO PARSE RESPONSE AND TRANSLATE TO DISPLAYABLE MESSAGE GOES HERE
-			 */
 			
 			tv.setText(getRestaurantName() + "\nPOSITION: " + getPosition() + " / " + getQueueLength());
 			return rootView;
