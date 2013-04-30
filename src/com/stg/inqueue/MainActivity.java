@@ -51,7 +51,7 @@ public class MainActivity extends FragmentActivity {
 	private QueueLine queue;
 	private String position;
 	private static GetBusiness n;
-	private static putQueue pQ;
+	private static PutQueue pQ;
 	
 	// private TaskListAdapter adapter;	
 	// url to make request
@@ -185,7 +185,7 @@ public class MainActivity extends FragmentActivity {
 	}
 	
 	public static void HTTPPostAsynTask(JSONObject jO){
-		pQ = new putQueue(new Callback() {
+		pQ = new PutQueue(new Callback() {
 			
 			@Override
 			public void onFail() {
@@ -197,8 +197,12 @@ public class MainActivity extends FragmentActivity {
 			public void onComplete() {
 				// TODO Auto-generated method stub
 				try {
-					Boolean result = pQ.get(1000,TimeUnit.MILLISECONDS);
+					JSONObject result = pQ.get(1000,TimeUnit.MILLISECONDS);
 					Log.i("front_end", "post with get success!");
+					
+					if(result != null){
+						//TODO: kevin's part
+					}
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -307,7 +311,7 @@ public class MainActivity extends FragmentActivity {
 										try{
 											jObject.put(TAG_PHONE, phoneNumber);
 											if(uniqueID != null){
-												jObject.put(TAG_QUEUES,uniqueID);
+												jObject.put(TAG_ID,uniqueID);
 											}
 											Log.i("front_end", "executing httpPost async");
 											HTTPPostAsynTask(jObject);
