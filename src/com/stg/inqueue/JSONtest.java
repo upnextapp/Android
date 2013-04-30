@@ -11,7 +11,7 @@ public class JSONtest extends TestCase {
 		String url_getRestaurants = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/" +
 				"api/list";
 		RestClient rc = new RestClient();
-		//assertTrue(rc.connect(url_getRestaurants));
+		
 	}
 
 }

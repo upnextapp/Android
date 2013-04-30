@@ -93,7 +93,6 @@ public class MainActivity extends FragmentActivity {
 		// fetch restaurants
 		HTTPGetAsyncTask();
 		
-		
 	}
 
 	@Override
@@ -101,7 +100,6 @@ public class MainActivity extends FragmentActivity {
 		super.onStart();
 	}
 
-	
 	@Override
 	protected void onRestart() {
 		//grab restaurants from db and display it again
