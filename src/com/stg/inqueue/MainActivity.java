@@ -578,7 +578,7 @@ public class MainActivity extends FragmentActivity {
 					container, false);
 			tv = (TextView) rootView.findViewById(R.id.position);
 			
-			tv.setText(getRestaurantName() + "\nPOSITION: " + getPosition() + " / " + getQueueLength());
+			tv.setText("\nPOSITION: " + getPosition() + " / " + getQueueLength());
 			return rootView;
 		}
 	}
