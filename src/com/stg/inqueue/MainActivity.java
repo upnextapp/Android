@@ -73,6 +73,8 @@ public class MainActivity extends FragmentActivity {
 	
 	private static String phoneNumber = "";
 	
+	static TextView tv;
+	
 	//static JSONObject
 	static JSONObject jObject = new JSONObject();
 	JSONObject dummy = new JSONObject(); 
@@ -205,14 +207,18 @@ public class MainActivity extends FragmentActivity {
 			
 			@Override
 			public void onComplete() {
+				Log.i("front_end", "finish");
 				try {
 					JSONObject result = pQ.get(1000,TimeUnit.MILLISECONDS);
 					Log.i("front_end", "post with get success!");
 					
 					if(result != null){
 						try {
-							position = result.getJSONArray(TAG_POSITION).getString(0);
-							queueLength = result.getJSONArray(TAG_QUEUE_LENGTH).getString(0);	
+							position = result.getString("position");
+							//position = result.getJSONObject(0).getString("position");
+							queueLength = result.getString("size");	
+							
+							tv.setText("POSITION: " + getPosition() + " / " + getQueueLength());
 						} catch (JSONException e) {
 							e.printStackTrace();
 							Log.i("ui","Failed to grab position number.");
@@ -224,7 +230,9 @@ public class MainActivity extends FragmentActivity {
 					e.printStackTrace();
 				} catch (TimeoutException e) {
 					e.printStackTrace();
-				}	
+				}finally{
+					Log.i("front_end", "post finished!!!!!!!!!!!!!!!!!!!!!!!");
+				}
 			}
 		});
 		
@@ -256,11 +264,13 @@ public class MainActivity extends FragmentActivity {
 			// logOff();
 			return true;
 		case R.id.menu_refresh:
-			HTTPGetAsyncTask();
+			/*HTTPGetAsyncTask();
 			if(jObject != dummy){
 				HTTPPostAsynTask(jObject);
 			}
+			*/
 			return true;
+			
 		default:
 			return super.onOptionsItemSelected(item);
 		}
@@ -487,7 +497,7 @@ public class MainActivity extends FragmentActivity {
 			setRetainInstance(true);
 			View rootView = inflater.inflate(R.layout.position_in_line,
 					container, false);
-			TextView tv = (TextView) rootView.findViewById(R.id.position);
+			tv = (TextView) rootView.findViewById(R.id.position);
 			
 			/*
 			 * CODE TO PARSE RESPONSE AND TRANSLATE TO DISPLAYABLE MESSAGE GOES HERE

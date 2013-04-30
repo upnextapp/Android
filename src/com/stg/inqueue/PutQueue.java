@@ -9,10 +9,10 @@ import android.util.Log;
 
 public class PutQueue extends AsyncTask<JSONObject, Void, JSONObject> {
 	
-	private Callback mCallbacks;
+	private Callback pCallbacks;
 
 	public PutQueue(Callback callback) {
-		mCallbacks = callback;
+		pCallbacks = callback;
 	}
 
 	protected JSONObject doInBackground(JSONObject... params) {
@@ -28,8 +28,8 @@ public class PutQueue extends AsyncTask<JSONObject, Void, JSONObject> {
 		return result;
 	}
 
-	protected void onPostExecute(Void result) {
-		mCallbacks.onComplete();
+	protected void onPostExecute(JSONObject result) {
+		pCallbacks.onComplete();
 	}
 
 }
