@@ -4,14 +4,12 @@ import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
-import android.support.v4.app.FragmentActivity;
-import android.util.Log;
-import android.widget.Toast;
 
 public class SplashActivity extends Activity {
 	
@@ -19,6 +17,8 @@ public class SplashActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.welcome);
+		ActionBar ab = getActionBar();
+		ab.hide();
 	}
 
 	@Override

@@ -93,6 +93,8 @@ public class MainActivity extends FragmentActivity {
 		// fetch restaurants
 		HTTPGetAsyncTask();
 		
+		ActionBar ab = getActionBar();
+		ab.hide();
 		
 	}
 
