@@ -241,6 +241,9 @@ public class MainActivity extends FragmentActivity {
 			// add about method later
 			// logOff();
 			return true;
+		case R.id.menu_refresh:
+			HTTPGetAsyncTask();
+			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
