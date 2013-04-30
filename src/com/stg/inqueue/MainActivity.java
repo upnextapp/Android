@@ -343,7 +343,7 @@ public class MainActivity extends FragmentActivity {
 		
 		// Add it to the array list.
 		for (String s : m.keySet())
-			restaurantsArrayList.add(s);
+			restaurantsArrayList.add(m.get(s));
 		
 		// Update the adapter and notify so that the view will refresh itself.
 		restaurantsAdapter.notifyDataSetChanged();
