@@ -73,6 +73,8 @@ public class MainActivity extends FragmentActivity {
 	private static String currentRestaurantName = "Unavailable";
 	private static String phoneNumber = "";
 	
+	//static JSONObject
+	static JSONObject jObject = null;
 	
 	//JSON array
 	JSONArray business = null;
@@ -110,7 +112,6 @@ public class MainActivity extends FragmentActivity {
 		super.onStart();
 	}
 
-	
 	@Override
 	protected void onRestart() {
 		//grab restaurants from db and display it again
@@ -198,38 +199,29 @@ public class MainActivity extends FragmentActivity {
 			
 			@Override
 			public void onFail() {
-				// TODO Auto-generated method stub
 				Log.i("Front_end", "post failed");
 			}
 			
 			@Override
 			public void onComplete() {
-				// TODO Auto-generated method stub
 				try {
 					JSONObject result = pQ.get(1000,TimeUnit.MILLISECONDS);
 					Log.i("front_end", "post with get success!");
 					
 					if(result != null){
-						//TODO: kevin's part
 						try {
 							position = result.getJSONArray(TAG_POSITION).getString(0);
-							queueLength = result.getJSONArray(TAG_QUEUE_LENGTH).getString(0);
-							
-							
+							queueLength = result.getJSONArray(TAG_QUEUE_LENGTH).getString(0);	
 						} catch (JSONException e) {
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 							Log.i("ui","Failed to grab position number.");
 						}
 					}
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				} catch (ExecutionException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				} catch (TimeoutException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}	
 			}
@@ -264,6 +256,9 @@ public class MainActivity extends FragmentActivity {
 			return true;
 		case R.id.menu_refresh:
 			HTTPGetAsyncTask();
+			if(jObject != null){
+				HTTPPostAsynTask(jObject);
+			}
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
@@ -331,7 +326,7 @@ public class MainActivity extends FragmentActivity {
 										//System.out.println(phoneNumber);
 										String uniqueID = getBusinssID(restaurantName);
 										//System.out.println(uniqueID);
-										JSONObject jObject = new JSONObject();
+										//jObject = new JSONObject();
 										try{
 											jObject.put(TAG_PHONE, phoneNumber);
 											if(uniqueID != null){
