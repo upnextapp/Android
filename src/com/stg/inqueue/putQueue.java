@@ -7,16 +7,16 @@ import com.stg.inqueue.MainActivity.Callback;
 import android.os.AsyncTask;
 import android.util.Log;
 
-public class putQueue extends AsyncTask<JSONObject, Void, Boolean> {
+public class PutQueue extends AsyncTask<JSONObject, Void, JSONObject> {
 	
 	private Callback mCallbacks;
 
-	public putQueue(Callback callback) {
+	public PutQueue(Callback callback) {
 		mCallbacks = callback;
 	}
 
-	protected Boolean doInBackground(JSONObject... params) {
-		boolean result = false;
+	protected JSONObject doInBackground(JSONObject... params) {
+		JSONObject result = new JSONObject();
 		String url_enterQueue = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/api/" +
 				"queue";
 		

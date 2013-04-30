@@ -166,8 +166,7 @@ public class RestClient {
 	
 	}
 	
-	public boolean postWithGet(JSONObject jObject, String url){
-		
+	public JSONObject postWithGet(JSONObject jObject, String url){
 	
 		HttpClient httpclient = new DefaultHttpClient();
 
@@ -188,11 +187,18 @@ public class RestClient {
 			HttpEntity entity = response.getEntity();
 			InputStream instream = entity.getContent();
 			String result= convertStreamToString(instream);
+			try {
+				json = new JSONObject(result);
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				Log.i("front_end", "failed to make JSONObject");
+			}
 			Log.i("front_end","printing response " + result);
 			
 			Log.i("front_end", "success with post request");
 			Log.i("front_end", response.toString());
-			return true;
+			return json;
 		}catch(ClientProtocolException e){
 			e.printStackTrace();
 		}catch(IOException e){
@@ -201,7 +207,7 @@ public class RestClient {
 			//TODO: do something
 		}
 		
-		return false;
+		return json;
 		
 	}
 }
