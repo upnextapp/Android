@@ -9,10 +9,10 @@ import android.util.Log;
 
 public class PutQueue extends AsyncTask<JSONObject, Void, JSONObject> {
 	
-	private Callback mCallbacks;
+	private Callback pCallbacks;
 
 	public PutQueue(Callback callback) {
-		mCallbacks = callback;
+		pCallbacks = callback;
 	}
 
 	protected JSONObject doInBackground(JSONObject... params) {
@@ -22,13 +22,14 @@ public class PutQueue extends AsyncTask<JSONObject, Void, JSONObject> {
 		
 		JSONObject jObject = params[0];
 		RestClient rC = new RestClient();
-		result = rC.postWithGet(jObject, url_enterQueue);
+		//result = rC.postWithGet(jObject, url_enterQueue);
+		result = rC.post(jObject, url_enterQueue);
 		Log.i("front_end", "async success post");
 		return result;
 	}
 
-	protected void onPostExecute(Void result) {
-		mCallbacks.onComplete();
+	protected void onPostExecute(JSONObject result) {
+		pCallbacks.onComplete();
 	}
 
 }

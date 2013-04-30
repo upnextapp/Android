@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
@@ -73,10 +74,11 @@ public class MainActivity extends FragmentActivity {
 	private static String currentRestaurantName = "Unavailable";
 	private static String phoneNumber = "";
 	
-	
 	//static JSONObject
-	static JSONObject jObject = null;
-	static JSONObject dummy = null;
+	static TextView tv;
+	static JSONObject jObject = new JSONObject();
+	JSONObject dummy = new JSONObject(); 
+	
 	//JSON array
 	JSONArray business = null;
 	
@@ -144,7 +146,7 @@ public class MainActivity extends FragmentActivity {
 								
 								//put key, values to map
 								//TODO: I might have to switch key, value
-								businessMap.put(business_name, business_id);
+								businessMap.put(business_id, business_name);
 							}
 						}
 						
@@ -261,14 +263,18 @@ public class MainActivity extends FragmentActivity {
 			
 			@Override
 			public void onComplete() {
+				Log.i("front_end", "finish");
 				try {
 					JSONObject result = pQ.get(1000,TimeUnit.MILLISECONDS);
 					Log.i("front_end", "post with get success!");
 					
 					if(result != null){
 						try {
-							position = result.getJSONArray(TAG_POSITION).getString(0);
-							queueLength = result.getJSONArray(TAG_QUEUE_LENGTH).getString(0);	
+							position = result.getString("position");
+							//position = result.getJSONObject(0).getString("position");
+							queueLength = result.getString("size");	
+							
+							tv.setText("POSITION: " + getPosition() + " / " + getQueueLength());
 						} catch (JSONException e) {
 							e.printStackTrace();
 							Log.i("ui","Failed to grab position number.");
@@ -280,7 +286,9 @@ public class MainActivity extends FragmentActivity {
 					e.printStackTrace();
 				} catch (TimeoutException e) {
 					e.printStackTrace();
-				}	
+				}finally{
+					Log.i("front_end", "post finished!!!!!!!!!!!!!!!!!!!!!!!");
+				}
 			}
 		});
 		
@@ -319,6 +327,7 @@ public class MainActivity extends FragmentActivity {
 			if(jObject != dummy)
 				HTTPPostAsynTask(jObject);
 			return true;
+			
 		default:
 			return super.onOptionsItemSelected(item);
 		}
@@ -344,7 +353,7 @@ public class MainActivity extends FragmentActivity {
 		restaurantsArrayList = new ArrayList<String>();
 		
 		for(Map.Entry<String, String> e: businessMap.entrySet()){
-			restaurantsArrayList.add(e.getKey());
+			restaurantsArrayList.add(e.getValue());
 		}
 		
 		Log.d("front_end", restaurantsArrayList.toString());
@@ -567,16 +576,22 @@ public class MainActivity extends FragmentActivity {
 			setRetainInstance(true);
 			View rootView = inflater.inflate(R.layout.position_in_line,
 					container, false);
-			TextView tv = (TextView) rootView.findViewById(R.id.position);
+			tv = (TextView) rootView.findViewById(R.id.position);
 			
 			tv.setText(getRestaurantName() + "\nPOSITION: " + getPosition() + " / " + getQueueLength());
 			return rootView;
 		}
 	}
 	
-	public static String getBusinssID(String businessName){
-		if(businessMap.containsKey(businessName)){
-			return businessMap.get(businessName);
+	public static String getBusinssID(String value){
+		if(businessMap.containsValue(value)){
+			Set<String> keySet = businessMap.keySet();
+			for(String key: keySet){
+				if(businessMap.get(key) == value){
+					return key;
+				}
+			}
+			//return businessMap.;
 		}
 		return null;
 	}

@@ -25,6 +25,7 @@ import android.util.Log;
 
 public class RestClient {
 	static JSONObject json;
+	static JSONObject jsonPost;
 
 	private static String convertStreamToString(InputStream is) {
 		/*
@@ -125,10 +126,10 @@ public class RestClient {
 		return json;
 	}
 	
-	public boolean post(JSONObject jObject, String url){
+	public JSONObject post(JSONObject jObject, String url){
 			HttpClient httpclient = new DefaultHttpClient();
 			
-			HttpPost httpPost = new HttpPost();
+			HttpPost httpPost = new HttpPost(url);
 			
 			HttpResponse httpResponse;
 			
@@ -138,7 +139,7 @@ public class RestClient {
 				
 				//sE.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
 				httpPost.setEntity(sE);
-				httpPost.setHeader("Accept", "application/json");
+				//httpPost.setHeader("Accept", "application/json");
 			    httpPost.setHeader("Content-type", "application/json");
 				httpResponse = httpclient.execute(httpPost);
 				
@@ -146,7 +147,25 @@ public class RestClient {
 				
 				if(httpResponse != null){
 					Log.i("front_end", httpResponse.toString());
-					return true;
+					HttpEntity hE = httpResponse.getEntity();
+					if (hE != null) {
+
+						// A Simple JSON Response Read
+						InputStream instream = hE.getContent();
+						String result= convertStreamToString(instream);
+						Log.i("front_end",result);
+
+						// A Simple JSONObject Creation
+						try {
+							jsonPost = new JSONObject(result);
+						} catch (JSONException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+
+					//jsonPost = (JSONObject) httpResponse.getEntity();
+					return jsonPost;
 				}else{
 					Log.i("front_end", "null!!!!!");
 				}
@@ -157,15 +176,18 @@ public class RestClient {
 			} catch (IOException e) {
 				e.printStackTrace();
 				Log.i("front_end", "IOexception error");
+			} catch(NullPointerException n){
+				n.printStackTrace();
 			}
 			finally{
 				//what can I do here?
 			}
 		
-		return false;
+		return jsonPost;
 	
 	}
 	
+	/*
 	public JSONObject postWithGet(JSONObject jObject, String url){
 	
 		HttpClient httpclient = new DefaultHttpClient();
@@ -175,6 +197,7 @@ public class RestClient {
 		
 		try {
 			StringEntity sE = new StringEntity(jObject.toString());
+			//httpget.se
 		} catch (UnsupportedEncodingException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -188,7 +211,7 @@ public class RestClient {
 			InputStream instream = entity.getContent();
 			String result= convertStreamToString(instream);
 			try {
-				json = new JSONObject(result);
+				jsonPost = new JSONObject(result);
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -198,7 +221,7 @@ public class RestClient {
 			
 			Log.i("front_end", "success with post request");
 			Log.i("front_end", response.toString());
-			return json;
+			return jsonPost;
 		}catch(ClientProtocolException e){
 			e.printStackTrace();
 		}catch(IOException e){
@@ -210,4 +233,5 @@ public class RestClient {
 		return json;
 		
 	}
+	*/
 }
