@@ -17,7 +17,7 @@ public class putQueue extends AsyncTask<JSONObject, Void, Boolean> {
 
 	protected Boolean doInBackground(JSONObject... params) {
 		boolean result = false;
-		String url_enterQueue = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/" +
+		String url_enterQueue = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/api/" +
 				"queue";
 		
 		JSONObject jObject = params[0];
@@ -30,8 +30,5 @@ public class putQueue extends AsyncTask<JSONObject, Void, Boolean> {
 	protected void onPostExecute(Void result) {
 		mCallbacks.onComplete();
 	}
-	
-	
-	
 
 }

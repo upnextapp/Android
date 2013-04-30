@@ -34,6 +34,7 @@ public class SplashActivity extends Activity {
 				//Make phoneNumber.txt file every time app launches
 				SDCard write = new SDCard();
 				try {
+					
 					write.outputTextFile(getUserPhoneNumber());
 					Bundle b = new Bundle();
 					b.putString("number", getUserPhoneNumber());

@@ -185,8 +185,13 @@ public class RestClient {
 		HttpResponse response;
 		try{
 			response = httpclient.execute(httpget);
+			HttpEntity entity = response.getEntity();
+			InputStream instream = entity.getContent();
+			String result= convertStreamToString(instream);
+			Log.i("front_end","printing response " + result);
+			
 			Log.i("front_end", "success with post request");
-			Log.i("front_end", response.getEntity().toString());
+			Log.i("front_end", response.toString());
 			return true;
 		}catch(ClientProtocolException e){
 			e.printStackTrace();

@@ -58,7 +58,7 @@ public class MainActivity extends FragmentActivity {
 	private static String url_getRestaurants = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/" +
 			"api/list";
 	private static String url_enterQueue = "http://ec2-54-244-184-198.us-west-2.compute.amazonaws.com/" +
-			"queue";
+			"api/queue";
 	
 	//JSON node names
 	private static String TAG_PHONE = "phone";
@@ -93,6 +93,7 @@ public class MainActivity extends FragmentActivity {
 		// fetch restaurants
 		HTTPGetAsyncTask();
 		
+		
 	}
 
 	@Override
@@ -115,7 +116,7 @@ public class MainActivity extends FragmentActivity {
 			public void onComplete() {
 				try {
 					
-					JSONObject jObject = n.get(100, TimeUnit.MILLISECONDS);
+					JSONObject jObject = n.get(1000, TimeUnit.MILLISECONDS);
 					Log.i("front_end","grabbed JSON Object");
 					
 					//make restaurant list
@@ -196,7 +197,7 @@ public class MainActivity extends FragmentActivity {
 			public void onComplete() {
 				// TODO Auto-generated method stub
 				try {
-					Boolean result = pQ.get(100,TimeUnit.MILLISECONDS);
+					Boolean result = pQ.get(1000,TimeUnit.MILLISECONDS);
 					Log.i("front_end", "post with get success!");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
@@ -207,8 +208,7 @@ public class MainActivity extends FragmentActivity {
 				} catch (TimeoutException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}
-				
+				}	
 			}
 		});
 		
@@ -311,14 +311,6 @@ public class MainActivity extends FragmentActivity {
 											}
 											Log.i("front_end", "executing httpPost async");
 											HTTPPostAsynTask(jObject);
-//											RestClient rc = new RestClient();
-//											//boolean result = rc.post(jObject, url_enterQueue);
-//											boolean result = rc.postWithGet(jObject, url_enterQueue);
-//											if(result){
-//												Log.i("front_end", "success");
-//											}else{
-//												Log.i("front_end", "failed");
-//											}
 										}catch(Exception e){
 											e.printStackTrace();
 											Log.i("front_end","not able to post.");
