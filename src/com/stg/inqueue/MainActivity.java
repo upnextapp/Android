@@ -64,12 +64,13 @@ public class MainActivity extends FragmentActivity {
 	
 	//JSON node names
 	private static String TAG_PHONE = "phone";
-	private static String TAG_QUEUES = "queue";
+	private static String TAG_QUEUES = "queues";
 	private static String TAG_ID = "uniqueID";
 	private static String TAG_NAME= "name";
 	private static String TAG_POSITION= "position";
 	private static String TAG_QUEUE_LENGTH= "queueLength";
 	
+	private static String currentRestaurantName = "Unavailable";
 	private static String phoneNumber = "";
 	
 	
@@ -308,6 +309,8 @@ public class MainActivity extends FragmentActivity {
 		public Dialog onCreateDialog(Bundle savedInstanceState) {
 			setRetainInstance(true);
 			AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+			LayoutInflater inflater = getActivity().getLayoutInflater();			
+			
 			builder.setMessage("Click 'Yes' to queue for " + restaurantName + "!")
 					.setPositiveButton("Yes",
 							new DialogInterface.OnClickListener() {
@@ -317,7 +320,7 @@ public class MainActivity extends FragmentActivity {
 									// If it is not the same as the previous
 									// line, then make a new line and add in the
 									// user (temporarily named Kevin).
-									
+									currentRestaurantName = restaurantName;
 									// TODO:this is where we make a JSON post request.
 									if (queue.getName() != restaurantName) {
 										queue = new QueueLine(restaurantName);
@@ -355,7 +358,8 @@ public class MainActivity extends FragmentActivity {
 										int which) {
 
 								}
-							}).setTitle("Would you like get in line?");
+							}).setTitle("Would you like get in line?")
+					.setView(inflater.inflate(R.layout.dialog_layout, null));
 			
 			return builder.create();
 		}
@@ -497,7 +501,7 @@ public class MainActivity extends FragmentActivity {
 			 * CODE TO PARSE RESPONSE AND TRANSLATE TO DISPLAYABLE MESSAGE GOES HERE
 			 */
 			
-			tv.setText("POSITION: " + getPosition() + " / " + getQueueLength());
+			tv.setText(getRestaurantName() + "\nPOSITION: " + getPosition() + " / " + getQueueLength());
 			return rootView;
 		}
 	}
@@ -515,6 +519,10 @@ public class MainActivity extends FragmentActivity {
 	
 	public static String getQueueLength() {
 		return queueLength;
+	}
+	
+	public static String getRestaurantName() {
+		return currentRestaurantName;
 	}
 	
 	public String getUserPhoneNumber() {

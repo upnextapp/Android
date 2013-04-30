@@ -24,4 +24,5 @@
     <string name="title_section2">Position</string>
     <string name="title_section3">george</string>
     <string name="menu_refresh">Refresh</string>
+    <string name="party_size">Party Size</string>
 </resources>
